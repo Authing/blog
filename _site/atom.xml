@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-16T21:47:41+08:00</updated>
+ <updated>2018-04-19T19:40:26+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -14,10 +14,20 @@
  
 
  <entry>
+   <title>客户故事-在小程序中使用Authing</title>
+   <link href="http://localhost:4000/%E5%9C%A8%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%AD%E4%BD%BF%E7%94%A8Authing"/>
+   <id>http://localhost:4000/在小程序中使用Authing</id>
+   <updated>2018-04-17T00:00:00+08:00</updated>
+   <content type="html">&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt; &lt;p&gt;在2018年，小程序毫无疑问成为了一个流行平台，许多互联网创业者的首选不再是APP，而是小程序。&lt;/p&gt; &lt;p&gt;“你的生日”（以下简称BirthCaker）便是这么一个案例。&lt;/p&gt; &lt;p&gt;BirthCaker是一款B2B2C电商应用，专注于蛋糕领域的在线商城，以“蛋糕在线定制”为核心切入点。其团队拥有较强的引流能力，其自主研发的&lt;strong&gt;「玩店」&lt;/strong&gt;系统可以为真实店铺带来数十倍的营业收入。因为拥有此项能力，所以BirthCaker有了一个天然的营销优势。创始人考虑到系统负荷和安全问题，采用了Authing来管理用户。&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;Authing为我们的工程师节省了大量不必要的开发时间，得以让专注于业务实现和用户体验，大幅加快了系统开发速度。同时为我们带来了非常好的安全保证，是一个非常有价值的产品。&lt;/strong&gt; -Steven.Y, CEO, 「你的生日」&lt;/p&gt; &lt;/blockquote&gt; &lt;hr /&gt; &lt;h2 id=&quot;挑战及解决方案&quot;&gt;挑战及解决方案&lt;/h2&gt; &lt;h3 id=&quot;首要挑战三端用户管理&quot;&gt;首要挑战：三端用户管理&lt;/h3&gt; &lt;p&gt;BirthCaker是一个B2B2C的应用，意味着它至少有三端用户：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;买家&lt;/li&gt; &lt;li&gt;卖家&lt;/li&gt; &lt;li&gt;管理员&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;这同时也意味着三端用户的登录／注册／管理功能。为了能够快速完成这三端用户的管理／认证工作，BirthCaker使用了Authing的应用创建功能，将三端用户从物理上隔开，完美的满足了需求。&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;我们发现Authing的一些功能真的特别贴心，开发者体验非常好。&lt;/strong&gt;- 叶乐心, 工程师,「你的生日」&lt;/p&gt; &lt;/blockquote&gt; &lt;h3 id=&quot;二次挑战微信登录&quot;&gt;二次挑战：微信登录&lt;/h3&gt; &lt;p&gt;BirthCaker的卖家入口是通过微信进行登录的，使用Authing的「第三方OAuth」功能后，节省了数倍的时间完成了OAuth功能的开发，使BirthCaker的工程师快速进入了业务开发阶段。&lt;/p&gt; &lt;h3 id=&quot;三次挑战将authing嵌入进小程序&quot;&gt;三次挑战：将Authing嵌入进小程序&lt;/h3&gt; &lt;p&gt;我们知道，小程序的api必须要通过腾讯的审核，但是在使用Authing API的时候无法让腾讯审核，所以我们使用&lt;web-view&gt;组件避开了这层限制，通过让&lt;web-view&gt;和小程序进行交互，完成了通过Authing进行注册的功能。Authing提供了使用unionid进行注册的功能，使用户不使用邮箱和手机也可以进入Authing系统。&lt;/web-view&gt;&lt;/web-view&gt;&lt;/p&gt; &lt;h3 id=&quot;四次挑战多个登录方法的杂糅问题&quot;&gt;四次挑战：多个登录方法的杂糅问题&lt;/h3&gt; &lt;p&gt;在自己做用户系统的时候，往往需要手机／邮箱／用户名／OAuth共同可以登，这就需要设计很多的逻辑来实现，而这一切，仅仅通过调用Authing的SDK即得到了解决。&lt;/p&gt; &lt;hr /&gt; &lt;h2 id=&quot;受益之处&quot;&gt;受益之处&lt;/h2&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;Authing帮我们分担了很多工作，我们将这些被分担出来的时间投入到了更多的客户支持中，以后有新产品还会继续使用。&lt;/strong&gt;- Steven.Y, CEO,「你的生日」&lt;/p&gt; &lt;/blockquote&gt; &lt;ul&gt; &lt;li&gt;排除了不必要工作&lt;/li&gt;...</content>
+ </entry>
+
+ 
+
+ <entry>
    <title>Authing 官方博客正式开通</title>
    <link href="http://localhost:4000/Authing%E5%AE%98%E6%96%B9%E5%8D%9A%E5%AE%A2%E6%AD%A3%E5%BC%8F%E5%BC%80%E9%80%9A"/>
    <id>http://localhost:4000/Authing官方博客正式开通</id>
-   <updated>2018-04-15T00:00:00+08:00</updated>
+   <updated>2018-04-16T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;今天是2018年4月16日，距离Authing 1.0 发布已经有两个月了。Authing在互联网上终于有了自己的小窝！今后，Authing的版本迭代将会在这里更新，感谢关注！&lt;/p&gt;
 </content>
  </entry>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>客户故事-在小程序中使用Authing</title>
+  <meta name="description" content="在小程序中使用Authing">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          Auth<span>ing</span> 官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>在小程序中使用Authing</h2>		
+	<time datetime="2018-04-17T00:00:00+08:00" class="by-line">17 Apr 2018</time>
+	<div class="content">
+
+		<h2 id="背景">背景</h2>
+
+<p>在2018年，小程序毫无疑问成为了一个流行平台，许多互联网创业者的首选不再是APP，而是小程序。</p>
+
+<p>“你的生日”（以下简称BirthCaker）便是这么一个案例。</p>
+
+<p>BirthCaker是一款B2B2C电商应用，专注于蛋糕领域的在线商城，以“蛋糕在线定制”为核心切入点。其团队拥有较强的引流能力，其自主研发的<strong>「玩店」</strong>系统可以为真实店铺带来数十倍的营业收入。因为拥有此项能力，所以BirthCaker有了一个天然的营销优势。创始人考虑到系统负荷和安全问题，采用了Authing来管理用户。</p>
+
+<blockquote>
+  <p><strong>Authing为我们的工程师节省了大量不必要的开发时间，得以让专注于业务实现和用户体验，大幅加快了系统开发速度。同时为我们带来了非常好的安全保证，是一个非常有价值的产品。</strong>
+-Steven.Y, CEO, 「你的生日」</p>
+</blockquote>
+
+<hr />
+
+<h2 id="挑战及解决方案">挑战及解决方案</h2>
+
+<h3 id="首要挑战三端用户管理">首要挑战：三端用户管理</h3>
+
+<p>BirthCaker是一个B2B2C的应用，意味着它至少有三端用户：</p>
+
+<ul>
+  <li>买家</li>
+  <li>卖家</li>
+  <li>管理员</li>
+</ul>
+
+<p>这同时也意味着三端用户的登录／注册／管理功能。为了能够快速完成这三端用户的管理／认证工作，BirthCaker使用了Authing的应用创建功能，将三端用户从物理上隔开，完美的满足了需求。</p>
+
+<blockquote>
+  <p><strong>我们发现Authing的一些功能真的特别贴心，开发者体验非常好。</strong>- 叶乐心, 工程师,「你的生日」</p>
+</blockquote>
+
+<h3 id="二次挑战微信登录">二次挑战：微信登录</h3>
+
+<p>BirthCaker的卖家入口是通过微信进行登录的，使用Authing的「第三方OAuth」功能后，节省了数倍的时间完成了OAuth功能的开发，使BirthCaker的工程师快速进入了业务开发阶段。</p>
+
+<h3 id="三次挑战将authing嵌入进小程序">三次挑战：将Authing嵌入进小程序</h3>
+
+<p>我们知道，小程序的api必须要通过腾讯的审核，但是在使用Authing API的时候无法让腾讯审核，所以我们使用<web-view>组件避开了这层限制，通过让<web-view>和小程序进行交互，完成了通过Authing进行注册的功能。Authing提供了使用unionid进行注册的功能，使用户不使用邮箱和手机也可以进入Authing系统。</web-view></web-view></p>
+
+<h3 id="四次挑战多个登录方法的杂糅问题">四次挑战：多个登录方法的杂糅问题</h3>
+
+<p>在自己做用户系统的时候，往往需要手机／邮箱／用户名／OAuth共同可以登，这就需要设计很多的逻辑来实现，而这一切，仅仅通过调用Authing的SDK即得到了解决。</p>
+
+<hr />
+
+<h2 id="受益之处">受益之处</h2>
+
+<blockquote>
+  <p><strong>Authing帮我们分担了很多工作，我们将这些被分担出来的时间投入到了更多的客户支持中，以后有新产品还会继续使用。</strong>- Steven.Y, CEO,「你的生日」</p>
+</blockquote>
+
+<ul>
+  <li>排除了不必要工作</li>
+  <li>更快开始面向市场推广</li>
+  <li>减少了安全、开发风险</li>
+  <li>得到了全程跟踪开发的工程师帮助</li>
+  <li>让团队更加专注于产品创新，而不是底层设施</li>
+  <li>集成起来非常简单，文档非常清晰，对开发者相当友好</li>
+  <li>非常快速的完成了SSO功能</li>
+</ul>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

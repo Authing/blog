@@ -4,12 +4,43 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-22T15:29:45+08:00</updated>
+ <updated>2018-04-22T15:54:49+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Authing 将进行版本升级</title>
+   <link href="http://localhost:4000/Authing%E5%B0%86%E8%BF%9B%E8%A1%8C%E7%89%88%E6%9C%AC%E5%8D%87%E7%BA%A7"/>
+   <id>http://localhost:4000/Authing将进行版本升级</id>
+   <updated>2018-04-22T00:00:00+08:00</updated>
+   <content type="html">&lt;h3 id=&quot;客户端&quot;&gt;客户端&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;邮件模版即时预览功能&lt;/li&gt;
+  &lt;li&gt;热点图统计功能（统计登录／注册热度）&lt;/li&gt;
+  &lt;li&gt;创建应用增加logo上传&lt;/li&gt;
+  &lt;li&gt;前端增加支付状态主动检查&lt;/li&gt;
+  &lt;li&gt;优化SEO&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;系统架构&quot;&gt;系统架构&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;提高安全防范&lt;/li&gt;
+  &lt;li&gt;增加微信PC登录的图片版本&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;预计新版本发布时间&quot;&gt;预计新版本发布时间&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;2018年6月底&lt;/strong&gt;&lt;/p&gt;
+
+</content>
+ </entry>
 
  
 

@@ -42,7 +42,7 @@ menuClick();
 
 window.onload = function() {
 	wx.config({
-      debug: true,
+      debug: false,
       appId: 'wxf8b4f85f3a794e77',
       timestamp: 1524384232,
       nonceStr: 'rBFHuB4686xzJnaL',

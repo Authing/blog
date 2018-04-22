@@ -39,3 +39,39 @@ function menuClick() {
 }
 
 menuClick();
+
+window.onload = function() {
+	wx.config({
+      debug: true,
+      appId: 'wxf8b4f85f3a794e77',
+      timestamp: 1524384232,
+      nonceStr: 'rBFHuB4686xzJnaL',
+      signature: '9aa0602eb4f1da3b8fe25c389a92bf7f68f5551d',
+      jsApiList: [
+        'checkJsApi',
+        'onMenuShareAppMessage',
+        'onMenuShareTimeline',
+        'onMenuShareQQ',
+        'onMenuShareWeibo',
+        'onMenuShareQZone'
+      ]
+  	});
+
+	wx.ready(function () {
+
+		var shareObj = {
+	      title: document.title,
+	      desc: document.querySelector('meta[name="description"]').getAttribute('content'),
+	      link: location.href,
+	      imgUrl: 'http://usercontents.authing.cn/client/logo-dark-colorful.jpg',
+	      fail: function (res) {
+	        alert('对不起，分享失败');
+	      }
+	    }
+
+	    wx.onMenuShareAppMessage(shareObj);
+	    wx.onMenuShareTimeline(shareObj);
+	    wx.onMenuShareQQ(shareObj);
+	    wx.onMenuShareWeibo(shareObj);
+	});
+}

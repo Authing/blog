@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-22T16:26:42+08:00</updated>
+ <updated>2018-04-25T15:15:41+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -61,7 +61,7 @@
    <updated>2018-04-16T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;今天是2018年4月16日，距离Authing 1.0 发布已经有两个月了。Authing在互联网上终于有了自己的小窝！今后，Authing的版本迭代将会在这里更新，感谢关注！&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://usercontents.authing.cn/client/logo-dark-colorful.jpg&quot; alt=&quot;Authing_logo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/client/logo-dark-colorful.jpg&quot; alt=&quot;Authing_logo&quot; /&gt;&lt;/p&gt;
 
 </content>
  </entry>

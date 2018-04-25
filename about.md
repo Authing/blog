@@ -43,7 +43,7 @@ AaaS提供了安全的准入许可和数据存储。当一名用户或一款应�
 
 ### 认证流程
 
-![auth_uml](http://usercontents.authing.cn/white_paper/authing_auth_uml.png)
+![auth_uml](https://usercontents.authing.cn/white_paper/authing_auth_uml.png)
 
 认证通过后，后端会生成基于JWT规范的Token。客户端将Token放到HTTP协议中的```Authorzation```头中并加上标注```Bearer```即可进行登录验证。
 

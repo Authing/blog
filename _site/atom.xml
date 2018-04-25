@@ -4,12 +4,23 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-25T15:17:36+08:00</updated>
+ <updated>2018-04-25T15:56:42+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Authing 已开启全站HTTPS</title>
+   <link href="http://localhost:4000/Authing%E5%B7%B2%E5%BC%80%E5%90%AF%E5%85%A8%E7%AB%99HTTPS"/>
+   <id>http://localhost:4000/Authing已开启全站HTTPS</id>
+   <updated>2018-04-25T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;Authing在上一个版本其实已经开启HTTPS，但是相关CDN和图片存储未开启，目前已经替换所有未切换到HTTPS的存储内容。&lt;/p&gt;
+</content>
+ </entry>
 
  
 

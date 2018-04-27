@@ -4,12 +4,23 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-25T15:56:42+08:00</updated>
+ <updated>2018-04-27T19:42:42+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Authing私有部署成内部SSO系统 - 高等教育出版社 - 客户案例 | Authing 官方博客</title>
+   <link href="http://localhost:4000/%E5%AE%A2%E6%88%B7%E6%95%85%E4%BA%8B-%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE-%E5%86%85%E9%83%A8SSO%E7%B3%BB%E7%BB%9F"/>
+   <id>http://localhost:4000/[客户故事][高等教育出版社]内部SSO系统</id>
+   <updated>2018-04-27T00:00:00+08:00</updated>
+   <content type="html">
+</content>
+ </entry>
 
  
 

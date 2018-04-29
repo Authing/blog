@@ -4,12 +4,30 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-04-29T17:28:20+08:00</updated>
+ <updated>2018-04-29T23:04:50+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Authing 上线Go语言SDK | Authing 官方博客</title>
+   <link href="http://localhost:4000/%E4%B8%8A%E7%BA%BFGo%E8%AF%AD%E8%A8%80%E7%9A%84SDK"/>
+   <id>http://localhost:4000/上线Go语言的SDK</id>
+   <updated>2018-04-29T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;很高兴的宣布，在国庆假期的第一天，Authing得以上线Go语言的SDK。&lt;/p&gt;
+
+&lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/authing-go-sdk&quot;&gt;authing-go-sdk(https://github.com/Authing/authing-go-sdk)&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;非常感谢 &lt;a href=&quot;https://github.com/kelvinji2009&quot;&gt;kelvinji2009&lt;/a&gt; 对Authing Golang SDK的贡献。&lt;/p&gt;
+
+&lt;p&gt;相关文档也会在近期补充 :) 欢迎继续关注&lt;/p&gt;
+
+</content>
+ </entry>
 
  
 

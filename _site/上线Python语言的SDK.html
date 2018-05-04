@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Authing 上线Python语言SDK | Authing 官方博客</title>
+  <meta name="description" content="Authing 上线Python语言 SDK">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 上线 Python语言 SDK</h2>		
+	<time datetime="2018-05-04T00:00:00+08:00" class="by-line">04 May 2018</time>
+	<div class="content">
+
+		<p>很高兴的宣布，在五四青年节这天，我们上线了Python SDK。</p>
+
+<p>Github repo: <a href="https://github.com/Authing/authing-py-sdk">authing-py-sdk(https://github.com/Authing/authing-py-sdk)</a></p>
+
+<!-- more -->
+
+<p>Authing Python SDK目前只支持Python3+。</p>
+
+<p><a href="https://docs.authing.cn">官方文档请点击这里</a>。</p>
+
+<h2 id="安装">安装</h2>
+
+<hr />
+
+<h4 id="pip">pip</h4>
+
+<p>当构建大规模应用时，我们推荐使用<code class="highlighter-rouge">pip</code>进行安装， 它可以与一些模块打包工具很好地配合使用。
+注意，authing目前仅能从pip3以上安装。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># latest stable</span>
+<span class="nv">$ </span>pip <span class="nb">install </span>authing
+</code></pre></div></div>
+
+<h2 id="开始使用">开始使用</h2>
+
+<hr />
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">authing</span> <span class="kn">import</span> <span class="n">Authing</span>
+
+<span class="n">clientId</span> <span class="o">=</span> <span class="s">'your_client_id'</span>
+<span class="n">secret</span> <span class="o">=</span> <span class="s">'your_app_secret'</span>
+
+<span class="n">authing</span> <span class="o">=</span> <span class="n">Authing</span><span class="p">(</span><span class="n">clientId</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
+
+<span class="c"># 如果authing验证clientId和secret失败，将会抛出一个错误。所以在初始化构造函数的时候，可以使用try...catch保证程序不会挂掉。</span>
+
+<span class="n">user</span> <span class="o">=</span> <span class="n">authing</span><span class="o">.</span><span class="n">login</span><span class="p">({</span>
+    <span class="s">'email'</span><span class="p">:</span> <span class="s">'test@testmail.com'</span><span class="p">,</span>
+    <span class="s">'password'</span><span class="p">:</span> <span class="s">'testpassword'</span>
+<span class="p">})</span>
+
+<span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'errors'</span><span class="p">):</span>
+    <span class="c"># 出错</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># 未出错</span>
+</code></pre></div></div>
+
+<p><a href="https://docs.authing.cn/#/quick_start/howto">怎样获取client ID ?</a>。</p>
+
+<p>获取Client ID和Client Secret，请<a href="https://docs.authing.cn/#/quick_start/howto">点击这里</a>。</p>
+
+<h2 id="错误处理">错误处理</h2>
+
+<hr />
+
+<p>SDK中的接口返回数据若出错会存在”errors”字段，因此可以用如下代码检查是否出错：</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">authing</span><span class="o">.</span><span class="n">xxx</span><span class="p">()</span> <span class="c"># 执行authing的某方法</span>
+
+<span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'errors'</span><span class="p">):</span>
+    <span class="c"># 出错，如 </span>
+    <span class="s">"""
+    {'code': 500, 'message': 'Cast to ObjectId failed ....
+    """</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="c"># 未发生错误，直接使用数据即可，如：</span>
+    <span class="s">"""
+    {'_id': '5aec1ea610ecb800018db176', 'email': 'xieyang@dodora.cn' ...
+    """</span>
+</code></pre></div></div>
+<p>了解更多报错的详情，请查看<a href="https://docs.authing.cn/#/quick_start/error_code">错误代码列表</a>。</p>
+
+<p><a href="https://docs.authing.cn/#/user_service/add_user">接口相关文档请点击这里</a>。</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

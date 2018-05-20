@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Authing即日起支持PHP | Authing 官方博客</title>
+  <meta name="description" content="Authing支持PHP了！">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 即日起支持PHP</h2>		
+	<time datetime="2018-05-20T00:00:00+08:00" class="by-line">20 May 2018</time>
+	<div class="content">
+
+		<p>520这个遍布着爱的日子，我们上线了Authing PHP的SDK，感谢 luhao 的辛苦开发工作。
+Github repo: <a href="https://github.com/Authing/authing-php-sdk">authing-php-sdk</a></p>
+
+<!-- more -->
+
+<p>Authing SDK for PHP目支持PHP5.6+。</p>
+
+<p><a href="https://docs.authing.cn">官方文档请点击这里</a>。</p>
+
+<h3 id="安装">安装</h3>
+
+<hr />
+
+<h4 id="composer">composer</h4>
+
+<p>当构建大规模应用时，我们推荐使用<code class="highlighter-rouge">composer</code>进行安装， 它可以与一些模块打包工具很好地配合使用。</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># latest stable</span>
+<span class="nv">$ </span>composer <span class="nb">install </span>authing-php-sdk
+</code></pre></div></div>
+
+<h3 id="开始使用">开始使用</h3>
+
+<hr />
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">use</span> <span class="nx">Authing\Client</span><span class="p">;</span>
+
+<span class="k">try</span> <span class="p">{</span>
+    <span class="nv">$data</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s1">'clientId'</span> <span class="o">=&gt;</span> <span class="s1">'your id'</span><span class="p">,</span>
+        <span class="s1">'secret'</span>   <span class="o">=&gt;</span> <span class="s1">'your secret'</span><span class="p">,</span>
+    <span class="p">];</span>
+    
+    <span class="nv">$client</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Client</span><span class="p">(</span><span class="nv">$data</span><span class="p">);</span>
+
+     <span class="nv">$client</span><span class="o">-&gt;</span><span class="na">login</span><span class="p">([</span>
+                       <span class="s1">'email'</span> <span class="o">=&gt;</span> <span class="s1">'376155014@qq.com'</span><span class="p">,</span>
+                       <span class="s1">'password'</span> <span class="o">=&gt;</span> <span class="s1">'654321'</span><span class="p">,</span>
+                   <span class="p">]);</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">\Exception</span> <span class="nv">$e</span><span class="p">)</span> <span class="p">{</span>
+ <span class="err"> </span> <span class="err"> </span><span class="c1">// 出错了</span>
+ <span class="err"> </span> <span class="err"> </span><span class="nb">print_r</span><span class="p">(</span><span class="nv">$e</span><span class="o">-&gt;</span><span class="na">getMessage</span><span class="p">());</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p><a href="https://docs.authing.cn/#/quick_start/howto">怎样获取client ID ?</a>。</p>
+
+<p>获取Client ID和Client Secret，请<a href="https://docs.authing.cn/#/quick_start/howto">点击这里</a>。</p>
+
+<h3 id="错误处理">错误处理</h3>
+
+<hr />
+
+<p>统一使用try…catch处理错误</p>
+
+<p>了解更多报错的详情，请查看<a href="https://docs.authing.cn/#/quick_start/error_code">错误代码列表</a>。</p>
+
+<p><a href="https://docs.authing.cn/#/user_service/add_user">接口相关文档请点击这里</a>。</p>
+
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

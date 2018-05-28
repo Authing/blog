@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Authing开源小程序GraphQL客户端 | Authing 官方博客</title>
+  <meta name="description" content="Authing开源小程序GraphQL客户端">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+      <!-- Nav links -->
+	    <a href="https://authing.cn/dashboard">Authing控制台</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing开源小程序GraphQL客户端</h2>		
+	<time datetime="2018-05-28T00:00:00+08:00" class="by-line">28 May 2018</time>
+	<div class="content">
+
+		<p>GraphQL的中国区用户有福了，Authing刚刚发布了微信小程序的GraphQL客户端！</p>
+
+<p><a href="https://usercontents.authing.cn/20180528-183158-HD.mp4"><img src="https://usercontents.authing.cn/20180528-184211@2x.png" alt="Watch the video" /></a></p>
+
+<!-- more -->
+
+<p>点击图片观看演示demo</p>
+
+<p>Github repo: <a href="https://github.com/Authing/wxapp-graphql">wxapp-graphql</a></p>
+
+<h3 id="使用方法">使用方法</h3>
+
+<h4 id="clone项目">clone项目</h4>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/Authing/wxapp-graphql
+</code></pre></div></div>
+
+<h4 id="将文件中的graphql文件夹复制到你的项目中并开始使用">将文件中的graphql文件夹复制到你的项目中并开始使用</h4>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">// 引入文件</span>
+<span class="kd">var</span> <span class="nx">gql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path/to/graphql/wxgql.js'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">GraphQL</span> <span class="o">=</span> <span class="nx">gql</span><span class="p">.</span><span class="nx">GraphQL</span><span class="p">;</span>
+
+<span class="nx">Page</span><span class="p">({</span>
+  <span class="na">test</span><span class="p">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+
+    <span class="c1">// 初始化对象</span>
+    <span class="kd">let</span> <span class="nx">gql</span> <span class="o">=</span> <span class="nx">GraphQL</span><span class="p">({</span>
+      <span class="na">url</span><span class="p">:</span> <span class="s1">'https://users.authing.cn/graphql'</span> <span class="c1">// url必填 </span>
+    <span class="p">});</span>
+
+    <span class="nx">gql</span><span class="p">({</span>
+
+      <span class="c1">// 示例GraphQL查询, body必填</span>
+      <span class="na">body</span><span class="p">:</span> <span class="p">{</span>
+        <span class="na">query</span><span class="p">:</span> <span class="s2">`query getAccessTokenByAppSecret($secret: String!, $clientId: String!){
+    getAccessTokenByAppSecret(secret: $secret, clientId: $clientId)
+}`</span><span class="p">,</span>
+        <span class="na">variables</span><span class="p">:</span> <span class="p">{</span>
+          <span class="na">secret</span><span class="p">:</span> <span class="s1">'427e24d3b7e289ae9469ab6724dc7ff0'</span><span class="p">,</span>
+          <span class="na">clientId</span><span class="p">:</span> <span class="s1">'5a9fa26cf8635a000185528c'</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+
+      <span class="c1">// 成功</span>
+      <span class="na">success</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+      <span class="p">},</span>
+
+      <span class="c1">// 失败</span>
+      <span class="na">fail</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+      <span class="p">},</span>
+
+      <span class="c1">// 执行完成</span>
+      <span class="na">complete</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+
+  <span class="p">}</span>
+<span class="p">});</span>
+
+
+</code></pre></div></div>
+
+<h3 id="todo">TODO</h3>
+
+<ol>
+  <li>兼容WEPY</li>
+  <li>兼容NPM</li>
+  <li>兼容await</li>
+  <li>兼容promise</li>
+  <li>深度错误处理</li>
+</ol>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

@@ -4,12 +4,22 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-05-20T22:49:35+08:00</updated>
+ <updated>2018-05-28T18:49:27+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>Authing开源小程序GraphQL客户端 | Authing 官方博客</title>
+   <link href="http://localhost:4000/Authing%E5%BC%80%E6%BA%90%E5%B0%8F%E7%A8%8B%E5%BA%8FGraphQL%E5%AE%A2%E6%88%B7%E7%AB%AF"/>
+   <id>http://localhost:4000/Authing开源小程序GraphQL客户端</id>
+   <updated>2018-05-28T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;GraphQL的中国区用户有福了，Authing刚刚发布了微信小程序的GraphQL客户端！&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://usercontents.authing.cn/20180528-183158-HD.mp4&quot;&gt;&lt;img src=&quot;https://usercontents.authing.cn/20180528-184211@2x.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;点击图片观看演示demo&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/wxapp-graphql&quot;&gt;wxapp-graphql&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt; &lt;h4 id=&quot;clone项目&quot;&gt;clone项目&lt;/h4&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Authing/wxapp-graphql &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h4 id=&quot;将文件中的graphql文件夹复制到你的项目中并开始使用&quot;&gt;将文件中的graphql文件夹复制到你的项目中并开始使用&lt;/h4&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;// 引入文件&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path/to/graphql/wxgql.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 

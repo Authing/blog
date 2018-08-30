@@ -1,7 +1,7 @@
 ---
-title: Authing 上线Python语言SDK | Authing 官方博客
-description: Authing 上线Python语言 SDK
-header: Authing 上线 Python语言 SDK
+title: Authing 上线 Python 语言 SDK | Authing 官方博客
+description: Authing 上线 Python 语言 SDK
+header: Authing 上线 Python 语言 SDK
 ---
 
 很高兴的宣布，在五四青年节这天，我们上线了Python SDK。

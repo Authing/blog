@@ -1,7 +1,7 @@
 ---
-title: Authing开源小程序GraphQL客户端 | Authing 官方博客
-description: Authing开源小程序GraphQL客户端
-header: Authing开源小程序GraphQL客户端
+title: Authing 开源小程序 GraphQL 客户端 | Authing 官方博客
+description: Authing 开源小程序 GraphQL 客户端
+header: Authing 开源小程序 GraphQL 客户端
 ---
 
 GraphQL的中国区用户有福了，Authing刚刚发布了微信小程序的GraphQL客户端！

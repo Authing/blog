@@ -4,12 +4,22 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-08-30T14:24:04+08:00</updated>
+ <updated>2018-09-15T10:20:03+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
    <email>xieyang@dodora.cn</email>
  </author>
+
+ 
+
+ <entry>
+   <title>小程序扫码登录功能简介 | Authing 官方博客</title>
+   <link href="http://localhost:4000/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"/>
+   <id>http://localhost:4000/小程序扫码登录功能简介</id>
+   <updated>2018-09-15T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;小程序扫码登录指使用Authing小程序&lt;code class=&quot;highlighter-rouge&quot;&gt;身份管家&lt;/code&gt;在网页端或其它客户端执行微信登录，目前的 SDK 仅支持客户端 JavaScript。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;其它语言若想使用可参考&lt;a href=&quot;https://docs.authing.cn/#/quick_start/wxapp_scan_login?id=http%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E&quot;&gt;HTTP接口说明&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://sample.authing.cn&quot;&gt;点击体验小程序扫码登录&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;注意：使用小程序扫码登录，请将 &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt; 升级到 &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.0.6&lt;/code&gt; 版本以上&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-scaning-demo.gif&quot; alt=&quot;扫码demo&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;接入流程&quot;&gt;接入流程&lt;/h3&gt; &lt;h5 id=&quot;1-配置小程序信息&quot;&gt;1. 配置小程序信息&lt;/h5&gt; &lt;p&gt;在Authing控制台中填入小程序的appId、secret和回调地址，用户扫码登录成功会回调至填入的地址。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-oauth-config.png&quot; alt=&quot;配置小程序信息&quot; /&gt;&lt;/p&gt; &lt;h5 id=&quot;2-使用sdkauthing-js-sdk&quot;&gt;2. 使用SDK（authing-js-sdk）&lt;/h5&gt; &lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt;中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;startWXAppScaning&lt;/code&gt;方法（&lt;a href=&quot;https://docs.authing.cn/#/quick_start/javascript&quot;&gt;authing-js-sdk文档&lt;/a&gt;）：&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span...</content>
+ </entry>
 
  
 
@@ -143,55 +153,6 @@
    <id>http://localhost:4000/上线Go语言的SDK</id>
    <updated>2018-04-29T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;很高兴的宣布，在劳动节假期的第一天，Authing得以上线Go语言的SDK。&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/authing-go-sdk&quot;&gt;authing-go-sdk(https://github.com/Authing/authing-go-sdk)&lt;/a&gt;&lt;/p&gt; &lt;p&gt;非常感谢 &lt;a href=&quot;https://github.com/kelvinji2009&quot;&gt;kelvinji2009&lt;/a&gt; 对Authing Golang SDK的贡献。&lt;/p&gt; &lt;!-- more --&gt; &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt; &lt;p&gt;Make sure you have a working Go environment. To install &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-go-sdk&lt;/code&gt;, simply run:&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/Authing/graphql &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h2 id=&quot;quick-guide&quot;&gt;Quick Guide&lt;/h2&gt; &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 私有部署成内部 SSO 系统 - 高等教育出版社 - 客户案例 | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E5%AE%A2%E6%88%B7%E6%95%85%E4%BA%8B-%E9%AB%98%E7%AD%89%E6%95%99%E8%82%B2%E5%87%BA%E7%89%88%E7%A4%BE-%E5%86%85%E9%83%A8SSO%E7%B3%BB%E7%BB%9F"/>
-   <id>http://localhost:4000/[客户故事][高等教育出版社]内部SSO系统</id>
-   <updated>2018-04-27T00:00:00+08:00</updated>
-   <content type="html">&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
-
-&lt;p&gt;高等教育出版社（以下简称“高教”）掌管了中国高校几乎所有的印刷业务，旗下拥有数十个平台，分别由不同的团队开发，需要一个内部SSO系统管理所有的用户登录／注册，同时要无缝衔接到之前的系统上。&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;在使用Authing之前，我们曾签了一个外包项目，但是执行的不是很好。使用Authing之后，经过Authing团队的培训，我们很快将Authing应用到了我们的业务中。&lt;/strong&gt;
--杨主任&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;挑战及解决方案&quot;&gt;挑战及解决方案&lt;/h2&gt;
-
-&lt;h3 id=&quot;首要挑战原平台账户的迁移问题&quot;&gt;首要挑战：原平台账户的迁移问题&lt;/h3&gt;
-
-&lt;p&gt;对接原有平台的第一步，首先是要有用户数据，因此，需要先在Authing平台上创建对应平台的对应应用，然后将对应平台的用户迁入进Authing。这一步，Authing提供了API，因此没有什么技术上的难度。&lt;/p&gt;
-
-&lt;p&gt;但难点在于如何导入&lt;strong&gt;原平台的密码&lt;/strong&gt;，任何一个安全性过关的网站，其密码一定是经过加密存储到数据库中的，这意味着即使是网站管理员也无法知道用户的密码是什么。对于这个问题，Authing单独为高教提供了JavaScript标签，让用户在第一次使用Authing登录时修改密码（一般来说，用户不会感到异常），这样就实现了无缝对接。&lt;/p&gt;
-
-&lt;h3 id=&quot;其他挑战应用间的用户需要可以互相查看&quot;&gt;其他挑战：应用间的用户需要可以互相查看&lt;/h3&gt;
-
-&lt;p&gt;这个功能是Authing没有提供的功能，不过Authing团队对此作了定制，满足了客户的需求。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;受益之处&quot;&gt;受益之处&lt;/h2&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;strong&gt;如果我们招人做，先不说能不能满足需求，人力成本、沟通之类的也很麻烦，是个漫长的周期，还不排除离职 他们离职之后系统仍需要维护。可以说，Authing帮我们打消了疑虑的同时也帮我们解决了麻烦。&lt;/strong&gt;- 杨主任&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;排除了不必要工作&lt;/li&gt;
-  &lt;li&gt;以最小成本，最快的速度统一了内部平台&lt;/li&gt;
-  &lt;li&gt;得到了Authing团队的官方培训和系统部署&lt;/li&gt;
-&lt;/ul&gt;
-
-</content>
  </entry>
 
  

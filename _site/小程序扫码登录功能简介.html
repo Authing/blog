@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>小程序扫码登录功能简介 | Authing 官方博客</title>
+  <meta name="description" content="Authing 小程序扫码登录功能简介">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 小程序扫码登录功能简介</h2>		
+	<time datetime="2018-09-15T00:00:00+08:00" class="by-line">15 Sep 2018</time>
+	<div class="content">
+
+		<p>小程序扫码登录指使用Authing小程序<code class="highlighter-rouge">身份管家</code>在网页端或其它客户端执行微信登录，目前的 SDK 仅支持客户端 JavaScript。</p>
+
+<!-- more -->
+
+<p>其它语言若想使用可参考<a href="https://docs.authing.cn/#/quick_start/wxapp_scan_login?id=http%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E">HTTP接口说明</a>。</p>
+
+<p><a href="http://sample.authing.cn">点击体验小程序扫码登录</a>。</p>
+
+<p>注意：使用小程序扫码登录，请将 <code class="highlighter-rouge">authing-js-sdk</code> 升级到 <code class="highlighter-rouge">v1.0.6</code> 版本以上</p>
+
+<p><img src="https://usercontents.authing.cn/wxapp-scaning-demo.gif" alt="扫码demo" /></p>
+
+<h3 id="接入流程">接入流程</h3>
+
+<h5 id="1-配置小程序信息">1. 配置小程序信息</h5>
+
+<p>在Authing控制台中填入小程序的appId、secret和回调地址，用户扫码登录成功会回调至填入的地址。</p>
+
+<p><img src="https://usercontents.authing.cn/wxapp-oauth-config.png" alt="配置小程序信息" /></p>
+
+<h5 id="2-使用sdkauthing-js-sdk">2. 使用SDK（authing-js-sdk）</h5>
+
+<p>在<code class="highlighter-rouge">authing-js-sdk</code>中使用<code class="highlighter-rouge">startWXAppScaning</code>方法（<a href="https://docs.authing.cn/#/quick_start/javascript">authing-js-sdk文档</a>）：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'authing-js-sdk'</span><span class="p">);</span>
+
+<span class="c1">// 对Client ID和Client Secret进行验证，获取Access Token</span>
+<span class="kd">var</span> <span class="nx">auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Authing</span><span class="p">({</span>
+	<span class="na">clientId</span><span class="p">:</span> <span class="s1">'your_client_id'</span><span class="p">,</span>
+	<span class="na">secret</span><span class="p">:</span> <span class="s1">'your_app_secret'</span>
+<span class="p">});</span>
+
+<span class="nx">auth</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">validAuth</span><span class="p">)</span> <span class="p">{</span>
+
+	<span class="nx">validAuth</span><span class="p">.</span><span class="nx">startWXAppScaning</span><span class="p">({</span>
+    	<span class="na">mount</span><span class="p">:</span> <span class="s1">'qrcode-node'</span><span class="p">,</span> <span class="c1">//二维码挂载点的HTML元素ID，如不写则默认漂浮在文档中间</span>
+	<span class="p">});</span>
+	
+<span class="p">})</span>
+
+</code></pre></div></div>
+
+<p>扫码完成后会自动跳到用户配置的URL上。</p>
+
+<h3 id="参数说明">参数说明</h3>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="nx">validAuth</span><span class="p">.</span><span class="nx">startWXAppScaning</span><span class="p">({</span>
+  	<span class="na">mount</span><span class="p">:</span> <span class="s1">'qrcode-node'</span><span class="p">,</span> <span class="c1">// 可选，二维码挂载点，如不写则默认漂浮在文档中间</span>
+  	<span class="na">redirect</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 可选，是否执行跳转（在用户后台配置的URL），默认为true，相关用户信息回传至url上</span>
+  	<span class="na">onSuccess</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，登录成功后回调函数，redirect为true时不回调此函数</span>
+  	<span class="na">onError</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，登录失败后回调函数，一般为网络问题</span>
+  	<span class="na">onIntervalStarting</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">intervalNum</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，轮询时的回调函数，intervalNum 为 setInterval 返回的数值，可使用 clearInterval 停止轮询</span>
+  	<span class="na">interval</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="c1">// 可选，每隔多少秒检查一次，默认1500</span>
+  	<span class="na">tips</span><span class="p">:</span> <span class="s1">'搜索小程序 &lt;strong&gt;身份管家&lt;/strong&gt; 扫码登录'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<h3 id="注意事项">注意事项</h3>
+
+<p>打开小程序扫码登录后，若您使用了其他第三方服务（如 Github），那么在 <a href="https://docs.authing.cn/#/oauth/read_oauth_list">获取应用第三方OAuth列表</a> 接口中需要手动过滤 <code class="highlighter-rouge">alias</code> 为 <code class="highlighter-rouge">wxapp</code> 的 OAuth应用，因为小程序扫码登录无链接可打开。</p>
+
+<p><code class="highlighter-rouge">alias</code> 为 <code class="highlighter-rouge">wxapp</code> 的应用即小程序扫码登录的应用。</p>
+
+<p><img width="400" height="400" src="https://cdn.authing.cn/sdk/guide/image/authing-login-form-wx-qrcode.png" /></p>
+
+<h3 id="http接口说明">HTTP接口说明</h3>
+
+<p>HTTP接口适用于非JavaScript平台，JavaScript开发者可以略过此节。</p>
+
+<p>扫码登录需要客户端做两个步骤：</p>
+
+<ol>
+  <li>生成二维码</li>
+  <li>客户端轮询查询扫码状态</li>
+</ol>
+
+<p>还有一个步骤是用户搜索<code class="highlighter-rouge">身份管家</code>小程序进行扫码登录，这块Authing已经做好，不需要开发者操心。</p>
+
+<h4 id="1-生成二维码">1. 生成二维码</h4>
+
+<h5 id="地址httpsoauthauthingcnoauthwxappqrcodeclientidrandomrandom_string">地址：https://oauth.authing.cn/oauth/wxapp/qrcode/:clientId?random=RANDOM_STRING</h5>
+
+<ul>
+  <li>
+    <p><strong>请求方法:</strong></p>
+
+    <ul>
+      <li><code class="highlighter-rouge">GET</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>参数:</strong></p>
+
+    <ul>
+      <li><code class="highlighter-rouge">{String} clientId</code>
+        <ul>
+          <li>即将登录的Authing应用Id</li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">{String} random</code>
+        <ul>
+          <li>客户端生成的随机字符串</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>返回数据:</strong></p>
+
+    <ul>
+      <li>
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"_id"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"client"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"oauth"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"oauthWithApplication"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"qrcode"</span><span class="p">:</span> <span class="s2">"https://usercontents.authing.cn/wxapp/qrcode/SweuVjfoPwSUTVEUv.png"</span><span class="p">,</span>
+        <span class="s2">"expiredAt"</span><span class="p">:</span> <span class="s2">"2018-07-16T12:56:03.000Z"</span><span class="p">,</span>
+        <span class="s2">"__v"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"createdAt"</span><span class="p">:</span> <span class="s2">"2018-07-16T12:55:03.302Z"</span><span class="p">,</span>
+        <span class="s2">"redirect"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"success"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">"used"</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">},</span>
+    <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li>返回数据中data中的qrcode即二维码地址，可直接先客户端显示。</li>
+      <li>若处理成功，code为200，非200都为失败。</li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="2-轮询查询扫码状态">2. 轮询查询扫码状态</h4>
+
+<h5 id="地址httpsoauthauthingcnoauthwxappconfirmqrrandomrandom_string">地址：https://oauth.authing.cn/oauth/wxapp/confirm/qr?random=RANDOM_STRING</h5>
+
+<ul>
+  <li>
+    <p><strong>请求方法:</strong></p>
+
+    <ul>
+      <li><code class="highlighter-rouge">POST</code></li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>参数:</strong></p>
+
+    <ul>
+      <li><code class="highlighter-rouge">{String} random</code>
+        <ul>
+          <li>在第一步生成二维码时客户端生成的随机字符串</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>返回数据:</strong></p>
+
+    <ul>
+      <li>
+        <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"扫码登录成功"</span><span class="p">,</span>
+        <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"_id"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+            <span class="s2">"email"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">"emailVerified"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"ivy"</span><span class="p">,</span>
+            <span class="s2">"nickname"</span><span class="p">:</span> <span class="s2">"ivy"</span><span class="p">,</span>
+            <span class="s2">"company"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"photo"</span><span class="p">:</span> <span class="s2">"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLkQc7PfrbBqFMib6lkPUxaA5UsMiadibfWQtKv0CBcKnH2khXicvUB9WB2ibYxN6GRTaTsQfPtlsAafBg/132"</span><span class="p">,</span>
+            <span class="s2">"browser"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"******************************************.*********************.*********************"</span><span class="p">,</span>
+            <span class="s2">"tokenExpiredAt"</span><span class="p">:</span> <span class="s2">"Wed Aug 01 2018 15:59:42 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"loginsCount"</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+            <span class="s2">"lastLogin"</span><span class="p">:</span> <span class="s2">"Tue Jul 17 2018 15:59:42 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"lastIP"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+            <span class="s2">"signedUp"</span><span class="p">:</span> <span class="s2">"Tue Jul 17 2018 11:15:03 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"blocked"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"isDeleted"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"__typename"</span><span class="p">:</span> <span class="s2">"ExtendUser"</span>
+        <span class="p">},</span>
+        <span class="s2">"redirect"</span><span class="p">:</span> <span class="s2">"http://sample.authing.cn/#/redirect"</span>
+    <span class="p">},</span>
+    <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li><code class="highlighter-rouge">redirect</code>为用户在Authing控制台中配置的回调地址，开发者可自行回调到此地址</li>
+      <li>如果用户已扫码，则code为200，若为非200，则代表用户未扫码或扫码失败</li>
+    </ul>
+  </li>
+</ul>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-15T10:20:03+08:00</updated>
+ <updated>2018-09-15T10:23:44+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -19,6 +19,16 @@
    <id>http://localhost:4000/小程序扫码登录功能简介</id>
    <updated>2018-09-15T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;小程序扫码登录指使用Authing小程序&lt;code class=&quot;highlighter-rouge&quot;&gt;身份管家&lt;/code&gt;在网页端或其它客户端执行微信登录，目前的 SDK 仅支持客户端 JavaScript。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;其它语言若想使用可参考&lt;a href=&quot;https://docs.authing.cn/#/quick_start/wxapp_scan_login?id=http%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E&quot;&gt;HTTP接口说明&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://sample.authing.cn&quot;&gt;点击体验小程序扫码登录&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;注意：使用小程序扫码登录，请将 &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt; 升级到 &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.0.6&lt;/code&gt; 版本以上&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-scaning-demo.gif&quot; alt=&quot;扫码demo&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;接入流程&quot;&gt;接入流程&lt;/h3&gt; &lt;h5 id=&quot;1-配置小程序信息&quot;&gt;1. 配置小程序信息&lt;/h5&gt; &lt;p&gt;在Authing控制台中填入小程序的appId、secret和回调地址，用户扫码登录成功会回调至填入的地址。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-oauth-config.png&quot; alt=&quot;配置小程序信息&quot; /&gt;&lt;/p&gt; &lt;h5 id=&quot;2-使用sdkauthing-js-sdk&quot;&gt;2. 使用SDK（authing-js-sdk）&lt;/h5&gt; &lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt;中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;startWXAppScaning&lt;/code&gt;方法（&lt;a href=&quot;https://docs.authing.cn/#/quick_start/javascript&quot;&gt;authing-js-sdk文档&lt;/a&gt;）：&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>一行代码生成登录表单功能简介 | Authing 官方博客</title>
+   <link href="http://localhost:4000/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E7%99%BB%E5%BD%95%E8%A1%A8%E5%8D%95"/>
+   <id>http://localhost:4000/一行代码生成登录表单</id>
+   <updated>2018-09-15T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;一行代码生成表单仅适用于 &lt;strong&gt;JavaScript&lt;/strong&gt; 客户端应用，该功能简称 &lt;a href=&quot;https://github.com/Authing/login-form&quot;&gt;Login-Form&lt;/a&gt;。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;代码开源，欢迎 star: &lt;a href=&quot;https://github.com/Authing/login-form&quot;&gt;https://github.com/Authing/login-form&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;该表单拥有以下基本功能：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;邮箱／密码登录注册&lt;/li&gt; &lt;li&gt;忘记密码以及重置密码&lt;/li&gt; &lt;li&gt;记住账号功能（加密存储到浏览器本地）&lt;/li&gt; &lt;li&gt;第三方 OAuth 登录（需先在后台配置）&lt;/li&gt; &lt;li&gt;小程序扫码登录（需先在后台配置）&lt;/li&gt; &lt;li&gt;响应式特性&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/sdk/guide/image/login-form.png&quot; alt=&quot;login-form&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://sample.authing.cn/#/&quot;&gt;点击体验&lt;/a&gt;。&lt;/p&gt; &lt;h2 id=&quot;使用步骤&quot;&gt;使用步骤&lt;/h2&gt; &lt;h3 id=&quot;1-引入代码&quot;&gt;1. 引入代码&lt;/h3&gt; &lt;p&gt;目前只支持 &lt;strong&gt;script&lt;/strong&gt; 引入，暂不支持 &lt;strong&gt;NPM&lt;/strong&gt; 安装，使用了本功能的开发者可以不必再安装 &lt;strong&gt;authing-js-sdk&lt;/strong&gt;，因为通过 script 标签引入的代码中包含了 &lt;strong&gt;authing-js-sdk&lt;/strong&gt;。&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;...</content>
  </entry>
 
  
@@ -143,16 +153,6 @@
    <id>http://localhost:4000/上线Python语言的SDK</id>
    <updated>2018-05-04T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;很高兴的宣布，在五四青年节这天，我们上线了Python SDK。&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/authing-py-sdk&quot;&gt;authing-py-sdk(https://github.com/Authing/authing-py-sdk)&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;Authing Python SDK目前只支持Python3+。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://docs.authing.cn&quot;&gt;官方文档请点击这里&lt;/a&gt;。&lt;/p&gt; &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt; &lt;hr /&gt; &lt;h4 id=&quot;pip&quot;&gt;pip&lt;/h4&gt; &lt;p&gt;当构建大规模应用时，我们推荐使用&lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;进行安装， 它可以与一些模块打包工具很好地配合使用。 注意，authing目前仅能从pip3以上安装。&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# latest stable&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;authing &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h2 id=&quot;开始使用&quot;&gt;开始使用&lt;/h2&gt; &lt;hr /&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 上线 Go 语言 SDK | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E4%B8%8A%E7%BA%BFGo%E8%AF%AD%E8%A8%80%E7%9A%84SDK"/>
-   <id>http://localhost:4000/上线Go语言的SDK</id>
-   <updated>2018-04-29T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;很高兴的宣布，在劳动节假期的第一天，Authing得以上线Go语言的SDK。&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/authing-go-sdk&quot;&gt;authing-go-sdk(https://github.com/Authing/authing-go-sdk)&lt;/a&gt;&lt;/p&gt; &lt;p&gt;非常感谢 &lt;a href=&quot;https://github.com/kelvinji2009&quot;&gt;kelvinji2009&lt;/a&gt; 对Authing Golang SDK的贡献。&lt;/p&gt; &lt;!-- more --&gt; &lt;h2 id=&quot;installation&quot;&gt;Installation&lt;/h2&gt; &lt;p&gt;Make sure you have a working Go environment. To install &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-go-sdk&lt;/code&gt;, simply run:&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;go get github.com/Authing/graphql &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h2 id=&quot;quick-guide&quot;&gt;Quick Guide&lt;/h2&gt; &lt;div class=&quot;language-go highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;package&lt;/span&gt;&lt;span class=&quot;x&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;main&lt;/span&gt;&lt;span...</content>
  </entry>
 
  

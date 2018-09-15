@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>一行代码生成登录表单功能简介 | Authing 官方博客</title>
+  <meta name="description" content="Authing 一行代码生成登录表单功能简介">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 一行代码生成登录表单功能简介</h2>		
+	<time datetime="2018-09-15T00:00:00+08:00" class="by-line">15 Sep 2018</time>
+	<div class="content">
+
+		<p>一行代码生成表单仅适用于 <strong>JavaScript</strong> 客户端应用，该功能简称 <a href="https://github.com/Authing/login-form">Login-Form</a>。</p>
+
+<!-- more -->
+
+<p>代码开源，欢迎 star: <a href="https://github.com/Authing/login-form">https://github.com/Authing/login-form</a>。</p>
+
+<p>该表单拥有以下基本功能：</p>
+
+<ul>
+  <li>邮箱／密码登录注册</li>
+  <li>忘记密码以及重置密码</li>
+  <li>记住账号功能（加密存储到浏览器本地）</li>
+  <li>第三方 OAuth 登录（需先在后台配置）</li>
+  <li>小程序扫码登录（需先在后台配置）</li>
+  <li>响应式特性</li>
+</ul>
+
+<p><img src="https://cdn.authing.cn/sdk/guide/image/login-form.png" alt="login-form" /></p>
+
+<p><a href="https://sample.authing.cn/#/">点击体验</a>。</p>
+
+<h2 id="使用步骤">使用步骤</h2>
+
+<h3 id="1-引入代码">1. 引入代码</h3>
+
+<p>目前只支持 <strong>script</strong> 引入，暂不支持 <strong>NPM</strong> 安装，使用了本功能的开发者可以不必再安装 <strong>authing-js-sdk</strong>，因为通过 script 标签引入的代码中包含了 <strong>authing-js-sdk</strong>。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"https://cdn.authing.cn/sdk/javascript/authing-login-form-1.1.0.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre></div></div>
+
+<h3 id="2-显示表单">2. 显示表单</h3>
+
+<p>初始化 AuthingForm 即可，查看怎么获取 Client Id 和 Secret 请 <a href="https://docs.authing.cn/#/quick_start/howto">点击这里</a>。</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+  <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'填入_Authing_的_client_ID'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'填入_Authing_client_ID_的_secret'</span>
+  <span class="p">});</span>
+
+</code></pre></div></div>
+
+<p>完成这两步后就可以使用表单了。</p>
+
+<h3 id="3-完整代码">3. 完整代码</h3>
+
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.authing.cn/sdk/javascript/authing-login-form-1.1.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'填入_Authing_的_client_ID'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'填入_Authing_client_ID_的_secret'</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span>
+</code></pre></div></div>
+
+<p>为了应用的安全起见，建议参数中的 <code class="highlighter-rouge">secret</code> 以加密方式存储在客户端代码中。</p>
+
+<h2 id="高级功能">高级功能</h2>
+
+<h3 id="方法">方法</h3>
+
+<p>Login-Form 提供了两个方法用以操作界面的显示和隐藏，方法名见下表：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>方法名称</th>
+      <th>方法参数</th>
+      <th>功能</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>show</strong></td>
+      <td><strong>mountId</strong></td>
+      <td>指定 Authing form 将在何处显示，接受一个 html 元素 id，不含<code class="highlighter-rouge">#</code>号。不指定则默认全屏弹出 Modal 登录框</td>
+    </tr>
+    <tr>
+      <td><strong>hide</strong></td>
+      <td>无</td>
+      <td>隐藏表单</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>在初始化完构造函数后会自动执行 <code class="highlighter-rouge">show</code> 方法。</p>
+
+<h3 id="完整参数">完整参数</h3>
+
+<p>Login-Form 的构造函数 <code class="highlighter-rouge">AuthingForm</code> 提供了一些高级功能。</p>
+
+<p>以下是完整的参数列表：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数名称</th>
+      <th>是否必填</th>
+      <th>默认值</th>
+      <th>类型</th>
+      <th>参数说明</th>
+      <th>回调参数</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>clientId</strong></td>
+      <td><strong>是</strong></td>
+      <td>无</td>
+      <td>String</td>
+      <td>Authing Client ID</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>secret</strong></td>
+      <td><strong>是</strong></td>
+      <td>无</td>
+      <td>String</td>
+      <td>Authing Client Secret</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>mountId</td>
+      <td>否</td>
+      <td>无</td>
+      <td>String</td>
+      <td>指定 Authing form 将在何处显示，接受一个 html 元素 id，不含<code class="highlighter-rouge">#</code>号。不指定则默认全屏弹出 Modal 登录框</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>title</td>
+      <td>否</td>
+      <td>Authing</td>
+      <td>String</td>
+      <td><strong>产品名称</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>logo</td>
+      <td>否</td>
+      <td>[Authing LOGO]</td>
+      <td>String</td>
+      <td><strong>产品logo</strong>，默认为 Authing 的官方 Logo</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>forceLogin</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否将注册和登录合并</strong>，合并后如果用户不存在将自动注册</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>hideQRCode</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否隐藏小程序扫码登录</strong>，在开发者在 Authing 控制台开启小程序扫码登录后，若此项为 true 将不显示小程序扫码登录</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>hideUP</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否隐藏用户名-密码登陆</strong>，隐藏后将不显示用户名-密码登录框</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>hideUsename</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否隐藏注册时的用户名填写</strong>，隐藏后将不显示用户名输入框</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>hideOAuth</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否隐藏第三方 OAuth 登录</strong>，在开发者在 Authing 控制台开启 OAuth 登录后，若此项为 true 将隐藏全部 OAuth 登录</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>hideClose</td>
+      <td>否</td>
+      <td>false</td>
+      <td>Boolean</td>
+      <td><strong>是否隐藏登录框右上角的关闭按钮</strong>，如果隐藏，用户将不能通过点击按钮或按 ESC 关闭登录框</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong></td>
+      <td>否</td>
+      <td>false</td>
+      <td>Object</td>
+      <td><strong>定制输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.username</td>
+      <td>否</td>
+      <td>请输入用户名</td>
+      <td>String</td>
+      <td><strong>定制输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.email</td>
+      <td>否</td>
+      <td>请输入邮箱</td>
+      <td>String</td>
+      <td><strong>用户名输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.password</td>
+      <td>否</td>
+      <td>请输入密码</td>
+      <td>String</td>
+      <td><strong>邮箱输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.confirmPassword</td>
+      <td>否</td>
+      <td>请确认密码</td>
+      <td>String</td>
+      <td><strong>密码输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.verfiyCode</td>
+      <td>否</td>
+      <td>请输入验证码</td>
+      <td>String</td>
+      <td><strong>验证码输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>placeholder</strong>.newPassword</td>
+      <td>否</td>
+      <td>请输入新密码</td>
+      <td>String</td>
+      <td><strong>新密码输入框的 paceholder</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong></td>
+      <td>否</td>
+      <td>false</td>
+      <td>Object</td>
+      <td><strong>小程序扫码登录的配置项</strong></td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.redirect</td>
+      <td>否</td>
+      <td>true</td>
+      <td>Boolean</td>
+      <td><strong>是否执行跳转（在用户后台配置的URL）</strong>，若值为false，用户数据会通过 onSuccess 回调函数返回</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.onSuccess</td>
+      <td>否</td>
+      <td>null</td>
+      <td>Function</td>
+      <td><strong>登录成功后回调函数，redirect为true时不回调此函数</strong></td>
+      <td>user</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.onError</td>
+      <td>否</td>
+      <td>null</td>
+      <td>Function</td>
+      <td><strong>登录失败后回调函数，一般为网络问题</strong></td>
+      <td>error</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.onIntervalStarting</td>
+      <td>否</td>
+      <td>null</td>
+      <td>Function</td>
+      <td><strong>轮询时的回调函数，intervalNum 为 setInterval 返回的数值，可使用 clearInterval 停止轮询</strong></td>
+      <td>intervalNum</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.interval</td>
+      <td>否</td>
+      <td>1500</td>
+      <td>Number</td>
+      <td>每隔多少秒检查一次是否扫码，默认1500</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td><strong>qrcodeScanning</strong>.tips</td>
+      <td>否</td>
+      <td>使用 微信 或小程序 身份管家 扫码登录</td>
+      <td>String</td>
+      <td>提示信息，可写HTML</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>完整代码：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
+
+  	<span class="c1">// 必选，client ID</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'5b7f79f519915500015f18ac'</span><span class="p">,</span>
+    <span class="c1">// 必选，secret</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'82f36cba243e13f81f06675193732af7'</span><span class="p">,</span>
+
+    <span class="na">title</span><span class="p">:</span> <span class="s1">'Authing'</span><span class="p">,</span>
+    <span class="na">logo</span><span class="p">:</span> <span class="s1">'https://cdn.authing.cn/authing-logo.png'</span><span class="p">,</span>
+
+    <span class="na">forceLogin</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">hideQRCode</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">hideUP</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">hideOAuth</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">hideUsername</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="na">hideClose</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+
+    <span class="na">mountId</span><span class="p">:</span> <span class="s1">'app'</span><span class="p">,</span>
+
+    <span class="c1">// 输入框的placeholder</span>
+    <span class="na">placeholder</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">username</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">email</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">password</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">confirmPassword</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">verfiyCode</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">newPassword</span><span class="p">:</span> <span class="s1">''</span>
+    <span class="p">},</span>
+
+    <span class="na">qrcodeScanning</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">redirect</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 可选，是否执行跳转（在用户后台配置的URL），默认为true，相关用户信息回传至url上</span>
+      <span class="na">onSuccess</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">},</span> <span class="c1">// 可选，登录成功后回调函数，redirect为true时不回调此函数</span>
+      <span class="na">onError</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">},</span> <span class="c1">// 可选，登录失败后回调函数，一般为网络问题</span>
+      <span class="na">onIntervalStarting</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">intervalNum</span><span class="p">)</span> <span class="p">{</span>
+      <span class="p">},</span> <span class="c1">// 可选，轮询时的回调函数，intervalNum 为 setInterval 返回的数值，可使用 clearInterval 停止轮询</span>
+      <span class="na">interval</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="c1">// 可选，每隔多少秒检查一次是否扫码，默认1500</span>
+      <span class="na">tips</span><span class="p">:</span> <span class="s1">'使用 微信 或小程序 身份管家 扫码登录'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
+    <span class="p">}</span>
+  <span class="p">});</span>
+</code></pre></div></div>
+<h3 id="事件响应">事件响应</h3>
+
+<p>Login-Form 还提供了 <strong>十五</strong> 个事件，开发者可根据需要定制操作。</p>
+
+<p>在初始化 <code class="highlighter-rouge">AuthingForm</code> 后，可使用 <code class="highlighter-rouge">on</code>方法，如：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span> <span class="na">clientId</span><span class="p">:</span> <span class="s1">'xxxx'</span><span class="p">,</span> <span class="na">secret</span><span class="p">:</span> <span class="s1">'xxxxx'</span><span class="p">});</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="c1">// 成功登录后的回调事件，参数 user 为用户数据</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<p>完整的事件列表如下：</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>事件名称</th>
+      <th>事件说明</th>
+      <th>事件参数</th>
+      <th>事件参数说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>authingLoad</td>
+      <td>Authing Client ID 和 Secret验证通过，加载完成</td>
+      <td>authing</td>
+      <td>authing 对象，可直接操作 <code class="highlighter-rouge">login</code>,<code class="highlighter-rouge">register</code>等方法</td>
+    </tr>
+    <tr>
+      <td>authingUnload</td>
+      <td>Authing Client ID 和 Secret验证失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息</td>
+    </tr>
+    <tr>
+      <td>oauthLoad</td>
+      <td>OAuth列表加载完成</td>
+      <td>oauthList</td>
+      <td>完整的 OAuth 列表，若用户未在后台配置过则为空</td>
+    </tr>
+    <tr>
+      <td>oauthUnload</td>
+      <td>OAuth列表加载失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息</td>
+    </tr>
+    <tr>
+      <td>login</td>
+      <td>用户登录成功</td>
+      <td>user</td>
+      <td>用户数据</td>
+    </tr>
+    <tr>
+      <td>loginError</td>
+      <td>用户登录失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息，包含字段缺失／非法或服务器错误等信息</td>
+    </tr>
+    <tr>
+      <td>register</td>
+      <td>用户注册成功</td>
+      <td>user</td>
+      <td>用户数据</td>
+    </tr>
+    <tr>
+      <td>registerError</td>
+      <td>用户注册失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息，包含字段缺失／非法或服务器错误等信息</td>
+    </tr>
+    <tr>
+      <td>emailSent</td>
+      <td>忘记密码邮件发送成功</td>
+      <td>data</td>
+      <td>发送的结果</td>
+    </tr>
+    <tr>
+      <td>emailSentError</td>
+      <td>忘记密码邮件发送失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息</td>
+    </tr>
+    <tr>
+      <td>resetPassword</td>
+      <td>重置密码成功</td>
+      <td>data</td>
+      <td>重置密码结果</td>
+    </tr>
+    <tr>
+      <td>resetPasswordError</td>
+      <td>重置密码失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息</td>
+    </tr>
+    <tr>
+      <td>scanning</td>
+      <td>扫码登录成功</td>
+      <td>user</td>
+      <td>用户数据</td>
+    </tr>
+    <tr>
+      <td>scanningError</td>
+      <td>扫码登录失败</td>
+      <td><code class="highlighter-rouge">error</code></td>
+      <td>错误信息</td>
+    </tr>
+    <tr>
+      <td>scanningIntervalStarting</td>
+      <td>开始监听扫码事件</td>
+      <td>interval</td>
+      <td>用户可使用 <code class="highlighter-rouge">clearInterval</code> 停止监听</td>
+    </tr>
+    <tr>
+      <td>formClosed</td>
+      <td>Login Form 关闭事件</td>
+      <td>null</td>
+      <td>用户按下 ESC 或点击右上方的关闭按钮后会触发此事件</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>完整代码如下：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'authingLoad'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">authing</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on authing load'</span><span class="p">,</span> <span class="nx">authing</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'authingUnload'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on authing load error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'oauthLoad'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">oauthList</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on oauth load'</span><span class="p">,</span> <span class="nx">oauthList</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'oauthUnload'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on oauth unload'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on login'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'loginError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on login error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'register'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on register'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'registerError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on register error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'emailSent'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on email sent'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'emailSentError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on email sent error'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'resetPassword'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on reset password'</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'resetPasswordError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on reset password error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanning'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning success'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanningError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanningIntervalStarting'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning interval starting'</span><span class="p">,</span> <span class="nx">interval</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'formClosed'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on form closed'</span><span class="p">);</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2018 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

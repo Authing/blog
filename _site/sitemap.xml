@@ -61,6 +61,10 @@
 <lastmod>2018-09-15T00:00:00+08:00</lastmod>
 </url>
 <url>
+<loc>http://localhost:4000/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%80%BC%E5%BE%97%E4%B8%8A%E4%BA%91</loc>
+<lastmod>2018-09-15T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>http://localhost:4000/blog/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B</loc>
 <lastmod>2018-09-15T00:00:00+08:00</lastmod>
 </url>
@@ -75,5 +79,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/blog/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/page3/</loc>
 </url>
 </urlset>

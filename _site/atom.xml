@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2018-09-15T10:23:44+08:00</updated>
+ <updated>2018-09-15T10:31:24+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -19,6 +19,16 @@
    <id>http://localhost:4000/小程序扫码登录功能简介</id>
    <updated>2018-09-15T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;小程序扫码登录指使用Authing小程序&lt;code class=&quot;highlighter-rouge&quot;&gt;身份管家&lt;/code&gt;在网页端或其它客户端执行微信登录，目前的 SDK 仅支持客户端 JavaScript。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;其它语言若想使用可参考&lt;a href=&quot;https://docs.authing.cn/#/quick_start/wxapp_scan_login?id=http%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E&quot;&gt;HTTP接口说明&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://sample.authing.cn&quot;&gt;点击体验小程序扫码登录&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;注意：使用小程序扫码登录，请将 &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt; 升级到 &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.0.6&lt;/code&gt; 版本以上&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-scaning-demo.gif&quot; alt=&quot;扫码demo&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;接入流程&quot;&gt;接入流程&lt;/h3&gt; &lt;h5 id=&quot;1-配置小程序信息&quot;&gt;1. 配置小程序信息&lt;/h5&gt; &lt;p&gt;在Authing控制台中填入小程序的appId、secret和回调地址，用户扫码登录成功会回调至填入的地址。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-oauth-config.png&quot; alt=&quot;配置小程序信息&quot; /&gt;&lt;/p&gt; &lt;h5 id=&quot;2-使用sdkauthing-js-sdk&quot;&gt;2. 使用SDK（authing-js-sdk）&lt;/h5&gt; &lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt;中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;startWXAppScaning&lt;/code&gt;方法（&lt;a href=&quot;https://docs.authing.cn/#/quick_start/javascript&quot;&gt;authing-js-sdk文档&lt;/a&gt;）：&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>为什么身份认证值得上云 | Authing 官方博客</title>
+   <link href="http://localhost:4000/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%80%BC%E5%BE%97%E4%B8%8A%E4%BA%91"/>
+   <id>http://localhost:4000/为什么身份认证值得上云</id>
+   <updated>2018-09-15T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;身份认证云本质上是一种“无服务器”应用，今天，我们就来讨论下这种模式的优点和缺点。如果没有权衡利弊，你或许不会使用身份认证云或其他“无服务器应用”。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;先看一下“无服务器架构”的介绍：&lt;/p&gt; &lt;p&gt;无服务器架构是包含 BaaS （后端即服务）和 FaaS （函数即服务）的程序开发 /部署方案（但未来远不止如此）。这类结构消除了对传统服务器的管理需求，使用无服务器架构可以显著降低运营成本、复杂性和开发时间。相应的代价是对供应商有更强的依赖性。&lt;/p&gt; &lt;p&gt;身份认证云是无服务器架构的一个分支，使用身份认证云和使用无服务器架构拥有一样的好处。&lt;/p&gt; &lt;h3 id=&quot;减少管理成本&quot;&gt;减少管理成本&lt;/h3&gt; &lt;p&gt;身份认证云本质上是一种外包解决方案，这种方案就是向某人付费以管理身份认证这个过程。由于一个服务同时被上千人使用，所以会产生一种规模经济效应：你所需支付的费用非常少，因为和其他人共享了基础设施（硬件、网络）。&lt;/p&gt; &lt;p&gt;除了与他人共享基础设施外，你还可以省掉大量的人工成本，不必开发基础设施，从而快速进入核心业务的开发。&lt;/p&gt; &lt;p&gt;如果说 PaaS 是为你解决了硬件和资源层的抽象，那么 Serverless 则是为你解决了软件层的抽象，这样你可以更加专注于市场和产品。&lt;/p&gt; &lt;h3 id=&quot;减少开发成本&quot;&gt;减少开发成本&lt;/h3&gt; &lt;p&gt;身份认证虽然听上去很简单，但他包括了注册、登录、密码管理、非法探测以及其他登录方式（如 OAuth，小程序扫码），而这些功能在大多数应用中都是相似的。Authing 便是应此而生的，我们希望将现成的身份认证功能集成到应用程序中，而不用每次开一个新项目都去重复开发相似的功能，这不仅浪费资源还浪费时间。&lt;/p&gt; &lt;p&gt;另一个例子是 BaaS 数据库，如 Firebase。这源于一些团队发现客户端与数据库的连接完全可以从业务中剥离出来。BaaS 不仅消除了大部分数据库管理开销，也提供了 ACL 访问权限机制，这样能保证足够的安全性。&lt;/p&gt; &lt;p&gt;不可否认的是，没有一家公司仅能靠自己的代码开发出成功的产品。将自己的非核心业务通过云的方式托管到第三方服务上，不失为一个好的选择。&lt;/p&gt; &lt;h3 id=&quot;减少伸缩成本&quot;&gt;减少伸缩成本&lt;/h3&gt; &lt;p&gt;无服务器或 FaaS 最大的优势是其无限弹性拓展能力，而这带给你的最大好处是只需要支付所需的计算费用，不用支付为保障弹性伸缩而配置的其他计算资源。假设你在推广一个 APP，当峰值来临的时候，登录接口挂掉，新用户无法注册，这会对你的业务造成致命的打击。而使用 Authing 这种身份认证云的时候，你则完全不用操心，因为系统会在峰值时自动伸缩。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/640.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt; &lt;p&gt;上图的红线是你在自己做弹性伸缩时所需要的服务器数量，蓝线是使用 Authing 时所需要的服务器数量，线的高度越低，所需支付的费用就越少。比起闲置的红线，蓝线明显更加绿色节能，这对厂商和消费者来说都是好事。&lt;/p&gt; &lt;blockquote&gt;...</content>
  </entry>
 
  
@@ -143,16 +153,6 @@
 &lt;!-- more --&gt;
 
 </content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 上线 Python 语言 SDK | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E4%B8%8A%E7%BA%BFPython%E8%AF%AD%E8%A8%80%E7%9A%84SDK"/>
-   <id>http://localhost:4000/上线Python语言的SDK</id>
-   <updated>2018-05-04T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;很高兴的宣布，在五四青年节这天，我们上线了Python SDK。&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/authing-py-sdk&quot;&gt;authing-py-sdk(https://github.com/Authing/authing-py-sdk)&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;Authing Python SDK目前只支持Python3+。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://docs.authing.cn&quot;&gt;官方文档请点击这里&lt;/a&gt;。&lt;/p&gt; &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt; &lt;hr /&gt; &lt;h4 id=&quot;pip&quot;&gt;pip&lt;/h4&gt; &lt;p&gt;当构建大规模应用时，我们推荐使用&lt;code class=&quot;highlighter-rouge&quot;&gt;pip&lt;/code&gt;进行安装， 它可以与一些模块打包工具很好地配合使用。 注意，authing目前仅能从pip3以上安装。&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# latest stable&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;pip &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;authing &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h2 id=&quot;开始使用&quot;&gt;开始使用&lt;/h2&gt; &lt;hr /&gt; &lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span...</content>
  </entry>
 
  

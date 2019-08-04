@@ -4,7 +4,8 @@ description: Authing 是什么以及为什么需要 Authing
 header: Authing 是什么以及为什么需要 Authing
 ---
 Authing 是什么以及为什么需要 Authing
-<!--more-->
+
+<!-- more -->
 
 ![](http://img.staryu.cn/20190710-authing.jpg)
 

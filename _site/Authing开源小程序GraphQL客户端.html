@@ -170,7 +170,7 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="c1">// 引入文件</span>
-<span class="kd">var</span> <span class="nx">gql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path/to/graphql/wxgql.js'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">gql</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path/to/graphql/wxgql.js</span><span class="dl">'</span><span class="p">);</span>
 <span class="kd">var</span> <span class="nx">GraphQL</span> <span class="o">=</span> <span class="nx">gql</span><span class="p">.</span><span class="nx">GraphQL</span><span class="p">;</span>
 
 <span class="nx">Page</span><span class="p">({</span>
@@ -178,7 +178,7 @@
 
     <span class="c1">// 初始化对象</span>
     <span class="kd">let</span> <span class="nx">gql</span> <span class="o">=</span> <span class="nx">GraphQL</span><span class="p">({</span>
-      <span class="na">url</span><span class="p">:</span> <span class="s1">'https://users.authing.cn/graphql'</span> <span class="c1">// url必填 </span>
+      <span class="na">url</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://users.authing.cn/graphql</span><span class="dl">'</span> <span class="c1">// url必填 </span>
     <span class="p">});</span>
 
     <span class="nx">gql</span><span class="p">({</span>
@@ -189,8 +189,8 @@
     getAccessTokenByAppSecret(secret: $secret, clientId: $clientId)
 }`</span><span class="p">,</span>
         <span class="na">variables</span><span class="p">:</span> <span class="p">{</span>
-          <span class="na">secret</span><span class="p">:</span> <span class="s1">'427e24d3b7e289ae9469ab6724dc7ff0'</span><span class="p">,</span>
-          <span class="na">clientId</span><span class="p">:</span> <span class="s1">'5a9fa26cf8635a000185528c'</span>
+          <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">427e24d3b7e289ae9469ab6724dc7ff0</span><span class="dl">'</span><span class="p">,</span>
+          <span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">5a9fa26cf8635a000185528c</span><span class="dl">'</span>
         <span class="p">}</span>
       <span class="p">},</span>
 

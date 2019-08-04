@@ -183,18 +183,18 @@
 
 <span class="n">authing</span> <span class="o">=</span> <span class="n">Authing</span><span class="p">(</span><span class="n">clientId</span><span class="p">,</span> <span class="n">secret</span><span class="p">)</span>
 
-<span class="c"># 如果authing验证clientId和secret失败，将会抛出一个错误。所以在初始化构造函数的时候，可以使用try...catch保证程序不会挂掉。</span>
-
+<span class="c1"># 如果authing验证clientId和secret失败，将会抛出一个错误。所以在初始化构造函数的时候，可以使用try...catch保证程序不会挂掉。
+</span>
 <span class="n">user</span> <span class="o">=</span> <span class="n">authing</span><span class="o">.</span><span class="n">login</span><span class="p">({</span>
     <span class="s">'email'</span><span class="p">:</span> <span class="s">'test@testmail.com'</span><span class="p">,</span>
     <span class="s">'password'</span><span class="p">:</span> <span class="s">'testpassword'</span>
 <span class="p">})</span>
 
 <span class="k">if</span> <span class="n">user</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'errors'</span><span class="p">):</span>
-    <span class="c"># 出错</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="c"># 未出错</span>
-</code></pre></div></div>
+    <span class="c1"># 出错
+</span><span class="k">else</span><span class="p">:</span>
+    <span class="c1"># 未出错
+</span></code></pre></div></div>
 
 <p><a href="https://docs.authing.cn/#/quick_start/howto">怎样获取client ID ?</a>。</p>
 
@@ -206,16 +206,16 @@
 
 <p>SDK中的接口返回数据若出错会存在”errors”字段，因此可以用如下代码检查是否出错：</p>
 
-<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">authing</span><span class="o">.</span><span class="n">xxx</span><span class="p">()</span> <span class="c"># 执行authing的某方法</span>
-
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">result</span> <span class="o">=</span> <span class="n">authing</span><span class="o">.</span><span class="n">xxx</span><span class="p">()</span> <span class="c1"># 执行authing的某方法
+</span>
 <span class="k">if</span> <span class="n">result</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">'errors'</span><span class="p">):</span>
-    <span class="c"># 出错，如 </span>
-    <span class="s">"""
+    <span class="c1"># 出错，如 
+</span>    <span class="s">"""
     {'code': 500, 'message': 'Cast to ObjectId failed ....
     """</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="c"># 未发生错误，直接使用数据即可，如：</span>
-    <span class="s">"""
+    <span class="c1"># 未发生错误，直接使用数据即可，如：
+</span>    <span class="s">"""
     {'_id': '5aec1ea610ecb800018db176', 'email': 'xieyang@dodora.cn' ...
     """</span>
 </code></pre></div></div>

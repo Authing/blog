@@ -2,9 +2,9 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Authing 官方博客 | 云端身份认证系统</title>
- <link href="http://localhost:4000/atom.xml" rel="self"/>
- <id>http://localhost:4000</id>
- <updated>2018-09-29T22:18:25+08:00</updated>
+ <link href="https://authing.cn/blog/atom.xml" rel="self"/>
+ <id>https://authing.cn/blog</id>
+ <updated>2019-08-04T19:48:26+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -14,9 +14,53 @@
  
 
  <entry>
+   <title>云端身份认证，你了解这个新兴的市场吗</title>
+   <link href="https://authing.cn/blog/%E4%BA%91%E7%AB%AF%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81-%E4%BD%A0%E4%BA%86%E8%A7%A3%E8%BF%99%E4%B8%AA%E6%96%B0%E5%85%B4%E7%9A%84%E5%B8%82%E5%9C%BA%E5%90%97"/>
+   <id>https://authing.cn/blog/云端身份认证，你了解这个新兴的市场吗</id>
+   <updated>2018-10-09T00:00:00+08:00</updated>
+   <content type="html">&lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20181009-%E4%BA%91%E7%AB%AF%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81.jpg&quot; alt=&quot;&quot; /&gt;
+云端身份认证，你了解这个新兴的市场吗?
+&lt;!-- more --&gt;&lt;/p&gt;
+
+&lt;p&gt;云端身份认证，也叫IDaaS（Identity As a Service）。这是个很超前的概念，试想下未来做APP、网站或其他系统的时候直接通过云端API授权用户是个什么样的场景。你可以免掉写各种平台的OAuth登录，免掉设计各种字段来满足不同的登录方式，免掉检查安全问题，如果流量很大，你甚至不用操心该怎么处理并发问题，这一切都在云端为你做好了。&lt;/p&gt;
+
+&lt;p&gt;这就和将服务托管在云端一样。一开始也没有人愿意把自己的系统放在一个第三方平台运行，但最终，市场让阿里云成了全球第三大云计算厂商，这难道还不能说明问题吗？马化腾也说，云计算就是未来的水和电，在人人都需要水和电的今天，互联网企业也不会错过。&lt;/p&gt;
+
+&lt;p&gt;未来的市场一定是细分化的，越细分的市场，所能产生的价值也就越大。因为每个组织得以专注，得以做的更好。而云端身份认证就是这样一个构建软件基础设施的细分市场。目前，美国有两家云端认证厂商，一家叫Okta，已上市；另外一家叫Auth0，一周前刚获得了5500万美金D轮融资。可见，云端身份认证的市场在海外已经被打开，这同时也是中国的机会。在中国，sso360是认证行业的领头羊，其已在新三板上市。但其主打并非云端认证，而是SSO（Single Sign On，单点登录），所以其主要营业来源还是偏向于定制开发。纵观中国市场，比较有潜力的只有九州云腾和Authing。&lt;/p&gt;
+
+&lt;p&gt;无论是sso360，还是九州云腾、Authing，其都使用了Docker微服务架构，提供了各种语言的SDK供开发者接入；目的都是帮助企业或个人快速开发核心业务。&lt;/p&gt;
+
+&lt;p&gt;身份认证和授权工作，在互联网业务中不是核心业务，却是很重要的流程。即使如今互联网上有很多开放授权协议如OpenID、OAuth1&amp;amp;2、SMAL等，但是给开发人员的技术选型造成了困难，后期的维护成本也不小。认证的场景非常多，软件、游戏、社区各行各业都需要，但是我们知道现在的用户都是比较懒的，如果能实现OAuth让用户点一下是最好的。而如果要实现OAuth，开发者就必须要面临大量工作。如仅仅微信的第三方登录就包括了Android、iOS、网页、移动网页、内嵌网页等多种方式，为了提升用户体验和覆盖更多的用户，互联网公司不得不都实现一遍。而每家公司对此的重复实现，无疑是一种巨大的资源浪费。这个时候，云端身份认证就派上用场了。他们已经将所有这些复杂的流程封装到了一起，你只需要调用接口即可，不用操心实现。&lt;/p&gt;
+
+&lt;p&gt;但是，不是说仅仅实现了用户注册、登录的过程就完了。CEO、首席增长官等都需要知道详细的用户数据，并以此为目标加大运营和销售力度。这个时候也必须让开发者开发全套的用户管理界面，包括了数据可视化、资料的增删查改等操作。除了用户能感知到的登录／注册框外，一家公司还需要更多的用户信息。比如用户的IP、用户所处的地理位置、用户的登录次数、用户来源、用户注册时间、最后登录时间等等。而这每一项工作都需要巨大的工作量，比如在查询用户地理位置时为了保证速度，必须要上一个消息队列来异步处理。一旦上了消息队列，那么对于运维人员来说，也是加重了工作负担。&lt;/p&gt;
+
+&lt;p&gt;你以为这就完了？还早着呢。现在大多系统是支持多种登录方式登录的，比如用手机、邮箱、用户名和第三方登录都可以找到同一个账户，这其中是存在一些冲突的，你必须再设计一些逻辑以将这些字段联关联到一起。如果是邮箱注册，很多企业是有邮件发送的需求的。这个时候就涉及到邮件服务器的问题了。邮件服务器怎么搭建？搭建成什么样？量大后怎么保证稳定性？邮件的模版是什么样？运营人员是否可以随时编辑？邮件要支持哪些模版？这些问题将一直困扰开发团队、运营团队和运维团队。&lt;/p&gt;
+
+&lt;p&gt;所以为什么不将以上工作托管到云一步到位呢？这也是为什么云端身份认证是未来趋势的原因。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;阻挡人们使用云端认证的大概只有一个忧虑：安全和隐私。&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;很明显，使用云端认证必然会将自己的用户数据导入到第三方平台，这对于安全性和隐私性是个巨大的挑战。从用户的角度来说，我的信息不仅要放到我的注册商里面，还有一个后面的服务商拥有，凭什么？从接入方的角度来看，我不仅要拱手给出我的用户数据，还要给你钱，你如何保证你不会侵犯我和用户的隐私，如何保证不查看我们的运营数据？从服务商的角度来看，如何让终端用户和接入用户信任，是最大的问题。&lt;/p&gt;
+
+&lt;p&gt;好在我们有区块链、以太坊和智能合约。我们都承认人的行为和欲望是无止尽且很难规范的，那就索性让计算机来规范人的行为罢。智能合约在这里就可以充当一个法官的角色。如果接入方担心认证服务商会查看数据，那么可以直接通过智能合约规定，只有项目的拥有者可以查看数据，其他人无权限，智能合约一旦发布，无法进行任何更改，所以一旦发布，这个制度就会永远存在。所以这就解决了用户和接入方关于隐私的忧虑，除了他们自己，其他人没有权限可以查看。&lt;/p&gt;
+
+&lt;p&gt;基于区块链的身份认证已经写入今年工信部的区块链白皮书中了，这是个神奇而又有很大导向性的事情。文中写道：“随着互联网的迅速发展，数字身份在各行各业中的应用变得越来越普遍。然而，数字身份在实际应用中存在个人隐私与数据主权的问题 。例如，个体在各个网站填写个人欣喜建立数字身份时，数据被重复存储在各个网站中，一方面造成了资源浪费，另一方面使个人隐私无法得到保障。在上述情况下，个人信息数据被存储在第三方网站中而非属于个人，存在数据被滥用和盗用的可能性。”。&lt;/p&gt;
+
+&lt;p&gt;白皮书中提到的解决办法是“在验证环节，利用非对称加密技术，验证请求方无需原始数据，仅通过对比数字身份的哈希值即可完成身份验证，消除了个人隐私泄漏的风险。此外，区块链可以消除由单方使用虚假信息的可能性，例如地址信息、电话号码等。这有助于防止身份盗用，消除了个人数字身份在不同场景使用时信息不一致的风险”。&lt;/p&gt;
+
+&lt;p&gt;这是可行且有效的措施。&lt;/p&gt;
+
+&lt;p&gt;综上所述，随着文中提到的组织对认证行业的摸索和区块链相关生态的发展，云端认证拥有即将走入千家万户的趋势，让我们拭目以待。&lt;/p&gt;
+
+</content>
+ </entry>
+
+ 
+
+ <entry>
    <title>JSON Web Token 解析接口变更说明 | Authing 官方博客</title>
-   <link href="http://localhost:4000/JSON-Web-Token-%E8%A7%A3%E6%9E%90%E6%8E%A5%E5%8F%A3%E5%8F%98%E6%9B%B4%E8%AF%B4%E6%98%8E"/>
-   <id>http://localhost:4000/JSON-Web-Token-解析接口变更说明</id>
+   <link href="https://authing.cn/blog/JSON-Web-Token-%E8%A7%A3%E6%9E%90%E6%8E%A5%E5%8F%A3%E5%8F%98%E6%9B%B4%E8%AF%B4%E6%98%8E"/>
+   <id>https://authing.cn/blog/JSON-Web-Token-解析接口变更说明</id>
    <updated>2018-09-29T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;为了提高安全性，我们更新了 JavaScript SDK 中的 decodeToken 方法，该方法可用来解析用户的 Token，获取用户 id 等源信息。&lt;/p&gt;
 
@@ -28,8 +72,8 @@
 
  <entry>
    <title>小程序扫码登录功能简介 | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"/>
-   <id>http://localhost:4000/小程序扫码登录功能简介</id>
+   <link href="https://authing.cn/blog/%E5%B0%8F%E7%A8%8B%E5%BA%8F%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B"/>
+   <id>https://authing.cn/blog/小程序扫码登录功能简介</id>
    <updated>2018-09-15T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;小程序扫码登录指使用Authing小程序&lt;code class=&quot;highlighter-rouge&quot;&gt;身份管家&lt;/code&gt;在网页端或其它客户端执行微信登录，目前的 SDK 仅支持客户端 JavaScript。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;其它语言若想使用可参考&lt;a href=&quot;https://docs.authing.cn/#/quick_start/wxapp_scan_login?id=http%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E&quot;&gt;HTTP接口说明&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://sample.authing.cn&quot;&gt;点击体验小程序扫码登录&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;注意：使用小程序扫码登录，请将 &lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt; 升级到 &lt;code class=&quot;highlighter-rouge&quot;&gt;v1.0.6&lt;/code&gt; 版本以上&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-scaning-demo.gif&quot; alt=&quot;扫码demo&quot; /&gt;&lt;/p&gt; &lt;h3 id=&quot;接入流程&quot;&gt;接入流程&lt;/h3&gt; &lt;h5 id=&quot;1-配置小程序信息&quot;&gt;1. 配置小程序信息&lt;/h5&gt; &lt;p&gt;在Authing控制台中填入小程序的appId、secret和回调地址，用户扫码登录成功会回调至填入的地址。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/wxapp-oauth-config.png&quot; alt=&quot;配置小程序信息&quot; /&gt;&lt;/p&gt; &lt;h5 id=&quot;2-使用sdkauthing-js-sdk&quot;&gt;2. 使用SDK（authing-js-sdk）&lt;/h5&gt; &lt;p&gt;在&lt;code class=&quot;highlighter-rouge&quot;&gt;authing-js-sdk&lt;/code&gt;中使用&lt;code class=&quot;highlighter-rouge&quot;&gt;startWXAppScaning&lt;/code&gt;方法（&lt;a href=&quot;https://docs.authing.cn/#/quick_start/javascript&quot;&gt;authing-js-sdk文档&lt;/a&gt;）：&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span...</content>
  </entry>
@@ -38,8 +82,8 @@
 
  <entry>
    <title>为什么身份认证值得上云 | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%80%BC%E5%BE%97%E4%B8%8A%E4%BA%91"/>
-   <id>http://localhost:4000/为什么身份认证值得上云</id>
+   <link href="https://authing.cn/blog/%E4%B8%BA%E4%BB%80%E4%B9%88%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%80%BC%E5%BE%97%E4%B8%8A%E4%BA%91"/>
+   <id>https://authing.cn/blog/为什么身份认证值得上云</id>
    <updated>2018-09-15T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;身份认证云本质上是一种“无服务器”应用，今天，我们就来讨论下这种模式的优点和缺点。如果没有权衡利弊，你或许不会使用身份认证云或其他“无服务器应用”。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;先看一下“无服务器架构”的介绍：&lt;/p&gt; &lt;p&gt;无服务器架构是包含 BaaS （后端即服务）和 FaaS （函数即服务）的程序开发 /部署方案（但未来远不止如此）。这类结构消除了对传统服务器的管理需求，使用无服务器架构可以显著降低运营成本、复杂性和开发时间。相应的代价是对供应商有更强的依赖性。&lt;/p&gt; &lt;p&gt;身份认证云是无服务器架构的一个分支，使用身份认证云和使用无服务器架构拥有一样的好处。&lt;/p&gt; &lt;h3 id=&quot;减少管理成本&quot;&gt;减少管理成本&lt;/h3&gt; &lt;p&gt;身份认证云本质上是一种外包解决方案，这种方案就是向某人付费以管理身份认证这个过程。由于一个服务同时被上千人使用，所以会产生一种规模经济效应：你所需支付的费用非常少，因为和其他人共享了基础设施（硬件、网络）。&lt;/p&gt; &lt;p&gt;除了与他人共享基础设施外，你还可以省掉大量的人工成本，不必开发基础设施，从而快速进入核心业务的开发。&lt;/p&gt; &lt;p&gt;如果说 PaaS 是为你解决了硬件和资源层的抽象，那么 Serverless 则是为你解决了软件层的抽象，这样你可以更加专注于市场和产品。&lt;/p&gt; &lt;h3 id=&quot;减少开发成本&quot;&gt;减少开发成本&lt;/h3&gt; &lt;p&gt;身份认证虽然听上去很简单，但他包括了注册、登录、密码管理、非法探测以及其他登录方式（如 OAuth，小程序扫码），而这些功能在大多数应用中都是相似的。Authing 便是应此而生的，我们希望将现成的身份认证功能集成到应用程序中，而不用每次开一个新项目都去重复开发相似的功能，这不仅浪费资源还浪费时间。&lt;/p&gt; &lt;p&gt;另一个例子是 BaaS 数据库，如 Firebase。这源于一些团队发现客户端与数据库的连接完全可以从业务中剥离出来。BaaS 不仅消除了大部分数据库管理开销，也提供了 ACL 访问权限机制，这样能保证足够的安全性。&lt;/p&gt; &lt;p&gt;不可否认的是，没有一家公司仅能靠自己的代码开发出成功的产品。将自己的非核心业务通过云的方式托管到第三方服务上，不失为一个好的选择。&lt;/p&gt; &lt;h3 id=&quot;减少伸缩成本&quot;&gt;减少伸缩成本&lt;/h3&gt; &lt;p&gt;无服务器或 FaaS 最大的优势是其无限弹性拓展能力，而这带给你的最大好处是只需要支付所需的计算费用，不用支付为保障弹性伸缩而配置的其他计算资源。假设你在推广一个 APP，当峰值来临的时候，登录接口挂掉，新用户无法注册，这会对你的业务造成致命的打击。而使用 Authing 这种身份认证云的时候，你则完全不用操心，因为系统会在峰值时自动伸缩。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://usercontents.authing.cn/640.webp&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt; &lt;p&gt;上图的红线是你在自己做弹性伸缩时所需要的服务器数量，蓝线是使用 Authing 时所需要的服务器数量，线的高度越低，所需支付的费用就越少。比起闲置的红线，蓝线明显更加绿色节能，这对厂商和消费者来说都是好事。&lt;/p&gt; &lt;blockquote&gt;...</content>
  </entry>
@@ -48,8 +92,8 @@
 
  <entry>
    <title>一行代码生成登录表单功能简介 | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E7%99%BB%E5%BD%95%E8%A1%A8%E5%8D%95"/>
-   <id>http://localhost:4000/一行代码生成登录表单</id>
+   <link href="https://authing.cn/blog/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%94%9F%E6%88%90%E7%99%BB%E5%BD%95%E8%A1%A8%E5%8D%95"/>
+   <id>https://authing.cn/blog/一行代码生成登录表单</id>
    <updated>2018-09-15T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;一行代码生成表单仅适用于 &lt;strong&gt;JavaScript&lt;/strong&gt; 客户端应用，该功能简称 &lt;a href=&quot;https://github.com/Authing/login-form&quot;&gt;Login-Form&lt;/a&gt;。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;代码开源，欢迎 star: &lt;a href=&quot;https://github.com/Authing/login-form&quot;&gt;https://github.com/Authing/login-form&lt;/a&gt;。&lt;/p&gt; &lt;p&gt;该表单拥有以下基本功能：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;邮箱／密码登录注册&lt;/li&gt; &lt;li&gt;忘记密码以及重置密码&lt;/li&gt; &lt;li&gt;记住账号功能（加密存储到浏览器本地）&lt;/li&gt; &lt;li&gt;第三方 OAuth 登录（需先在后台配置）&lt;/li&gt; &lt;li&gt;小程序扫码登录（需先在后台配置）&lt;/li&gt; &lt;li&gt;响应式特性&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/sdk/guide/image/login-form.png&quot; alt=&quot;login-form&quot; /&gt;&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://sample.authing.cn/#/&quot;&gt;点击体验&lt;/a&gt;。&lt;/p&gt; &lt;h2 id=&quot;使用步骤&quot;&gt;使用步骤&lt;/h2&gt; &lt;h3 id=&quot;1-引入代码&quot;&gt;1. 引入代码&lt;/h3&gt; &lt;p&gt;目前只支持 &lt;strong&gt;script&lt;/strong&gt; 引入，暂不支持 &lt;strong&gt;NPM&lt;/strong&gt; 安装，使用了本功能的开发者可以不必再安装 &lt;strong&gt;authing-js-sdk&lt;/strong&gt;，因为通过 script 标签引入的代码中包含了 &lt;strong&gt;authing-js-sdk&lt;/strong&gt;。&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt;...</content>
  </entry>
@@ -58,8 +102,8 @@
 
  <entry>
    <title>JavaScript SDK for Authing 发布 v1.0.x 正式版 | Authing 官方博客</title>
-   <link href="http://localhost:4000/JSSDK%E5%8D%87%E7%BA%A7%E5%88%B0%E6%AD%A3%E5%BC%8F%E7%89%88"/>
-   <id>http://localhost:4000/JSSDK升级到正式版</id>
+   <link href="https://authing.cn/blog/JSSDK%E5%8D%87%E7%BA%A7%E5%88%B0%E6%AD%A3%E5%BC%8F%E7%89%88"/>
+   <id>https://authing.cn/blog/JSSDK升级到正式版</id>
    <updated>2018-08-30T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;经过半年的发展，Authing SDK for JavaScript 正式版终于可用了！&lt;/p&gt;
 
@@ -94,8 +138,8 @@
 
  <entry>
    <title>Authing 兼容 Java | Authing 官方博客</title>
-   <link href="http://localhost:4000/Authing%E5%85%BC%E5%AE%B9java"/>
-   <id>http://localhost:4000/Authing兼容java</id>
+   <link href="https://authing.cn/blog/Authing%E5%85%BC%E5%AE%B9java"/>
+   <id>https://authing.cn/blog/Authing兼容java</id>
    <updated>2018-07-14T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;让 Java 开发者们久等了，Authing今日起支持Java，客户端相关 GUI 和 OAuth 跳转的兼容也正在开发中，欢迎持续关注！&lt;/p&gt;
 
@@ -109,8 +153,8 @@
 
  <entry>
    <title>Authing 送福利了，即日起免费额度提升至 20 万次 | Authing 官方博客</title>
-   <link href="http://localhost:4000/Authing%E5%8D%B3%E6%97%A5%E8%B5%B7%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E6%8F%90%E5%8D%87%E8%87%B320%E4%B8%87%E6%AC%A1"/>
-   <id>http://localhost:4000/Authing即日起免费额度提升至20万次</id>
+   <link href="https://authing.cn/blog/Authing%E5%8D%B3%E6%97%A5%E8%B5%B7%E5%85%8D%E8%B4%B9%E9%A2%9D%E5%BA%A6%E6%8F%90%E5%8D%87%E8%87%B320%E4%B8%87%E6%AC%A1"/>
+   <id>https://authing.cn/blog/Authing即日起免费额度提升至20万次</id>
    <updated>2018-06-16T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;即日起 Authing 每位用户的免费额度提升到 &lt;strong&gt;20万&lt;/strong&gt; 次，&lt;strong&gt;新老用户&lt;/strong&gt;皆可享受！&lt;/p&gt;
 
@@ -126,30 +170,20 @@
 
  <entry>
    <title>Authing 已兼容微信小程序 | Authing 官方博客</title>
-   <link href="http://localhost:4000/Authing%E5%B7%B2%E5%85%BC%E5%AE%B9%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F"/>
-   <id>http://localhost:4000/Authing已兼容微信小程序</id>
+   <link href="https://authing.cn/blog/Authing%E5%B7%B2%E5%85%BC%E5%AE%B9%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F"/>
+   <id>https://authing.cn/blog/Authing已兼容微信小程序</id>
    <updated>2018-06-06T00:00:00+08:00</updated>
-   <content type="html">&lt;blockquote&gt; &lt;p&gt;Authing 即日起兼容微信小程序。&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;ol&gt; &lt;li&gt;官方repo：&lt;a href=&quot;https://github.com/Authing/authing-wxapp-sdk&quot;&gt;https://github.com/Authing/authing-wxapp-sdk&lt;/a&gt;&lt;/li&gt; &lt;li&gt;相关接口和JavaScript版本相同：&lt;a href=&quot;https://github.com/Authing/authing-js-sdk&quot;&gt;https://github.com/Authing/authing-js-sdk&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;&lt;a href=&quot;https://usercontents.authing.cn/wxapp-sdk-demo.mp4&quot;&gt;&lt;img src=&quot;https://usercontents.authing.cn/20180528-184211@2x.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;此repo可下载后直接用小程序开发工具打开.&lt;/p&gt; &lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt; &lt;p&gt;1、下载代码&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Authing/authing-wxapp-sdk &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;2、引入文件&lt;/p&gt; &lt;p&gt;然后将repo内的authing文件夹移动到你的项目目录下，之后使用require引入&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path/to/authing/authing.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;...</content>
+   <content type="html">&lt;blockquote&gt; &lt;p&gt;Authing 即日起兼容微信小程序。&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;ol&gt; &lt;li&gt;官方repo：&lt;a href=&quot;https://github.com/Authing/authing-wxapp-sdk&quot;&gt;https://github.com/Authing/authing-wxapp-sdk&lt;/a&gt;&lt;/li&gt; &lt;li&gt;相关接口和JavaScript版本相同：&lt;a href=&quot;https://github.com/Authing/authing-js-sdk&quot;&gt;https://github.com/Authing/authing-js-sdk&lt;/a&gt;&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;&lt;a href=&quot;https://usercontents.authing.cn/wxapp-sdk-demo.mp4&quot;&gt;&lt;img src=&quot;https://usercontents.authing.cn/20180528-184211@2x.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;此repo可下载后直接用小程序开发工具打开.&lt;/p&gt; &lt;h4 id=&quot;使用&quot;&gt;使用&lt;/h4&gt; &lt;p&gt;1、下载代码&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Authing/authing-wxapp-sdk &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;2、引入文件&lt;/p&gt; &lt;p&gt;然后将repo内的authing文件夹移动到你的项目目录下，之后使用require引入&lt;/p&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Authing&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;path/to/authing/authing.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span...</content>
  </entry>
 
  
 
  <entry>
    <title>Authing 开源小程序 GraphQL 客户端 | Authing 官方博客</title>
-   <link href="http://localhost:4000/Authing%E5%BC%80%E6%BA%90%E5%B0%8F%E7%A8%8B%E5%BA%8FGraphQL%E5%AE%A2%E6%88%B7%E7%AB%AF"/>
-   <id>http://localhost:4000/Authing开源小程序GraphQL客户端</id>
+   <link href="https://authing.cn/blog/Authing%E5%BC%80%E6%BA%90%E5%B0%8F%E7%A8%8B%E5%BA%8FGraphQL%E5%AE%A2%E6%88%B7%E7%AB%AF"/>
+   <id>https://authing.cn/blog/Authing开源小程序GraphQL客户端</id>
    <updated>2018-05-28T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;GraphQL的中国区用户有福了，Authing刚刚发布了微信小程序的GraphQL客户端！&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://usercontents.authing.cn/20180528-183158-HD.mp4&quot;&gt;&lt;img src=&quot;https://usercontents.authing.cn/20180528-184211@2x.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;点击图片观看演示demo&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/wxapp-graphql&quot;&gt;wxapp-graphql&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt; &lt;h4 id=&quot;clone项目&quot;&gt;clone项目&lt;/h4&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Authing/wxapp-graphql &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h4 id=&quot;将文件中的graphql文件夹复制到你的项目中并开始使用&quot;&gt;将文件中的graphql文件夹复制到你的项目中并开始使用&lt;/h4&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;// 引入文件&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'path/to/graphql/wxgql.js'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 即日起支持 PHP | Authing 官方博客</title>
-   <link href="http://localhost:4000/%E4%B8%8A%E7%BA%BFPHP%E8%AF%AD%E8%A8%80SDK"/>
-   <id>http://localhost:4000/上线PHP语言SDK</id>
-   <updated>2018-05-20T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;520这个遍布着爱的日子，我们上线了Authing PHP的SDK，感谢 luhao 的辛苦开发工作。 Github repo: &lt;a href=&quot;https://github.com/Authing/authing-php-sdk&quot;&gt;authing-php-sdk&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;Authing SDK for PHP目支持PHP5.6+。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://docs.authing.cn&quot;&gt;官方文档请点击这里&lt;/a&gt;。&lt;/p&gt; &lt;h3 id=&quot;安装&quot;&gt;安装&lt;/h3&gt; &lt;hr /&gt; &lt;h4 id=&quot;composer&quot;&gt;composer&lt;/h4&gt; &lt;p&gt;当构建大规模应用时，我们推荐使用&lt;code class=&quot;highlighter-rouge&quot;&gt;composer&lt;/code&gt;进行安装， 它可以与一些模块打包工具很好地配合使用。&lt;/p&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# latest stable&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;composer &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;authing-php-sdk &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h3 id=&quot;开始使用&quot;&gt;开始使用&lt;/h3&gt; &lt;hr /&gt; &lt;div class=&quot;language-php highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span...</content>
+   <content type="html">&lt;p&gt;GraphQL的中国区用户有福了，Authing刚刚发布了微信小程序的GraphQL客户端！&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;https://usercontents.authing.cn/20180528-183158-HD.mp4&quot;&gt;&lt;img src=&quot;https://usercontents.authing.cn/20180528-184211@2x.png&quot; alt=&quot;Watch the video&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;点击图片观看演示demo&lt;/p&gt; &lt;p&gt;Github repo: &lt;a href=&quot;https://github.com/Authing/wxapp-graphql&quot;&gt;wxapp-graphql&lt;/a&gt;&lt;/p&gt; &lt;h3 id=&quot;使用方法&quot;&gt;使用方法&lt;/h3&gt; &lt;h4 id=&quot;clone项目&quot;&gt;clone项目&lt;/h4&gt; &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone https://github.com/Authing/wxapp-graphql &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h4 id=&quot;将文件中的graphql文件夹复制到你的项目中并开始使用&quot;&gt;将文件中的graphql文件夹复制到你的项目中并开始使用&lt;/h4&gt; &lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;c1&quot;&gt;// 引入文件&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;gql&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;require&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;path/to/graphql/wxgql.js&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;'&lt;/span&gt;&lt;span...</content>
  </entry>
 
  

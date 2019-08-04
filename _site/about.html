@@ -224,8 +224,8 @@
 <p>完整的头部就像下面这样的JSON：</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s1">'typ'</span><span class="p">:</span> <span class="s1">'JWT'</span><span class="p">,</span>
-  <span class="s1">'alg'</span><span class="p">:</span> <span class="s1">'HS256'</span>
+  <span class="dl">'</span><span class="s1">typ</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">JWT</span><span class="dl">'</span><span class="p">,</span>
+  <span class="dl">'</span><span class="s1">alg</span><span class="dl">'</span><span class="p">:</span> <span class="dl">'</span><span class="s1">HS256</span><span class="dl">'</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -265,9 +265,9 @@ playload
 <p>定义一个payload:</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-  <span class="s2">"sub"</span><span class="p">:</span> <span class="s2">"1234567890"</span><span class="p">,</span>
-  <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"John Doe"</span><span class="p">,</span>
-  <span class="s2">"admin"</span><span class="p">:</span> <span class="kc">true</span>
+  <span class="dl">"</span><span class="s2">sub</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1234567890</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">John Doe</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">admin</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">}</span>
 </code></pre></div></div>
 
@@ -288,9 +288,9 @@ playload
 
 <p>这个部分需要base64加密后的header和base64加密后的payload使用.连接组成的字符串，然后通过header中声明的加密方式进行加盐secret组合加密，然后就构成了jwt的第三部分。</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">encodedString</span> <span class="o">=</span> <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">header</span><span class="p">)</span> <span class="o">+</span> <span class="s1">'.'</span> <span class="o">+</span> <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">payload</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">encodedString</span> <span class="o">=</span> <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">header</span><span class="p">)</span> <span class="o">+</span> <span class="dl">'</span><span class="s1">.</span><span class="dl">'</span> <span class="o">+</span> <span class="nx">base64UrlEncode</span><span class="p">(</span><span class="nx">payload</span><span class="p">);</span>
 
-<span class="kd">var</span> <span class="nx">signature</span> <span class="o">=</span> <span class="nx">HMACSHA256</span><span class="p">(</span><span class="nx">encodedString</span><span class="p">,</span> <span class="s1">'secret'</span><span class="p">);</span> <span class="c1">// TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span>
+<span class="kd">var</span> <span class="nx">signature</span> <span class="o">=</span> <span class="nx">HMACSHA256</span><span class="p">(</span><span class="nx">encodedString</span><span class="p">,</span> <span class="dl">'</span><span class="s1">secret</span><span class="dl">'</span><span class="p">);</span> <span class="c1">// TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ</span>
 </code></pre></div></div>
 <p>将这三部分用.连接成一个完整的字符串，构成了最终的jwt：</p>
 
@@ -321,7 +321,7 @@ playload
 <p>使用由Docker构建的RabbtMQ和基于Node的rabbit.js。我们内部定义了一套RabbitMQ消息通信的规范。</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-    <span class="nl">action</span><span class="p">:</span> <span class="s1">'ACTION_NAME'</span><span class="p">,</span> <span class="c1">//要执行的动作（函数）</span>
+    <span class="nl">action</span><span class="p">:</span> <span class="dl">'</span><span class="s1">ACTION_NAME</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//要执行的动作（函数）</span>
     <span class="nx">payload</span><span class="p">:</span> <span class="p">{}</span> <span class="c1">//附带的参数</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -412,8 +412,8 @@ playload
 <p>在进行代码初始化时必须是初始化一个类，该类的构造函数接收一个对象作为参数：</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-    <span class="nl">clientId</span><span class="p">:</span> <span class="s1">'CLIENT_ID'</span><span class="p">,</span>
-    <span class="nx">secret</span><span class="p">:</span> <span class="s1">'APP_SECRET'</span>
+    <span class="nl">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">CLIENT_ID</span><span class="dl">'</span><span class="p">,</span>
+    <span class="nx">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">APP_SECRET</span><span class="dl">'</span>
 <span class="p">}</span>
 </code></pre></div></div>
 

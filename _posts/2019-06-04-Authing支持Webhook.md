@@ -4,8 +4,6 @@ title: Authing 支持 Webhook
 Webhooks 允许你对用户注册、登录等行为进行监听，从而对其做一些自定义处理。
 
 <!-- more -->
-Webhooks 允许你对用户注册、登录等行为进行监听，从而对其做一些自定义处理。
-
 使用 Webhook 的方法是在 Authing 平台中配置 HTTP URL，当你的用户登录、注册、修改密码后，都会给远程 HTTP URL 发送一个 POST 请求。
 
 ## 配置 Webhook

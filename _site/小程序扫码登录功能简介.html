@@ -56,6 +56,14 @@
 	  
 	    
 	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
     
     <!-- Nav links -->
 	  <a href="https://authing.cn">主页</a>
@@ -105,6 +113,14 @@
 	    
 	      
 	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
 	      
 	    
 	      
@@ -178,18 +194,18 @@
 <p>在<code class="highlighter-rouge">authing-js-sdk</code>中使用<code class="highlighter-rouge">startWXAppScaning</code>方法（<a href="https://docs.authing.cn/#/quick_start/javascript">authing-js-sdk文档</a>）：</p>
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-<span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">authing-js-sdk</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'authing-js-sdk'</span><span class="p">);</span>
 
 <span class="c1">// 对Client ID和Client Secret进行验证，获取Access Token</span>
 <span class="kd">var</span> <span class="nx">auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Authing</span><span class="p">({</span>
-	<span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_client_id</span><span class="dl">'</span><span class="p">,</span>
-	<span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_app_secret</span><span class="dl">'</span>
+	<span class="na">clientId</span><span class="p">:</span> <span class="s1">'your_client_id'</span><span class="p">,</span>
+	<span class="na">secret</span><span class="p">:</span> <span class="s1">'your_app_secret'</span>
 <span class="p">});</span>
 
 <span class="nx">auth</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">validAuth</span><span class="p">)</span> <span class="p">{</span>
 
 	<span class="nx">validAuth</span><span class="p">.</span><span class="nx">startWXAppScaning</span><span class="p">({</span>
-    	<span class="na">mount</span><span class="p">:</span> <span class="dl">'</span><span class="s1">qrcode-node</span><span class="dl">'</span><span class="p">,</span> <span class="c1">//二维码挂载点的HTML元素ID，如不写则默认漂浮在文档中间</span>
+    	<span class="na">mount</span><span class="p">:</span> <span class="s1">'qrcode-node'</span><span class="p">,</span> <span class="c1">//二维码挂载点的HTML元素ID，如不写则默认漂浮在文档中间</span>
 	<span class="p">});</span>
 	
 <span class="p">})</span>
@@ -202,13 +218,13 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
 <span class="nx">validAuth</span><span class="p">.</span><span class="nx">startWXAppScaning</span><span class="p">({</span>
-  	<span class="na">mount</span><span class="p">:</span> <span class="dl">'</span><span class="s1">qrcode-node</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 可选，二维码挂载点，如不写则默认漂浮在文档中间</span>
+  	<span class="na">mount</span><span class="p">:</span> <span class="s1">'qrcode-node'</span><span class="p">,</span> <span class="c1">// 可选，二维码挂载点，如不写则默认漂浮在文档中间</span>
   	<span class="na">redirect</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// 可选，是否执行跳转（在用户后台配置的URL），默认为true，相关用户信息回传至url上</span>
   	<span class="na">onSuccess</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，登录成功后回调函数，redirect为true时不回调此函数</span>
   	<span class="na">onError</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，登录失败后回调函数，一般为网络问题</span>
   	<span class="na">onIntervalStarting</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">intervalNum</span><span class="p">)</span> <span class="p">{},</span> <span class="c1">// 可选，轮询时的回调函数，intervalNum 为 setInterval 返回的数值，可使用 clearInterval 停止轮询</span>
   	<span class="na">interval</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="c1">// 可选，每隔多少秒检查一次，默认1500</span>
-  	<span class="na">tips</span><span class="p">:</span> <span class="dl">'</span><span class="s1">搜索小程序 &lt;strong&gt;身份管家&lt;/strong&gt; 扫码登录</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
+  	<span class="na">tips</span><span class="p">:</span> <span class="s1">'搜索小程序 &lt;strong&gt;身份管家&lt;/strong&gt; 扫码登录'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
@@ -267,20 +283,20 @@
     <ul>
       <li>
         <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">client</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">oauth</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">oauthWithApplication</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">qrcode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://usercontents.authing.cn/wxapp/qrcode/SweuVjfoPwSUTVEUv.png</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">expiredAt</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2018-07-16T12:56:03.000Z</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">__v</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">createdAt</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2018-07-16T12:55:03.302Z</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">redirect</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">success</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">used</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"_id"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"client"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"oauth"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"oauthWithApplication"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+        <span class="s2">"qrcode"</span><span class="p">:</span> <span class="s2">"https://usercontents.authing.cn/wxapp/qrcode/SweuVjfoPwSUTVEUv.png"</span><span class="p">,</span>
+        <span class="s2">"expiredAt"</span><span class="p">:</span> <span class="s2">"2018-07-16T12:56:03.000Z"</span><span class="p">,</span>
+        <span class="s2">"__v"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="s2">"createdAt"</span><span class="p">:</span> <span class="s2">"2018-07-16T12:55:03.302Z"</span><span class="p">,</span>
+        <span class="s2">"redirect"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+        <span class="s2">"success"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="s2">"used"</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">200</span>
+    <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span>
 <span class="p">}</span>
 </code></pre></div>        </div>
       </li>
@@ -319,31 +335,31 @@
     <ul>
       <li>
         <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">扫码登录成功</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-            <span class="dl">"</span><span class="s2">_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">email</span><span class="dl">"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">emailVerified</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">username</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ivy</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">nickname</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ivy</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">company</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">photo</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLkQc7PfrbBqFMib6lkPUxaA5UsMiadibfWQtKv0CBcKnH2khXicvUB9WB2ibYxN6GRTaTsQfPtlsAafBg/132</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">browser</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">token</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">******************************************.*********************.*********************</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">tokenExpiredAt</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Wed Aug 01 2018 15:59:42 GMT+0800 (CST)</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">loginsCount</span><span class="dl">"</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">lastLogin</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tue Jul 17 2018 15:59:42 GMT+0800 (CST)</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">lastIP</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">*********************</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">signedUp</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Tue Jul 17 2018 11:15:03 GMT+0800 (CST)</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">blocked</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">isDeleted</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">__typename</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ExtendUser</span><span class="dl">"</span>
+    <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+        <span class="s2">"message"</span><span class="p">:</span> <span class="s2">"扫码登录成功"</span><span class="p">,</span>
+        <span class="s2">"data"</span><span class="p">:</span> <span class="p">{</span>
+            <span class="s2">"_id"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+            <span class="s2">"email"</span><span class="p">:</span> <span class="kc">null</span><span class="p">,</span>
+            <span class="s2">"emailVerified"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"username"</span><span class="p">:</span> <span class="s2">"ivy"</span><span class="p">,</span>
+            <span class="s2">"nickname"</span><span class="p">:</span> <span class="s2">"ivy"</span><span class="p">,</span>
+            <span class="s2">"company"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"photo"</span><span class="p">:</span> <span class="s2">"https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTLkQc7PfrbBqFMib6lkPUxaA5UsMiadibfWQtKv0CBcKnH2khXicvUB9WB2ibYxN6GRTaTsQfPtlsAafBg/132"</span><span class="p">,</span>
+            <span class="s2">"browser"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+            <span class="s2">"token"</span><span class="p">:</span> <span class="s2">"******************************************.*********************.*********************"</span><span class="p">,</span>
+            <span class="s2">"tokenExpiredAt"</span><span class="p">:</span> <span class="s2">"Wed Aug 01 2018 15:59:42 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"loginsCount"</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+            <span class="s2">"lastLogin"</span><span class="p">:</span> <span class="s2">"Tue Jul 17 2018 15:59:42 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"lastIP"</span><span class="p">:</span> <span class="s2">"*********************"</span><span class="p">,</span>
+            <span class="s2">"signedUp"</span><span class="p">:</span> <span class="s2">"Tue Jul 17 2018 11:15:03 GMT+0800 (CST)"</span><span class="p">,</span>
+            <span class="s2">"blocked"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"isDeleted"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+            <span class="s2">"__typename"</span><span class="p">:</span> <span class="s2">"ExtendUser"</span>
         <span class="p">},</span>
-        <span class="dl">"</span><span class="s2">redirect</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">http://sample.authing.cn/#/redirect</span><span class="dl">"</span>
+        <span class="s2">"redirect"</span><span class="p">:</span> <span class="s2">"http://sample.authing.cn/#/redirect"</span>
     <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">200</span>
+    <span class="s2">"code"</span><span class="p">:</span> <span class="mi">200</span>
 <span class="p">}</span>
 </code></pre></div>        </div>
       </li>

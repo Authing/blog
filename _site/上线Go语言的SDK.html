@@ -17,7 +17,7 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
 
   	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
@@ -38,6 +38,14 @@
 	  
 	    
 	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
 	    
 	  
 	    
@@ -93,7 +101,7 @@
     <span class="f-left">  
       <a href="/blog//">
         <h1>
-          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
           官方博客
         </h1>
       </a>
@@ -105,6 +113,14 @@
 	    
 	      
 	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
 	      
 	    
 	      
@@ -169,70 +185,70 @@
 
 <h2 id="quick-guide">Quick Guide</h2>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="n">main</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span><span class="x"> </span><span class="n">main</span><span class="x">
 
-<span class="k">import</span> <span class="p">(</span>
-	<span class="s">"encoding/json"</span>
-	<span class="s">"log"</span>
-	<span class="s">"os"</span>
+</span><span class="k">import</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="s">"encoding/json"</span><span class="x">
+	</span><span class="s">"log"</span><span class="x">
+	</span><span class="s">"os"</span><span class="x">
 
-	<span class="s">"github.com/Authing/authing-go-sdk"</span>
-	<span class="s">"github.com/kelvinji2009/graphql"</span>
-<span class="p">)</span>
+	</span><span class="s">"github.com/Authing/authing-go-sdk"</span><span class="x">
+	</span><span class="s">"github.com/kelvinji2009/graphql"</span><span class="x">
+</span><span class="p">)</span><span class="x">
 
-<span class="k">const</span> <span class="p">(</span>
-	<span class="n">clientID</span>  <span class="o">=</span> <span class="s">"5adb75e03055230001023b26"</span>
-	<span class="n">appSecret</span> <span class="o">=</span> <span class="s">"e683d18f9d597317d43d7a6522615b9d"</span>
-<span class="p">)</span>
+</span><span class="k">const</span><span class="x"> </span><span class="p">(</span><span class="x">
+	</span><span class="n">clientID</span><span class="x">  </span><span class="o">=</span><span class="x"> </span><span class="s">"5adb75e03055230001023b26"</span><span class="x">
+	</span><span class="n">appSecret</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="s">"e683d18f9d597317d43d7a6522615b9d"</span><span class="x">
+</span><span class="p">)</span><span class="x">
 
-<span class="k">func</span> <span class="n">main</span><span class="p">()</span> <span class="p">{</span>
-	<span class="n">client</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">,</span> <span class="no">false</span><span class="p">)</span>
-	<span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span>
-	<span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span> <span class="o">=</span> <span class="k">func</span><span class="p">(</span><span class="n">s</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span> <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">}</span>
+</span><span class="k">func</span><span class="x"> </span><span class="n">main</span><span class="p">()</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">client</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span><span class="x"> </span><span class="n">appSecret</span><span class="p">,</span><span class="x"> </span><span class="no">false</span><span class="p">)</span><span class="x">
+	</span><span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span><span class="x">
+	</span><span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="k">func</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="x"> </span><span class="p">}</span><span class="x">
 
-	<span class="c">// &gt;&gt;&gt;Graphql Mutation: register</span>
-	<span class="n">input</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UserRegisterInput</span><span class="p">{</span>
-		<span class="n">Email</span><span class="o">:</span>            <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-		<span class="n">Password</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password"</span><span class="p">),</span>
-		<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="p">}</span>
+	</span><span class="c">// &gt;&gt;&gt;Graphql Mutation: register</span><span class="x">
+	</span><span class="n">input</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UserRegisterInput</span><span class="p">{</span><span class="x">
+		</span><span class="n">Email</span><span class="o">:</span><span class="x">            </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+		</span><span class="n">Password</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password"</span><span class="p">),</span><span class="x">
+		</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="p">}</span><span class="x">
 
-	<span class="n">m</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Register</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input</span><span class="p">)</span>
-	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-		<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Register failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-	<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-		<span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-	<span class="p">}</span>
+	</span><span class="n">m</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">Register</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input</span><span class="p">)</span><span class="x">
+	</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Register failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+	</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="x">
+	</span><span class="p">}</span><span class="x">
 
-	<span class="c">// oauthClient := authing.NewOauthClient(clientID, appSecret, false)</span>
-	<span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span>
-	<span class="c">// oauthClient.Client.Log = func(s string) { log.Println(s) }</span>
+	</span><span class="c">// oauthClient := authing.NewOauthClient(clientID, appSecret, false)</span><span class="x">
+	</span><span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span><span class="x">
+	</span><span class="c">// oauthClient.Client.Log = func(s string) { log.Println(s) }</span><span class="x">
 
-	<span class="c">// &gt;&gt;&gt;&gt;Graphql Query: Read OAuth List</span>
-	<span class="c">// readOauthListQueryParameter := authing.ReadOauthListQueryParameter{</span>
-	<span class="c">// 	ClientID:   graphql.String(clientID),</span>
-	<span class="c">// 	DontGetURL: graphql.Boolean(false),</span>
-	<span class="c">// }</span>
+	</span><span class="c">// &gt;&gt;&gt;&gt;Graphql Query: Read OAuth List</span><span class="x">
+	</span><span class="c">// readOauthListQueryParameter := authing.ReadOauthListQueryParameter{</span><span class="x">
+	</span><span class="c">// 	ClientID:   graphql.String(clientID),</span><span class="x">
+	</span><span class="c">// 	DontGetURL: graphql.Boolean(false),</span><span class="x">
+	</span><span class="c">// }</span><span class="x">
 
-	<span class="c">// q, err := oauthClient.ReadOauthList(&amp;readOauthListQueryParameter)</span>
-	<span class="c">// if err != nil {</span>
-	<span class="c">// 	log.Println("&gt;&gt;&gt;&gt;Read OAuth List failed: " + err.Error())</span>
-	<span class="c">// } else {</span>
-	<span class="c">// 	printJSON(q)</span>
-	<span class="c">// }</span>
+	</span><span class="c">// q, err := oauthClient.ReadOauthList(&amp;readOauthListQueryParameter)</span><span class="x">
+	</span><span class="c">// if err != nil {</span><span class="x">
+	</span><span class="c">// 	log.Println("&gt;&gt;&gt;&gt;Read OAuth List failed: " + err.Error())</span><span class="x">
+	</span><span class="c">// } else {</span><span class="x">
+	</span><span class="c">// 	printJSON(q)</span><span class="x">
+	</span><span class="c">// }</span><span class="x">
 
-<span class="p">}</span>
+</span><span class="p">}</span><span class="x">
 
-<span class="c">// printJSON prints v as JSON encoded with indent to stdout. It panics on any error.</span>
-<span class="k">func</span> <span class="n">printJSON</span><span class="p">(</span><span class="n">v</span> <span class="k">interface</span><span class="p">{})</span> <span class="p">{</span>
-	<span class="n">w</span> <span class="o">:=</span> <span class="n">json</span><span class="o">.</span><span class="n">NewEncoder</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span>
-	<span class="n">w</span><span class="o">.</span><span class="n">SetIndent</span><span class="p">(</span><span class="s">""</span><span class="p">,</span> <span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span>
-	<span class="n">err</span> <span class="o">:=</span> <span class="n">w</span><span class="o">.</span><span class="n">Encode</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
-	<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-		<span class="nb">panic</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="c">// printJSON prints v as JSON encoded with indent to stdout. It panics on any error.</span><span class="x">
+</span><span class="k">func</span><span class="x"> </span><span class="n">printJSON</span><span class="p">(</span><span class="n">v</span><span class="x"> </span><span class="k">interface</span><span class="p">{})</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">w</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">json</span><span class="o">.</span><span class="n">NewEncoder</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">Stdout</span><span class="p">)</span><span class="x">
+	</span><span class="n">w</span><span class="o">.</span><span class="n">SetIndent</span><span class="p">(</span><span class="s">""</span><span class="p">,</span><span class="x"> </span><span class="s">"</span><span class="se">\t</span><span class="s">"</span><span class="p">)</span><span class="x">
+	</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">w</span><span class="o">.</span><span class="n">Encode</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="x">
+	</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+		</span><span class="nb">panic</span><span class="p">(</span><span class="n">err</span><span class="p">)</span><span class="x">
+	</span><span class="p">}</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h2 id="usages-and-examples">Usages And Examples</h2>
 
@@ -247,197 +263,197 @@
 
 <p>Please create a user endpoint client first.Then you can do a series of operations for user.</p>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">client</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">,</span> <span class="no">false</span><span class="p">)</span>
-<span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span>
-<span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span> <span class="o">=</span> <span class="k">func</span><span class="p">(</span><span class="n">s</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span> <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">}</span>
-</code></pre></div></div>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">client</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">NewClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span><span class="x"> </span><span class="n">appSecret</span><span class="p">,</span><span class="x"> </span><span class="no">false</span><span class="p">)</span><span class="x">
+</span><span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span><span class="x">
+</span><span class="n">client</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="k">func</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="register-a-new-user">Register a new user</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UserRegisterInput</span><span class="p">{</span>
-	<span class="n">Email</span><span class="o">:</span>            <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-	<span class="n">Password</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password"</span><span class="p">),</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">input</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UserRegisterInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">            </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Password</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password"</span><span class="p">),</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">m</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Register</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Register failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">m</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">Register</span><span class="p">(</span><span class="o">&amp;</span><span class="n">input</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Register failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="user-login">User Login</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loginInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UserLoginInput</span><span class="p">{</span>
-	<span class="n">Email</span><span class="o">:</span>            <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-	<span class="n">Password</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password!"</span><span class="p">),</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">loginInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UserLoginInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">            </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Password</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password!"</span><span class="p">),</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">m</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Login</span><span class="p">(</span><span class="o">&amp;</span><span class="n">loginInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Login failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="p">}</span>
+</span><span class="n">m</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">Login</span><span class="p">(</span><span class="o">&amp;</span><span class="n">loginInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Login failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">userID</span> <span class="o">:=</span> <span class="kt">string</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">Login</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span> 
-</code></pre></div></div>
+</span><span class="n">userID</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="kt">string</span><span class="p">(</span><span class="n">m</span><span class="o">.</span><span class="n">Login</span><span class="o">.</span><span class="n">ID</span><span class="p">)</span><span class="x"> 
+</span></code></pre></div></div>
 
 <h4 id="check-login-status">Check Login Status</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">q</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">CheckLoginStatus</span><span class="p">()</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Check login status failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">q</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">CheckLoginStatus</span><span class="p">()</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Check login status failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="query-user-information">Query User Information</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UserQueryParameter</span><span class="p">{</span>
-	<span class="n">ID</span><span class="o">:</span>               <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"5ae3d830f0db4b000117a95e"</span><span class="p">),</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UserQueryParameter</span><span class="p">{</span><span class="x">
+	</span><span class="n">ID</span><span class="o">:</span><span class="x">               </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"5ae3d830f0db4b000117a95e"</span><span class="p">),</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">q</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Query user failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">q</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">User</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Query user failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="query-all-users">Query All Users</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UsersQueryParameter</span><span class="p">{</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">Page</span><span class="o">:</span>             <span class="n">graphql</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="m">1</span><span class="p">),</span>
-	<span class="n">Count</span><span class="o">:</span>            <span class="n">graphql</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="m">10</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">p</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UsersQueryParameter</span><span class="p">{</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">Page</span><span class="o">:</span><span class="x">             </span><span class="n">graphql</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="m">1</span><span class="p">),</span><span class="x">
+	</span><span class="n">Count</span><span class="o">:</span><span class="x">            </span><span class="n">graphql</span><span class="o">.</span><span class="n">Int</span><span class="p">(</span><span class="m">10</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">q</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">Users</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Query users failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">q</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">Users</span><span class="p">(</span><span class="o">&amp;</span><span class="n">p</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Query users failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="remove-users">Remove User(s)</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">removeUsersInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">RemoveUsersInput</span><span class="p">{</span>
-	<span class="n">IDs</span><span class="o">:</span>              <span class="p">[]</span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">{</span><span class="s">"111"</span><span class="p">,</span> <span class="s">"222"</span><span class="p">},</span> <span class="c">// NOTE: Please use your real user IDs</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">Operator</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"5adb75be3055230001023b20"</span><span class="p">),</span> <span class="c">// FIXME: It's your Authing.cn account ID</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">removeUsersInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">RemoveUsersInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">IDs</span><span class="o">:</span><span class="x">              </span><span class="p">[]</span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">{</span><span class="s">"111"</span><span class="p">,</span><span class="x"> </span><span class="s">"222"</span><span class="p">},</span><span class="x"> </span><span class="c">// NOTE: Please use your real user IDs</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">Operator</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"5adb75be3055230001023b20"</span><span class="p">),</span><span class="x"> </span><span class="c">// FIXME: It's your Authing.cn account ID</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">m</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">RemoveUsers</span><span class="p">(</span><span class="o">&amp;</span><span class="n">removeUsersInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Remove users failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">m</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">RemoveUsers</span><span class="p">(</span><span class="o">&amp;</span><span class="n">removeUsersInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Remove users failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="update-user-information">Update User Information</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">userUpdateInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">UserUpdateInput</span><span class="p">{</span>
-	<span class="n">Username</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009x"</span><span class="p">),</span>
-	<span class="n">Nickname</span><span class="o">:</span>         <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"Sicario13th"</span><span class="p">),</span>
-	<span class="n">Phone</span><span class="o">:</span>            <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"18665308994"</span><span class="p">),</span>
-	<span class="n">RegisterInClient</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">userUpdateInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">UserUpdateInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Username</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009x"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Nickname</span><span class="o">:</span><span class="x">         </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"Sicario13th"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Phone</span><span class="o">:</span><span class="x">            </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"18665308994"</span><span class="p">),</span><span class="x">
+	</span><span class="n">RegisterInClient</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">m</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">UpdateUser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">userUpdateInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Update user failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">m</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">UpdateUser</span><span class="p">(</span><span class="o">&amp;</span><span class="n">userUpdateInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Update user failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">m</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="send-verify-email">Send Verify Email</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sendVerifyEmailInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">SendVerifyEmailInput</span><span class="p">{</span>
-	<span class="n">Email</span><span class="o">:</span>  <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-	<span class="n">Client</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sendVerifyEmailInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">SendVerifyEmailInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">  </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Client</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">SendVerifyEmail</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sendVerifyEmailInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Send verify email failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">SendVerifyEmail</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sendVerifyEmailInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Send verify email failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="send-reset-password-email">Send Reset Password Email</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sendResetPasswordEmailInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">SendResetPasswordEmailInput</span><span class="p">{</span>
-	<span class="n">Client</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">Email</span><span class="o">:</span>  <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">sendResetPasswordEmailInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">SendResetPasswordEmailInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Client</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">  </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">SendResetPasswordEmail</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sendResetPasswordEmailInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Send reset password email failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">SendResetPasswordEmail</span><span class="p">(</span><span class="o">&amp;</span><span class="n">sendResetPasswordEmailInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Send reset password email failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="verify-reset-password-verify-code">Verify Reset Password Verify-Code</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">verifyResetPasswordVerifyCodeInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">VerifyResetPasswordVerifyCodeInput</span><span class="p">{</span>
-	<span class="n">Client</span><span class="o">:</span>     <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">Email</span><span class="o">:</span>      <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-	<span class="n">VerifyCode</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"7670"</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">verifyResetPasswordVerifyCodeInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">VerifyResetPasswordVerifyCodeInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Client</span><span class="o">:</span><span class="x">     </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">      </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+	</span><span class="n">VerifyCode</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"7670"</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">VerifyResetPasswordVerifyCode</span><span class="p">(</span><span class="o">&amp;</span><span class="n">verifyResetPasswordVerifyCodeInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Verify reset passwod verify code failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">VerifyResetPasswordVerifyCode</span><span class="p">(</span><span class="o">&amp;</span><span class="n">verifyResetPasswordVerifyCodeInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Verify reset passwod verify code failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="change-password">Change Password</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">changePasswordInput</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">ChangePasswordInput</span><span class="p">{</span>
-	<span class="n">Client</span><span class="o">:</span>     <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">Email</span><span class="o">:</span>      <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span>
-	<span class="n">VerifyCode</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"7670"</span><span class="p">),</span>
-	<span class="n">Password</span><span class="o">:</span>   <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password!"</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">changePasswordInput</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">ChangePasswordInput</span><span class="p">{</span><span class="x">
+	</span><span class="n">Client</span><span class="o">:</span><span class="x">     </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">Email</span><span class="o">:</span><span class="x">      </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"kelvinji2009@gmail.com"</span><span class="p">),</span><span class="x">
+	</span><span class="n">VerifyCode</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"7670"</span><span class="p">),</span><span class="x">
+	</span><span class="n">Password</span><span class="o">:</span><span class="x">   </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="s">"password!"</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">err</span> <span class="o">:=</span> <span class="n">client</span><span class="o">.</span><span class="n">ChangePassword</span><span class="p">(</span><span class="o">&amp;</span><span class="n">changePasswordInput</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Change password failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">client</span><span class="o">.</span><span class="n">ChangePassword</span><span class="p">(</span><span class="o">&amp;</span><span class="n">changePasswordInput</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Change password failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h3 id="oauth-endpoint">OAuth Endpoint</h3>
 
 <p>Please create an oauth endpoint client first.</p>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">oauthClient</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">NewOauthClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">,</span> <span class="no">false</span><span class="p">)</span>
-<span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span>
-<span class="n">oauthClient</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span> <span class="o">=</span> <span class="k">func</span><span class="p">(</span><span class="n">s</span> <span class="kt">string</span><span class="p">)</span> <span class="p">{</span> <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="p">}</span>
-</code></pre></div></div>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">oauthClient</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">NewOauthClient</span><span class="p">(</span><span class="n">clientID</span><span class="p">,</span><span class="x"> </span><span class="n">appSecret</span><span class="p">,</span><span class="x"> </span><span class="no">false</span><span class="p">)</span><span class="x">
+</span><span class="c">// Enable debug info for graphql client, just comment it if you want to disable the debug info</span><span class="x">
+</span><span class="n">oauthClient</span><span class="o">.</span><span class="n">Client</span><span class="o">.</span><span class="n">Log</span><span class="x"> </span><span class="o">=</span><span class="x"> </span><span class="k">func</span><span class="p">(</span><span class="n">s</span><span class="x"> </span><span class="kt">string</span><span class="p">)</span><span class="x"> </span><span class="p">{</span><span class="x"> </span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">s</span><span class="p">)</span><span class="x"> </span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h4 id="read-oauth-list">Read OAuth List</h4>
 
-<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">readOauthListQueryParameter</span> <span class="o">:=</span> <span class="n">authing</span><span class="o">.</span><span class="n">ReadOauthListQueryParameter</span><span class="p">{</span>
-	<span class="n">ClientID</span><span class="o">:</span>   <span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span>
-	<span class="n">DontGetURL</span><span class="o">:</span> <span class="n">graphql</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="no">false</span><span class="p">),</span>
-<span class="p">}</span>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">readOauthListQueryParameter</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">authing</span><span class="o">.</span><span class="n">ReadOauthListQueryParameter</span><span class="p">{</span><span class="x">
+	</span><span class="n">ClientID</span><span class="o">:</span><span class="x">   </span><span class="n">graphql</span><span class="o">.</span><span class="n">String</span><span class="p">(</span><span class="n">clientID</span><span class="p">),</span><span class="x">
+	</span><span class="n">DontGetURL</span><span class="o">:</span><span class="x"> </span><span class="n">graphql</span><span class="o">.</span><span class="n">Boolean</span><span class="p">(</span><span class="no">false</span><span class="p">),</span><span class="x">
+</span><span class="p">}</span><span class="x">
 
-<span class="n">q</span><span class="p">,</span> <span class="n">err</span> <span class="o">:=</span> <span class="n">oauthClient</span><span class="o">.</span><span class="n">ReadOauthList</span><span class="p">(</span><span class="o">&amp;</span><span class="n">readOauthListQueryParameter</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="no">nil</span> <span class="p">{</span>
-	<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Read OAuth List failed: "</span> <span class="o">+</span> <span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-	<span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre></div></div>
+</span><span class="n">q</span><span class="p">,</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">:=</span><span class="x"> </span><span class="n">oauthClient</span><span class="o">.</span><span class="n">ReadOauthList</span><span class="p">(</span><span class="o">&amp;</span><span class="n">readOauthListQueryParameter</span><span class="p">)</span><span class="x">
+</span><span class="k">if</span><span class="x"> </span><span class="n">err</span><span class="x"> </span><span class="o">!=</span><span class="x"> </span><span class="no">nil</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s">"&gt;&gt;&gt;&gt;Read OAuth List failed: "</span><span class="x"> </span><span class="o">+</span><span class="x"> </span><span class="n">err</span><span class="o">.</span><span class="n">Error</span><span class="p">())</span><span class="x">
+</span><span class="p">}</span><span class="x"> </span><span class="k">else</span><span class="x"> </span><span class="p">{</span><span class="x">
+	</span><span class="n">printJSON</span><span class="p">(</span><span class="n">q</span><span class="p">)</span><span class="x">
+</span><span class="p">}</span><span class="x">
+</span></code></pre></div></div>
 
 <h2 id="todo">TODO</h2>
 
@@ -466,7 +482,7 @@
 	  </div>
 	    
 	    <!-- Footer -->
-	    <footer><span>@2018 - Authing</span></footer>
+	    <footer><span>@2019 - Authing</span></footer>
 
 
 	    <!-- Script -->

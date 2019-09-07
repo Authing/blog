@@ -4,158 +4,162 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="https://authing.cn/blog/atom.xml" rel="self"/>
  <id>https://authing.cn/blog</id>
- <updated>2019-08-09T00:17:06+08:00</updated>
+ <updated>2019-09-03T22:48:39+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
-   <email>xieyang@dodora.cn</email>
+   <email>xieyang@authing.cn</email>
  </author>
 
  
 
  <entry>
-   <title>Authing 是什么以及为什么需要 Authing</title>
-   <link href="https://authing.cn/blog/Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing"/>
-   <id>https://authing.cn/blog/Authing是什么以及为什么需要Authing</id>
-   <updated>2019-07-10T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;Authing 是什么以及为什么需要 Authing&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20190710-authing.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;authing-是什么&quot;&gt;Authing 是什么？&lt;/h1&gt; &lt;p&gt;Authing 提供身份认证和授权服务。&lt;/p&gt; &lt;p&gt;我们为开发者和企业提供用以保证应用程序安全所需的认证模块，这让开发人员无需成为安全专家。&lt;/p&gt; &lt;p&gt;你可以将以任意语言和任意技术栈编写的应用接入到 Authing，同时你还可以自定义应用程序的登录方式（如：邮箱/密码、短信/验证码、扫码登录等）。&lt;/p&gt; &lt;p&gt;你可以根据你使用的技术，来选择我们的 SDK 或调用相关 API，从而接入你的应用。当用户发起授权请求时，Authing 会帮助你认证他们的身份和返回必要的用户信息到你的应用中。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20190710-authing-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h1 id=&quot;为什么要使用-authing&quot;&gt;为什么要使用 Authing&lt;/h1&gt; &lt;p&gt;下面是我们整理的 Authing 的部分使用场景：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;你想开发一个很酷的程序，这时你想添加用户身份认证和授权。你希望你的用户能使用微信、Github 登录，同时你还希望能追踪到用户的注册来源，活动数据，以便你做后续的用户增长。&lt;/li&gt; &lt;li&gt;你做了一个 API，同时你希望能使用 OAuth 2.0 协议保证 API 的安全。&lt;/li&gt; &lt;li&gt;你做了很多应用程序，你希望这些应用程序的用户数据可以通过单点登录（Single Sign On）的方式互通。&lt;/li&gt; &lt;li&gt;你做了一个 JavaScript 前端应用和一个移动端应用，你希望这两个客户端应用都可以安全的访问你的 API。&lt;/li&gt;...</content>
- </entry>
+   <title>转载 | 零登录：无口令身份认证的兴起</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E9%9B%B6%E7%99%BB%E5%BD%95-%E6%97%A0%E5%8F%A3%E4%BB%A4%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E7%9A%84%E5%85%B4%E8%B5%B7"/>
+   <id>https://authing.cn/blog/转载 | 零登录：无口令身份认证的兴起</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--零登录无口令身份认证的兴起&quot;&gt;转载 | 零登录：无口令身份认证的兴起&lt;/h1&gt;
 
- 
+&lt;blockquote&gt;
+  &lt;p&gt;基于用户行为的身份验证新技术终将宣告口令退出历史舞台吗？&lt;/p&gt;
+&lt;/blockquote&gt;
 
- <entry>
-   <title>使用 Authing + Lambda 替代 AWS Cognito</title>
-   <link href="https://authing.cn/blog/%E4%BD%BF%E7%94%A8Authing%E6%9B%BF%E4%BB%A3AWS-Cognito"/>
-   <id>https://authing.cn/blog/使用Authing替代AWS-Cognito</id>
-   <updated>2019-04-29T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;AWSuthing + Lambda 轻松替代 AWS Cognito &lt;!-- more --&gt; &lt;img src=&quot;http://img.staryu.cn/20190710-authing.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;Amazon Web Services(AWS) 虽然作为市场份额全球第一的云计算厂商，其产品也不是完美无缺的，Cognito （AWS 的身份认证解决方案）及其附带的中文文档就是一个反面教材，其难用程度令人发指。当然，除了不易用之外，还有访问速度缓慢，不适用于中国市场等问题存在。&lt;/p&gt; &lt;p&gt;而国产的 Authing 可以解决使用 Cognito 的诸多问题，先看一下 Authing 的介绍：&lt;/p&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Authing 是一个身份认证服务商，其提供了企业级身份认证和管理解决方案，客户分布教育、IoT、互联网和电商等多个行业。 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;p&gt;Lambda 是一个由 AWS 提供的 Function-as-a-Service (FaaS) 平台 。Lambda 和 AWS 生态结合的非常紧密，接入 Lambda 后，开发者可以使用 AWS 生态内的所有资源。比如，我们可以创建一个 Lambda 函数，让用户通过 Cognito...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 支持 SSO 统一身份认证</title>
-   <link href="https://authing.cn/blog/Authing%E6%94%AF%E6%8C%81SSO%E7%BB%9F%E4%B8%80%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81"/>
-   <id>https://authing.cn/blog/Authing支持SSO统一身份认证</id>
-   <updated>2019-03-14T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;SSO 可以将你的 Authing 应用作为 OAuth 服务提供商，使第三方应用可以读取你的用户数据，流程与 Github 基本一致，这在企业内部、机器人、IoT  等建设中有广泛应用。我们提供了 OAuth 认证流程的四种模式，分别为：implicit、authorization_code、password 和 client_credentials。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20190315-authing-sso.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-</content>
- </entry>
-
- 
-
- <entry>
-   <title>W3C 宣布：WebAuthn 成为正式 Web 标准</title>
-   <link href="https://authing.cn/blog/WebAuth%E6%AD%A3%E5%BC%8F%E6%88%90%E4%B8%BAWEB%E6%A0%87%E5%87%86"/>
-   <id>https://authing.cn/blog/WebAuth正式成为WEB标准</id>
-   <updated>2019-03-05T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;万维网联盟（W3C）与 FIDO 联盟近日宣布，Web 认证（Web Authentication，简称 WebAuthn）现已成为正式 Web 标准。 &lt;!-- more --&gt; 万维网联盟（W3C）与 FIDO 联盟近日宣布，Web 认证（Web Authentication，简称 WebAuthn）现已成为正式 Web 标准。 WebAuthn 于2015年11月由 W3C 和 Fido 联盟宣布，现已成为网上无密码登录的开放标准。它由 W3C 贡献者支持，其中包括 Airbnb、阿里巴巴、苹果、谷歌、IBM、英特尔、微软、Mozilla、PayPal、软银、腾讯和 Yubico。&lt;/p&gt; &lt;p&gt;WebAuthn 允许用户使用生物特征、移动设备或 FIDO 安全密钥登录在线帐户，而不是在账号密码框中键入一串串字符。Android 和 Windows10 已经支持 WebAuthn。浏览器方面，谷歌 Chrome、Mozilla Firefox 和 微软 Edge浏览器去年就已实现了对 WebAuthn 的支持。自去年12月以来，苹果就在 Safari 的预览版中支持 WebAuthn。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20190808-WebAuthn.jpg&quot; alt=&quot;&quot;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Web 的未来，语义互联已死，请拥抱自由编辑</title>
-   <link href="https://authing.cn/blog/Web%E7%9A%84%E6%9C%AA%E6%9D%A5-%E8%AF%AD%E4%B9%89%E4%BA%92%E8%81%94%E5%B7%B2%E6%AD%BB-%E8%AF%B7%E6%8B%A5%E6%8A%B1%E8%87%AA%E7%94%B1%E7%BC%96%E8%BE%91"/>
-   <id>https://authing.cn/blog/Web的未来，语义互联已死，请拥抱自由编辑</id>
-   <updated>2019-01-19T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;语义网的故事 &lt;!-- more --&gt; &lt;img src=&quot;http://img.staryu.cn/20190119-web-semantic.jpg&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;语义网的故事&quot;&gt;语义网的故事&lt;/h2&gt; &lt;p&gt;1989 年，Tim Berners-Lee 在欧洲核子研究中心（CERN）工作时，发现人们正在使用的各类计算机无论是文档保存还是菜单编辑，都很不一样。于是他产生了一个想法：&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;有没有可能开发一个元系统，将这些计算机及其所储存的文件统一起来？&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;于是 Tim 和他的同事们做的第一件事就是为 CERN 开发了一套存储电话号码的网页。起初这套网页运行在 CERN 的主机上，需要懂得一些计算机操作才能登录浏览，后来有些用户为了方便而安装了他们的网页浏览器（也被称为第一个网页浏览器）。&lt;/p&gt; &lt;p&gt;随后这套系统发生了爆发式增长，直至成了如今的规模。建立在 Web 上的公司都成为了巨头，包括但不限于 Google、Facebook、Twitter、Youtube 等。这些公司囊括了信息检索、网络社交、信息分享和视频内容，为普通消费者创造了极大便利。而这一切的源头都来自 Tim 在 1989 年写的一个号码簿程序。&lt;/p&gt; &lt;p&gt;Tim 本人也在 2017 年 04 月 05 日被美国计算机协会（ACM）授予图灵奖（A.M. Turing Award），该奖项通常被称为“诺贝尔计算机奖“。&lt;/p&gt; &lt;p&gt;Web 让世界和 Tim 本人获得了极大成功，但他认为简单的 Web（Simplicity of Web）...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 和 云原生应用</title>
-   <link href="https://authing.cn/blog/Authing%E5%92%8C%E4%BA%91%E5%8E%9F%E7%94%9F%E5%BA%94%E7%94%A8"/>
-   <id>https://authing.cn/blog/Authing和云原生应用</id>
-   <updated>2018-12-23T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;云原生应用是 Matt Stine 提出的一个概念，出现在其 Migrate to cloud Native App Architectures 一书中。 &lt;!-- more --&gt; CloudNative 是一个思想的集合，包括 DevOps、持续交付（Continuous Delivery）、微服务（MicroServices）、敏捷基础设施（Agile Infrastructure）、康威定律（Conways Law）等，以及根据商业能力对公司进行重组。Cloud Native 既包含技术（微服务，敏捷基础设施），也包含管理（DevOps，持续交付，康威定律，重组等）。Cloud Native也可以说是一系列 Cloud 技术、企业管理方法的集合。&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Cloud speed up the rate of creating, CloudNative is the way.&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;CNCF（云计算基金会）认为CloudNative 系统需包含如下属性：&lt;/p&gt; &lt;p&gt;(a) 容器化封装：以容器为基础，提高整体开发水平，形成代码和组件重用，简化云原生应用程序的维护。在容器中运行应用程序和进程，并作为应用程序部署的独立单元，实现高水平资源隔离。&lt;/p&gt; &lt;p&gt;(b) 自动化管理：统一调度和管理中心，从根本上提高系统和资源利用率，同时降低运维成本。&lt;/p&gt; &lt;p&gt;(c) 面向微服务：通过松耦合方式，提升应用程序的整体敏捷性和可维护性。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;CloudNative 致力于解决以下问题：&lt;/strong&gt;&lt;/p&gt; &lt;ol&gt; &lt;li&gt;传统应用开资源利用率低&lt;/li&gt;...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 和 Solid 账号完成打通</title>
-   <link href="https://authing.cn/blog/Authing%E5%92%8CSolid%E8%B4%A6%E5%8F%B7%E5%AE%8C%E6%88%90%E6%89%93%E9%80%9A"/>
-   <id>https://authing.cn/blog/Authing和Solid账号完成打通</id>
-   <updated>2018-12-16T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;Authing 和 Solid 账号完成打通 &lt;!-- more --&gt; Solid 是万维网之父的去中心化社交网络项目，正式的名称是“社交互联数据”，旨在将数据还给用户。&lt;/p&gt; &lt;p&gt;Authing 是一个服务开发者的身份认证云（为什么身份认证值得上云），可以帮助开发者快速集成登录认证、OAuth、邮件等服务。&lt;/p&gt; &lt;p&gt;Solid 项目仍处于早期，无法有效管理用户，与 Authing 账号打通后可实现注册／登录 Solid 等同于注册／登录 Authing 。管理员使用 Authing 的控制台即可看到 Solid 的活跃状况。&lt;/p&gt; &lt;p&gt;集成的代码已在 Github 开源（搜索：solid-authing）。&lt;/p&gt; &lt;p&gt;solid-authing 使用 Authing 官方架设的 Solid Pod: solid.authing.cn。&lt;/p&gt; &lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ npm install solid-authing --save &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt; &lt;h2 id=&quot;引入&quot;&gt;引入&lt;/h2&gt; &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;import...</content>
- </entry>
-
- 
-
- <entry>
-   <title>Authing 中国 Pod 节点进入 Solid 提供商列表</title>
-   <link href="https://authing.cn/blog/Authing%E8%BF%9B%E5%85%A5Solid%E6%8F%90%E4%BE%9B%E5%95%86%E5%88%97%E8%A1%A8"/>
-   <id>https://authing.cn/blog/Authing进入Solid提供商列表</id>
-   <updated>2018-11-19T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;Authing 中国 Pod 节点进入 Solid 提供商列表 
 &lt;!-- more --&gt;
-&lt;img src=&quot;http://img.staryu.cn/20181119-pod-list-1.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;刚刚，Solid 官方团队接受了 solid.authing.cn 进入 Solid IDP（Identity Provider，身份提供商）的请求。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2018/05/gettyimages-692915427.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2018/05/gettyimages-692915427-690x501.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20181119-pod-list-2.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;FIDO联盟（线上快速身份验证联盟）和万维网联盟(W3C)&lt;/strong&gt;最近公布了一个新的技术标准，可以让用户用安全密钥或智能手机之类的外部验证因子免口令登录网站，这是口令消除渐进过程中的一块重大里程碑。口令不仅用户体验糟糕，安全性更是饱受诟病。若设备智能到可即时识别用户身份，基于可信信息而不是口令提供一种个性化的安全体验，会有什么样的效果呢？该名为“零登录”的新技术可能将永绝口令后患。&lt;/p&gt;
 
-&lt;p&gt;从此，Solid 的 Pod 节点不再仅限于美洲大陆，在亚洲也可以快速访问了～！&lt;/p&gt;
+&lt;p&gt;我们大多数人都用过指纹或人脸识别来解锁智能手机，但很快，可能连这一步都不需要了。用户的行为，比如划过屏幕或输入字符的方式、位置情况、常规工作时段等等，都是特定于用户个体的。新技术就是基于这些因素进行用户身份识别，让用户什么都不用做就能登录所有应用。&lt;/p&gt;
+
+&lt;p&gt;想要骗过零登录技术，身份窃贼们可能需要花费几个月时间并投入数千美元的设备。因而，&lt;strong&gt;零登录技术基本上意味着身份窃贼的失业。不过，还是有一些负面的东西需要新的规则和标准来监管，保护用户的边界、信息与隐私。&lt;/strong&gt;比如：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;用户如何知晓自己什么时候是被监视着的？&lt;/li&gt;
+  &lt;li&gt;用户怎么知道自己什么时候登出了？&lt;/li&gt;
+  &lt;li&gt;这些行为数据的受保护情况如何？&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;##&lt;strong&gt;身份验证的未来&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;零登录或许听起来还有些科幻小说的未来感，但其实其理念已经投入实践。一些银行可以识别出用户用新手机登录或用从未到过的咖啡店的WiFi连接网银的情况。一旦检测到这种“异常”，银行会要求用户验证邮箱或手机号，证明是本人在操作。&lt;/p&gt;
+
+&lt;p&gt;包括亚马逊在内的一些大型零售公司也在尝试基于用户行为进行身份验证。&lt;strong&gt;点击屏幕的力度、输入的速度等等因人而异，攻击者难以猜测或复制。手机中的运动传感器还能从行走模式“认出”用户——每个人的步态都是唯一的，别人模仿不来。&lt;/strong&gt;综合所有这些信息，手机不需要口令也能分析出现在拿着它的人是不是自己真正的主人。&lt;/p&gt;
+
+&lt;p&gt;其他设备的信号也可以被手机检测到，比如自己的座驾、健身传感器、耳机等等，能够以此为基础构建出用户的常规行为模式。这些生活习惯提供了证明一切如常的另一层保障。&lt;/p&gt;
+
+&lt;p&gt;以上行为识别技术单拎出来可能还好破解或绕过，但骗过全部？这技术难度未免太大。多种技术综合在一起还能识别出手机当前是否未经主人同意就在解锁模式下被别人拿走，然后立即锁定或干脆完全关机。口令可做不到这一点。&lt;/p&gt;
+
+&lt;p&gt;##&lt;strong&gt;上下文很重要&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;用手机从信用卡上划1美元下单买个泰迪熊送到家这种事，是攻击者会做的吗？不太可能。今天很多应用即便欺诈交易可能性极低的情况都会要求用户提供口令。在线商城不愿意损失销量，而很多人会在面对口令输入框的时候再考虑一下要不要买。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;零登录技术不仅关注用户身份，还注意用户试图去做的事&lt;/strong&gt;。它们擅长分析哪些事情是普通人会做的，而哪些事情又是攻击者会干的。口令依然存在，但用户可能再也不会被要求输入了——因为手机已经识别了用户。完美的零登录世界中，只有攻击者才会被要求输入口令。&lt;/p&gt;
+
+&lt;p&gt;##&lt;strong&gt;负面因素&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;如果手机时刻在收集关于用户的一切信息，怎么保护这些信息？这些信息发往何方？目前，大多数时候这些信息都是闲置状态，并不会被用到。零登录技术需要用到这些信息，但怎么使用是个问题。比较好的用法是在手机上运行软件收集处理，只往云端发送“风险评分”，让云端的软件做出智能身份验证决断。不好的用法就是把关于用户的所有信息——行为、生物特征、位置信息等等，都通过互联网发送并存储在云端。即便信息是加密的，其被攻击者浸染的风险依然存在。所以，为什么每次换新iPhone都得重置一下指纹？因为用户的指纹是本地存储在手机里的，从来不通过互联网发到云端存储。&lt;/p&gt;
+
+&lt;p&gt;如果没有显式的登录过程就登入了服务，其间的隐私问题怎么算？虽然几乎没人会幻想互联网上还存在完全的隐私，我们依然希望能保留一部分的隐私，个人生活至少不要全部毫无隐藏。在被动身份验证模式下，我们可以轻松登录所有账户，随时随地，毫无阻碍，甚至意识不到登录过程的存在。&lt;/p&gt;
+
+&lt;p&gt;我们也需要能明确终止某在线会话的途径。有些人用Uber之类公司的服务是出于个人原因，有些人则是职业需要。如果我就是名出租司机，那雇主在工作时间追踪我的位置毫无问题。但下班之后我可能就需要知道自己已经登出服务，可以自由地揽点儿私活了。&lt;/p&gt;
+
+&lt;p&gt;或许有朝一日，这个需要记住几十个复杂口令的时代，会让后人诧异。他们或许会想：动动手指就行的事儿，到底哪个脑子不开窍的搞出这种费脑子记口令的方法啊？然而，就算未来的无形身份验证更便捷，也不能让它凌驾于人类的隐私、安全与授意之上。这些工具应从一开始就按正确的方式构建。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;原文链接： https://www.aqniu.com/tools-tech/33791.html 作者：&lt;a href=&quot;https://www.aqniu.com/vip/nana&quot;&gt;nana&lt;/a&gt;星期四, 五月 10, 2018&lt;/p&gt;
+&lt;/blockquote&gt;
 </content>
  </entry>
 
  
 
  <entry>
-   <title>Authing 成为中国境内首个 Solid Pod 提供商</title>
-   <link href="https://authing.cn/blog/%E6%88%90%E4%B8%BA%E4%B8%AD%E5%9B%BD%E5%A2%83%E5%86%85%E9%A6%96%E4%B8%AASolid-Pod%E6%8F%90%E4%BE%9B%E5%95%86"/>
-   <id>https://authing.cn/blog/成为中国境内首个Solid-Pod提供商</id>
-   <updated>2018-11-04T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;Authing 成为中国境内首个 Solid Pod 提供商
-&lt;!-- more --&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-06.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;我们发布了在中国境内的首个 Solid Pod，欢迎大家注册体验。&lt;/p&gt;
-
-&lt;p&gt;网站地址为：https://solid.authing.cn&lt;/p&gt;
-
-&lt;p&gt;需要说明的是，目前 Solid Pod 还处在早期，各方面还很不完善，另外此 Pod 还是一个测试网络，请不要将其用于生产环境。&lt;/p&gt;
-
-&lt;p&gt;每一个用户注册后，会得到一个三级域名。比如，你的用户名是 test，那么你会得到 https://test.solid.authing.cn 这个网址，同时也是你在 Solid 网络中的 Pod 地址。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;现阶段 Solid 的 UI／UX 还处于原始人阶段，槽点很多，仅供测试使用。&lt;/strong&gt;&lt;/p&gt;
-</content>
+   <title>转载 | 身份管理的15个安全开发实践</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86%E7%9A%8415%E4%B8%AA%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91%E5%AE%9E%E8%B7%B5"/>
+   <id>https://authing.cn/blog/转载 | 身份管理的15个安全开发实践</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份管理的15个安全开发实践&quot;&gt;转载 | 身份管理的15个安全开发实践&lt;/h1&gt; &lt;p&gt;应用或服务的安全编码很重要，但若事关处理个人数据的系统，那就不仅仅是重要，而是至关重要了。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://www.aqniu.com/wp-content/uploads/2019/02/COSA-standards-bodies-1920x1280.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt; &lt;p&gt;软件分析公司CAST分析了1380个软件应用，在代码中发现了惊人的130万个漏洞。&lt;/p&gt; &lt;p&gt;有点网络安全常识的人都知道，软件漏洞就是向网络罪犯敞开的大门。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;身份管理可以说是所有技术门类中风险最大的服务&lt;/strong&gt;。身份盗窃事件常伴我们左右。咨询公司 Javelin Research 从事身份盗窃事件研究多年，其《2018身份欺诈》报告将2017年身份盗窃统计数据描述为“&lt;strong&gt;历史新高&lt;/strong&gt;”，揭示身份盗窃继续困扰着这个行业。&lt;/p&gt; &lt;p&gt;身份管理中我们常会谈及所谓&lt;strong&gt;“武器化身份”&lt;/strong&gt;的概念，也就是强化系统中的接入点和用户与服务交互的位置。然而，武器化过程需分层实施，而其中一层就是代码层。&lt;/p&gt; &lt;h3 id=&quot;身份管理安全编码&quot;&gt;身份管理安全编码&lt;/h3&gt; &lt;p&gt;数字身份平台可能会非常复杂，因为这些平台往往得依赖外部数据源，并与第三方API集成。消费级身份与访问管理(IAM)甚至更为复杂。这类平台需要扩展功能来上传、存储和共享文档与图片。很多身份服务还融入移动设备App，或者说完全基于移动App。依靠身份生态系统各组件间通信所用协议的固有安全是不够的。此类生态系统的底层代码必须尽可能安全，同时又不能对其功能造成影响。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;开发身份平台时可以采用如下几种最佳安全编码实践：&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;1. 使用良好资源&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;从安全编码入门经典资源开始。开放网络应用安全计划(OWASP)是安全编码实际上的入门资源。其安全编码“快速参考指南”是个极好的起始点，可作为开发过程中的复核工具使用。放心充分利用他们的资源。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;2. 采用防御性编程技巧&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;这么做可以一定程度上避免出现可利用漏洞。其中一招是等价比较：把常量放到比较语句的前端。常量前置的话，如果不小心把比较操作符(两个等号“==”)误敲成赋值操作符(一个等号“=”)，在编译或运行时阶段就会报错。举个例子：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;不良编码习惯：变量在前&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;if ($result == ‘SUCCESS’) {&lt;/p&gt; &lt;ul&gt; &lt;li&gt;更好些的编码习惯： 常量在前——如果 “==” 误敲成 “=” 会导致运行时错误或编译错误&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;if (‘SUCCESS’ == $result) {&lt;/p&gt;...</content>
  </entry>
 
  
 
  <entry>
-   <title>Authing 为核心开发者定制了新 Logo</title>
-   <link href="https://authing.cn/blog/Authing%E4%B8%BA%E6%A0%B8%E5%BF%83%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9A%E5%88%B6%E4%BA%86%E6%96%B0Logo"/>
-   <id>https://authing.cn/blog/Authing为核心开发者定制了新Logo</id>
-   <updated>2018-10-19T00:00:00+08:00</updated>
-   <content type="html">&lt;p&gt;Authing 为核心开发者定制了新 Logo
-&lt;!-- more --&gt;
-先来个最普通的，用来开胃
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-02.jpg&quot; alt=&quot;先来个最普通的，用来开胃&quot; /&gt;&lt;/p&gt;
+   <title>转载 | 身份管理的12个趋势</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86%E7%9A%8412%E4%B8%AA%E8%B6%8B%E5%8A%BF"/>
+   <id>https://authing.cn/blog/转载 | 身份管理的12个趋势</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份管理的12个趋势&quot;&gt;转载 | 身份管理的12个趋势&lt;/h1&gt; &lt;p&gt;在IAM公司的大力宣传下，网络安全市场上已经形成了自成体系的“身份”细分市场。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2018/05/01Cover.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2018/05/01Cover.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;刚结束不久的RSA大会上或许已现端倪：大量讨论围绕身份展开，很多公司将自己的产品往身份与访问管理(IAM)上靠，展位上挂满“身份治理”、“身份上下文”、“特权访问管理”、“隐私”、“行为生物特征识别”、“生物特征平台”、“以人为中心的安全”等等标签。&lt;/p&gt; &lt;p&gt;如果网络安全市场是个星球，每个细分市场占据其中一块，那么终端安全就是广袤的大陆，威胁情报则是群岛；IAM又应该落到哪个位置呢？&lt;/p&gt; &lt;p&gt;或许哪里都不适合，IAM自成体系。&lt;/p&gt; &lt;p&gt;用户的问题在于互动性。&lt;strong&gt;企业身份管理工作之所以难做，是因为用户的身份和行为多变，入职、离职、升迁、访问敏感文件系统、共享机密数据、发送带秘密信息的邮件、访问没有权限查看的数据、尝试本不该做的事情等等。&lt;/strong&gt;身份管理上不存在一劳永逸这码事，想设置一次就不用再管是不可行的。&lt;/p&gt; &lt;p&gt;但幸运的是，IAM正变得越来越容易，Sailpoint和Saviynt之类身份治理工具及CyberArk等特权访问管理工具不仅可控，价格也是企业负担得起的。&lt;/p&gt; &lt;p&gt;这一切来得正好。&lt;strong&gt;IAM需求一直都很高，但最近的数据泄露(Equifax)、新合规压力(GDPR)和隐私问题(Cambridge Analytica/Facebook)进一步推高了对身份安全与治理的重压&lt;/strong&gt;。&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;Facebook的安全团队超棒，但其监管很糟。Equifax则是彻底的安全悲剧。&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;##到底有哪些力量在塑造身份管理小世界的地形地貌呢？不妨看看下列12个趋势：&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;1. KBA身份验证已死&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Equifax数据泄露之后，传统基于知识的身份验证(KBA)系统就已分崩离析。为什么要让客户通过确认其前雇主、住址或母亲生日的方式来验证客户身份呢？这些东西攻击者也全都知道啊，而且没准儿知道得更多，连用户订阅了哪些杂志，后院有没有泳池都知道。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;2. GDPR将身份回归个人手中&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;公司企业越来越惯于将数据库中的东西当成自己的所有物，几乎毫无顾忌地收集、存储、传输、买卖用户的个人可识别信息(PII)。GDPR改变了这一切，提高了企业对身份治理的需求。&lt;/p&gt; &lt;p&gt;GDPR要求企业收集或共享个人信息时必须获得用户的明确许可——自动勾选的同意框可不算明确许可，而且个人还应可以随时撤销该许可。个人拥有“被遗忘的权力”。另外，无论数据流向何方，身份信息的使用记录都必须留存。&lt;/p&gt; &lt;p&gt;GDPR适用于欧盟公民的任何数据，无论该公民及其数据在哪儿，因而其影响范围是全世界，且企业的客户和员工都适用——即涉及公司内部和外部身份的治理与安全。&lt;/p&gt; &lt;p&gt;GDPR将于今年5月25日正式生效(自GDPR诞生的2年宽限期后)，届时将会对违反GDPR的行为处以最高2000万欧元或年营业收入4%的罚款。&lt;/p&gt; &lt;p&gt;GDPR影响巨大，像PCI一样会推动行业发展，但又与PCI不同，影响的是所有行业。或许，欧盟之后，北美地区也会有自己的GDPR。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;3. 保护隐私的身份验证需求上升&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;人们需要既能护住隐私又能验明自身的方法。&lt;/p&gt; &lt;p&gt;老用例再现的例子不是没有。比如说，酒吧保安能不能不用看身份证就知道客人是否到了法定饮酒年龄？而政府机构又能否在不知道用户饮酒时间和位置的情况下提供该验证信息？&lt;/p&gt; &lt;p&gt;更重要的是，社交媒体和新网站点能不能用此类身份验证方法抵御可扰乱大选的虚假信息行动？投票网站能够验证用户是注册选民还是某国公民吗？&lt;/p&gt; &lt;p&gt;技术上而言，这些东西都是触手可及的。智能手机就能存储私钥。目前的限制，在于监管。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;4. 身份监管延伸至云端&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;监管的落脚点在于谁有权限访问什么东西，谁应该有权限访问什么东西，以及这些权限都用对了没有。大多数客户距离前两条都还差得很远，也就不用担心第三条了。&lt;/p&gt; &lt;p&gt;SailPoint和其他身份治理及管理(IGA)解决方案提供商致力于在前端为安全人员带来更加用户友好的云管理工具。而在后端，各种云服务却让身份治理问题更加复杂，用户不得不越来越多的地方管理越来越多的账户，更别说原本就有的现场资源身份管理任务了。&lt;/p&gt; &lt;p&gt;Saviynt是专为云环境设计的IGA解决方案，尝试 IGA 2.0 的急先锋。其他的，比如Sailpoint和 One Identity，则通过云迁移为客户提供支持。&lt;/p&gt;...</content>
+ </entry>
 
-&lt;p&gt;再来个冰雪的，感受理性
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-01.jpg&quot; alt=&quot;再来个冰雪的，感受理性&quot; /&gt;&lt;/p&gt;
+ 
 
-&lt;p&gt;冰雪之后是浓浓的热情
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-03.jpg&quot; alt=&quot;冰雪之后是浓浓的热情&quot; /&gt;&lt;/p&gt;
+ <entry>
+   <title>转载 | 身份管理是否需要迁移到云端？先回答好这四个问题！</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86%E6%98%AF%E5%90%A6%E9%9C%80%E8%A6%81%E8%BF%81%E7%A7%BB%E5%88%B0%E4%BA%91%E7%AB%AF-%E5%85%88%E5%9B%9E%E7%AD%94%E5%A5%BD%E8%BF%99%E5%9B%9B%E4%B8%AA%E9%97%AE%E9%A2%98"/>
+   <id>https://authing.cn/blog/转载 | 身份管理是否需要迁移到云端？先回答好这四个问题！</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份管理是否需要迁移到云端先回答好这四个问题&quot;&gt;转载 | 身份管理是否需要迁移到云端？先回答好这四个问题！&lt;/h1&gt; &lt;p&gt;云已经改变了我们工作的方式，且在不远的将来，这一动作仍将持续。在云为员工提供各种便利，为公司企业带来成本节约、价值提升、工序缩减等收益的同时，新的挑战也随之而来。Gartner预测，到2020年，&lt;strong&gt;90%&lt;/strong&gt;的企业都将管理&lt;strong&gt;由云和内部解决方案组成的混合IT基础设施&lt;/strong&gt;，这无疑会使得安全挑战和困难变得更加复杂。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/Cloud_Identity_Management.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/Cloud_Identity_Management-690x460.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;就像其他任何重大技术革新一样，基础设施迁移到云端，需要深谋远虑和充分准备。对很多企业而言，云优先的IT策略，意味着专注核心业务驱动力，而不是费劲管理技术解决方案。&lt;strong&gt;当这些企业考虑采用云优先的方法时，他们毫无疑问会将自己的IT基础设施和安全迁移到云端。而身份，也不会被落下。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;很多IT和安全运营部门面临的一个重大问题是：你能将自己的身份监管解决方案迁移到云端吗？然后，或许是更重要的问题，你应该这么做吗？对这俩问题的答案，公司之间各不相同，取决于各自的业务需求和身份项目的当前结构。&lt;/p&gt; &lt;p&gt;因此，为确定迁移身份到云端对公司而言是否正确，每家公司都必须问问自己下面这4个问题：&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;1. 你的公司已经迁移了某些基础设施到云端了吗？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;虽然很多业务应用已经相对方便作为服务使用，将复杂的身份管理项目转移到云端，却是更具挑战性的任务。如果你的公司已经在用基础设施即服务(IaaS)，例如AWS或微软Azure，那么你可能已经准备好朝着实现基于云的身份管理项目迈进了。然而，如果你尚未实验过迁移任务关键App到云端，你应该谨慎考虑自家公司是否准备好做出这一跨越。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;2. 你的公司有多灵活？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;无论部署方式怎样，有效身份管理解决方案，必须提供对公司所有内部及云端应用的完整可见性。策略和控制，是合规及安全的根本，而可见性，则是打造策略和控制的基础。对没有时间或能力创建定制身份策略或合规过程的企业来说，云解决方案有望带来成功的部署。然而，如果你的公司对身份管理配置和部署方式有严格死板的要求，那么，向云端的迁移，就会面临更多困难。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;3. 你的资源受限吗？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;部署身份管理解决方案耗时耗力耗资源，有效身份管理项目需要人员、过程和技术的融合才有可能成功。对资源有限的公司来说，云是很棒的选择，因为不涉及硬件或基础设施升级，比现场解决方案更快更经济。基于云的身份解决方案，对IT团队人手不足，或缺乏该领域特定技能的公司来说，也是极佳的选择。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;4. 你对自己的管理需求有多了解？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;身份管理不仅仅是修改谁有权访问什么。有效身份管理还必须回答：用户应不应该有权限、应该赋予何种权限、权限下可以做什么等问题。而且，虽然身份管理可能易于使用，其背后发生的一切，却有可能非常复杂。&lt;/p&gt; &lt;p&gt;这一点必须加以了解，因为基于软件即服务(SaaS)的身份管理，并不像现场解决方案一样可定制。所以，如果你的身份需要相当直接明了，那可以选择云，但如果你的公司要求更多的复杂性和个性化选择，现场解决方案可能依然是你的最佳选择。&lt;/p&gt; &lt;p&gt;无论你是从现场身份管理解决方案迁移到云，还是全新实现基于云的身份管理解决方案，都需要仔细研究自家公司，了解公司需求，再谋求下一步动作。只有胸中有丘壑，你才能恰当地管理身份，限制对敏感商业数据的不合适访问所带来的风险。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;相关阅读&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html&quot;&gt;Authing 是什么以及为什么需要 Authing&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html&quot;&gt;我们为什么坚持做 ToB 的慢生意&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://learn.authing.cn/authing/&quot;&gt;Authing 知识库&lt;/a&gt;&lt;/li&gt; &lt;li&gt;todo&lt;/li&gt; &lt;/ul&gt; &lt;blockquote&gt; &lt;p&gt;原文链接：https://www.aqniu.com/learn/29680.html 作者： nana 星期四,...</content>
+ </entry>
 
-&lt;p&gt;热情之后是温柔的女儿情
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-04.jpg&quot; alt=&quot;热情之后是温柔的女儿情&quot; /&gt;&lt;/p&gt;
+ 
 
-&lt;p&gt;儿女情长后是最土豪的土豪金
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-05.jpg&quot; alt=&quot;儿女情长后是最土豪的土豪金&quot; /&gt;&lt;/p&gt;
+ <entry>
+   <title>转载 | 身份管理入门</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E7%AE%A1%E7%90%86%E5%85%A5%E9%97%A8"/>
+   <id>https://authing.cn/blog/转载 | 身份管理入门</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份管理入门&quot;&gt;转载 | 身份管理入门&lt;/h1&gt; &lt;blockquote&gt; &lt;p&gt;身份管理工具为IT经理提供了控制用户对公司关键信息访问的工具和技术&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2017/08/shutterstock_284496383.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2017/08/shutterstock_284496383-690x460.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;什么是身份管理？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;广义讲，身份管理系统（也称为身份及访问管理系统，或IAM系统）可在某个系统内管理个人身份，比如一家公司、一个网络，甚或一个国家。具体讲，企业IT中的ID管理，就是&lt;strong&gt;定义并管理单个网络用户的角色和访问权限，以及用户被赋予/拒绝这些权限的情况。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;ID管理系统的核心目标，是每人一个身份。&lt;strong&gt;该数字ID一旦被建立，在每个用户的整个“访问生命周期”里都应受到维护、修改和监视。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;因此，用企业身份管理提供商 Okta 高级副总裁兼首席安全官亚希尔·阿布塞勒哈姆的话说&lt;strong&gt;，ID管理的整体目标，是从用户系统登录到许可授权到按需登出，都能及时在正确的上下文中，为正确的用户，分配正确的企业资产访问权限。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;ID管理系统为管理员提供各种工具和技术，可以修改用户角色，跟踪用户活动，创建活动报告，贯彻策略执行。这些系统的设计目标，是要提供在整个企业里管理用户访问的方法，以及确保符合企业策略和政府监管规定。&lt;/p&gt; &lt;p&gt;ID管理技术包括（但不限于）口令管理工具、配置软件、安全策略执行应用程序、报告和监视App，以及身份存储库。ID管理系统在内部部署系统（如微软SharePoint）和云系统（如微软 Office 365）都可用。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;ID管理系统必须足够灵活，足够健壮，才可以适应当今计算环境的复杂性。&lt;/strong&gt;原因之一：企业计算环境曾经很大程度上是内部部署的，ID管理系统在员工都在工作场所上班的时候对用户进行身份验证和跟踪管理。那个时候的企业环境，是有着安全围栏围着的。而今天，这个围栏不再存在。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;今天的ID管理系统，应能让管理员很方便地进行访问权限管理，服务对象也应包括各类用户&lt;/strong&gt;——国内公司里上班的雇员和国外远程办公的承包商；&lt;strong&gt;混合计算环境&lt;/strong&gt;——企业内计算、软件即服务(SaaS)应用程序、影子IT和BYOD用户；计算架构——UNIX、Windows、Macintosh、iOS、安卓、IoT设备。&lt;/p&gt; &lt;p&gt;最终，ID管理系统应能对整个企业，以一致而可扩展的方式，对用户进行集中管理。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;最近几年，身份即服务(IDaaS)以云端订阅的方式，作为第三方托管服务而兴起，为企业内客户和云系统客户提供ID管理。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;为什么要关注身份管理？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;ID管理是任何企业安全计划的重要部分，因为今天的数字化经济中，ID管理与企业安全和生产力密不可分。&lt;/p&gt; &lt;p&gt;被盗用户凭证常常是进入企业网络及其信息资产的入口点。&lt;strong&gt;企业采用ID管理来保护其信息资产不受勒索软件、犯罪黑客行为、网络钓鱼和其他恶意软件攻击的威胁。&lt;/strong&gt;Cybersecurity Ventures 预测，2017年，仅全球勒索软件破坏的损失，就可达50亿美元，比2016年上升了15%。&lt;/p&gt; &lt;p&gt;很多企业里，用户权限有时候会比所需的要高。健壮的ID管理系统，可通过&lt;strong&gt;确保整个企业内应用一致的用户访问规则和策略，为企业添加一层重要的防护。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;ID管理系统可增强企业生产力&lt;/strong&gt;。这些系统的中央管理功能，可减少保护用户凭证和访问权限的复杂性及开销。同时，ID管理系统还让员工在各种环境下更富生产力和安全性，无论他们是在家工作还是在办公室开工，还是在出差途中。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;很多政府要求企业注重身份管理&lt;/strong&gt;。Sarbanes-Oxley法案、Gramm-Leach-Bliley金融服务法案和HIPAA法案，都要求企业为客户及员工信息访问控制负责。ID系统可帮助企业遵从这些规定。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;《通用数据保护条例》(GDPR)&lt;/strong&gt;是更近一些的规定，要求强安全和强用户访问控制。GDPR强制企业保护欧盟公民的个人数据和隐私。该条例将于2018年5月正式生效，在欧盟国家经营或拥有欧盟公民客户的每家公司均受其管辖。&lt;/p&gt; &lt;p&gt;2017年3月1日，纽约州金融服务署(NYDFS)新网络安全规定宣布生效。该规定描述了很多在纽约运营的金融服务公司应遵从的安全运营要求，包括监视授权用户活动和维护审计日志——ID管理系统通常都会做的那些事。&lt;/p&gt; &lt;p&gt;ID管理系统可以&lt;strong&gt;自动化为企业网络和数据提供安全的用户访问，减轻IT在这些琐碎但重要的任务上的负担，并帮助他们持续符合政府的规定。&lt;/strong&gt;鉴于如今每个IT职位同时也是安全职位的态势；全球性网络安全劳动力紧缺在持续；不合规所遭受的惩罚可让企业损失数百万甚至数十亿美元；上述这些都是非常重大的好处。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;公司怎么从身份管理系统获益？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;实现ID管理和相关最佳实践，可以多种形式带来重大竞争优势。现下，&lt;strong&gt;大多数公司需要为外部用户赋予到内部系统的访问权限。向客户、合作伙伴、供应商、承包商和雇员开放公司网络，可提升效率，降低运营成本。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;ID管理系统可使公司在不破坏安全的情况下，将访问权限扩展至其各种各样的信息系统，包括企业内应用、移动App、SaaS工具等。向外部提供更多访问，可驱动整个企业的协作，提升生产效率、员工满意度，提振研究和开发，最终形成收益增加。&lt;/p&gt; &lt;p&gt;ID管理可减少IT支持团队接到的口令重置类求助电话。ID管理系统能让管理员自动化这些动作和其他耗时耗力的任务。&lt;/p&gt; &lt;p&gt;ID管理系统可成为安全网络的基石，因为用户身份管理是访问控制拼图的重要一块。ID管理系统要求公司企业定义自身访问策略，具体描述哪些人可以在哪种情况下对哪些数据资源具有访问权。&lt;/p&gt; &lt;p&gt;因此，&lt;strong&gt;管理良好的ID，意味着对用户访问更好的控制，也就是内部和外部数据泄露风险的降低。&lt;/strong&gt;这非常重要，因为，伴随着外部威胁的持续上升，内部攻击同样愈驱频繁。根据IBM《2016网络安全情报索引》，约有60%的数据泄露时由公司自己的雇员导致的。当然，75%是恶意的，25%是无意的。&lt;/p&gt; &lt;p&gt;正如前文提到的，通过提供工具实现全面安全、审计和访问策略，ID管理系统能够增强合规。很多系统如今都有确保公司合规的诸多功能。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;身份管理系统工作机制是什么？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;过去几年中，&lt;strong&gt;典型的ID管理系统包括4个基本元素：&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt;...</content>
+ </entry>
 
-&lt;p&gt;而土豪金的背后，其实是——美国队长
-&lt;img src=&quot;http://img.staryu.cn/20181019-authing-logo-avantar-06.jpg&quot; alt=&quot;而土豪金的背后，其实是——美国队长&quot; /&gt;&lt;/p&gt;
+ 
 
-&lt;h4 id=&quot;你最喜欢哪一个&quot;&gt;你最喜欢哪一个？&lt;/h4&gt;
-</content>
+ <entry>
+   <title>转载 | 身份互联网即将到来 iam将发生巨变</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E4%BA%92%E8%81%94%E7%BD%91%E5%8D%B3%E5%B0%86%E5%88%B0%E6%9D%A5-IAM%E5%B0%86%E5%8F%91%E7%94%9F%E5%B7%A8%E5%8F%98"/>
+   <id>https://authing.cn/blog/转载 | 身份互联网即将到来 IAM将发生巨变</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份互联网ioi即将到来iam将发生巨变&quot;&gt;转载 | 身份互联网(IoI)即将到来，IAM将发生巨变！&lt;/h1&gt; &lt;p&gt;身份互联网和物联网之间有什么区别？&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;顾名思义，物联网是关于物的——设备、控制器、致动器等等。但这些东西会执行任务、收集数据、连接到其他设备。换句话说，&lt;strong&gt;每个设备都会有带多重属性的一个身份，而这些属性必须得到良好的理解，才可以驱动好事发生，而阻止坏事降临。&lt;/strong&gt;因此，&lt;strong&gt;身份互联网IOI (Internet of Identities)&lt;/strong&gt;出现了。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/blockchain-digital-identity.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/blockchain-digital-identity-690x456.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;如今，随着公司企业往自身内部网络和基于云的网络中添加成千上万的新设备，&lt;strong&gt;身份与访问管理&lt;/strong&gt;(IAM)技术也将经历巨大的转型。企业的IAM基础设施要能够适应：&lt;/p&gt; &lt;h2 id=&quot;1-大规模&quot;&gt;&lt;strong&gt;1. 大规模&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;新IAM技术将不得不支持数百万台设备（及用户），每台设备（或每个用户）都有各自的属性列表。这就是个N×N的身份属性矩阵。而且，这些用户和设备还有可能是临时的——作为某种业务或执行过程的一部分而出现并消失。仅资产审计这一项，就可能是耗时耗力的繁重任务。&lt;/p&gt; &lt;h2 id=&quot;2-隐私及安全要求&quot;&gt;&lt;strong&gt;2. 隐私及安全要求&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;设备需具有强化的配置、唯一的身份、多因子身份验证功能，以及设备间安全通信。这就需要有与现有网络、云和IAM基础设施紧密集成的新型策略引擎和实施控制措施。&lt;/p&gt; &lt;h2 id=&quot;3-持续智能监视&quot;&gt;&lt;strong&gt;3. 持续智能监视&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;为维持可用性、高性能和安全性，身份互联网需要有持续的监视。考虑到急速增长的规模，可以说，人类自身是无法跟上这些活动的。于是，让身份互联网列车持续准时运转的重担，就落在了人工智能和机器学习算法的引入上，恰当的AI与机器学习的引入，有助于自动化区分正常行为与异常活动，并将之转译为人类可用的情报。&lt;/p&gt; &lt;p&gt;老实说，微软虽然位列软件业巨头，但其活动目录(AD)不足以管理和维护身份互联网。&lt;/p&gt; &lt;p&gt;##随着&lt;strong&gt;身份互联网&lt;/strong&gt;的成型，可能会出现几个重大转变，比如说：&lt;/p&gt; &lt;h3 id=&quot;1-公司企业将集中化iam管理和采购&quot;&gt;&lt;strong&gt;1. 公司企业将集中化IAM管理和采购&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;过去几年里IAM有机增长，倾向于由应用开发人员、IT运营和安全人员的松散耦合进行管理。随着身份互联网的发展，公司企业会认识到，现有的拼凑式IAM部署无法解决身份互联网规模，也无法驱动新的业务过程。到那时，很多企业都会把下一代身份基础设施列为优先考虑。公司也会设立首席身份官的位子——具备转型公司身份基础设施并塑造新IAM策略所需业务及技术能力的资深人士。&lt;/p&gt; &lt;h3 id=&quot;2-身份走向云端&quot;&gt;&lt;strong&gt;2. 身份走向云端&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;对大规模、持续连接和处理能力的需求，将驱动大型企业拥抱基于云的IAM服务。&lt;/p&gt; &lt;h3 id=&quot;3-安全在iam中的地位更加重要&quot;&gt;&lt;strong&gt;3. 安全在IAM中的地位更加重要&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;企业战略集团(ESG)的调查显示，66%的公司企业宣称，他们的安全团队对IAM策略、规程和技术的参与度，比2年前有了大幅或某种程度的增长。然而，这还仅仅只是个开始。随着身份互联网地位的稳固，CISO将会紧密参与到编制和实施身份策略中来。对数据隐私的重视也会大幅增加。&lt;/p&gt; &lt;p&gt;IT界谈论基于身份的计算和基于身份的联网已经有好几年了，但这更多只是个愿景而非现实。随着身份互联网的进化发展，愿景终将成真，带来一段充斥混乱、创新和转型的时期。&lt;/p&gt; &lt;p&gt;什么时候会这样呢？我们如今正行驶在高速入口处，但高速车流的移动速度比我们想象的要快得多。换句话说，身份互联网及其相关的一切，马上就会到来。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;相关阅读&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;&lt;a...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>转载 | 身份互联网(ioi)来了，iam将大放异彩</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%BA%AB%E4%BB%BD%E4%BA%92%E8%81%94%E7%BD%91(IoI)%E6%9D%A5%E4%BA%86-IAM%E5%B0%86%E5%A4%A7%E6%94%BE%E5%BC%82%E5%BD%A9"/>
+   <id>https://authing.cn/blog/转载 | 身份互联网(IoI)来了，IAM将大放异彩</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--身份互联网ioi来了iam将大放异彩&quot;&gt;转载 | 身份互联网(IoI)来了，IAM将大放异彩&lt;/h1&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;IoT、移动性和紧迫的安全需求，意味着每个节点都必须有可信身份和连接网络服务的安全通道。&lt;/strong&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2017/07/IoI-800.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2017/07/IoI-800-690x456.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;现在每个人都在谈论IoT，理由充分：已有数十亿设备接入全球互联网，有些研究人员预测到2020年联网设备数量将达&lt;strong&gt;500亿&lt;/strong&gt;。仅此一项，就让CISO的工作更难开展了，但安全高管还要面临其它相关挑战，包括：&lt;/p&gt; &lt;ul&gt; &lt;li&gt; &lt;p&gt;员工移动办公，倾向于利用各种设备访问公司应用；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;应用、工作负载和容器存在于私有或公共云，甚至在二者之间转换；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;更多设备、云应用和移动用户的增加，大幅扩大了攻击界面；&lt;/p&gt; &lt;/li&gt; &lt;li&gt; &lt;p&gt;CISO被迫以人手不足兼技能不够的网络安全团队，保护这不断增长的IT资产。&lt;/p&gt; &lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt;传统安全过程、控制措施和技术手段，无法扩展满足当今IoT移动世界的安全挑战。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;这正是身份（例如：设备身份、用户身份、资产身份等等）大展拳脚的地方。源和目的之间，必须通过2/3层协议和用户名及口令连接。更进一步，&lt;strong&gt;互联网上所有东西都必须有个可信身份，这些可信身份将用于引导并监视安全连接。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;这一趋势被称为“&lt;strong&gt;身份互联网(IoI)&lt;/strong&gt;”，符合我们目前跟踪的多个安全趋势。比如说，&lt;strong&gt;可信身份，就处于微分隔和软件定义边界(SDP)之类联网趋势的中心。&lt;/strong&gt;&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;&lt;strong&gt;只要知道设备或人的身份，以及该设备或人想连接的应用或服务的身份，就可以验证各实体，检查策略引擎以确保这是授权连接；分隔并加密源和目的之间的流量，并维护对连接甚至俩节点间所有数据包的审计日志。&lt;/strong&gt;&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;基本上，整个全球互联网被固定功能网络和个人虚拟网络分隔成大大小小数十亿个网络——全都由管道两端的身份驱动。&lt;/p&gt; &lt;p&gt;因为需要用身份、软件定义网络技术和大数据分析，来减小网络攻击界面并监视这数十亿节点情况，IoI的理论是完全正确的。商业方面，IoI可帮助公司企业向关键网络流量和高价值客户提供高性能服务。&lt;/p&gt; &lt;p&gt;##虽然IoI听起来很符合逻辑，其未来几年的成功取决于很多因素，包括：&lt;/p&gt; &lt;h3 id=&quot;1-对iot设备的强身份验证&quot;&gt;&lt;strong&gt;1. 对IoT设备的强身份验证&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;每个IoT设备都必须拥有强壮而唯一的身份，可基于生物特征识别技术、指纹技术或经验证的X.509数字证书。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;2. 标准和固有技术的广泛采用&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;或许可以对FIDO、OAuth、OpenID、SAML等标准进行某种形式的合理化，同时增加手机指纹读取器等常见生物特征识别的使用。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;3. 身份的云监管&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;Facebook、谷歌和微软已将身份扩展至云端，也正努力进行身份控制，但 IoI...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>转载 | 访问控制的定义及五大实现挑战</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E7%9A%84%E5%AE%9A%E4%B9%89%E5%8F%8A%E4%BA%94%E5%A4%A7%E5%AE%9E%E7%8E%B0%E6%8C%91%E6%88%98"/>
+   <id>https://authing.cn/blog/转载 | 访问控制的定义及五大实现挑战</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--访问控制的定义及五大实现挑战&quot;&gt;转载 | 访问控制的定义及五大实现挑战&lt;/h1&gt; &lt;blockquote&gt; &lt;p&gt;访问控制可验证并授权个人访问允许查看和使用的信息。&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;p&gt;谁应该访问公司的数据？你怎么保证尝试访问的人都经过了授权？在什么情况下要拒绝有权限的用户访问数据？&lt;/p&gt; &lt;p&gt;想要有效保护数据，公司的访问控制策略必须解决以上及其他的问题。然后就是遵循访问控制的几个基本原则：&lt;strong&gt;访问控制是什么？为什么访问控制很重要？什么企业最需要访问控制？实现和维护访问控制时安全人员会面临什么问题？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;访问控制定义&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;站在较高层级来看，访问控制就是精选出来的一系列数据访问规则。其主要组成部分有2个：身份验证与授权。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;身份验证&lt;/strong&gt;就是用于验证给定用户是否是其所声称的身份的一种技术。身份验证本身并不足以防护数据，还需要&lt;strong&gt;授权&lt;/strong&gt;技术以确定用户是否可以访问数据或执行其所尝试的操作。&lt;/p&gt; &lt;p&gt;也就是说，访问控制基本上就是确定用户身份及其所享有权限的一种技术。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;访问控制对整个数据安全有多重要？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;没有身份验证和授权，就没有数据安全。每一起数据泄露事件，调查的时候首先查的就是访问控制策略。无论是终端用户疏忽大意造成的敏感数据意外暴露，还是Equifax这种因公共Web服务器软件漏洞而泄露敏感数据，访问控制都是其中关键因素。如果没有恰当实现和维护好访问控制，可能会造成灾难性后果。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;什么类型的企业最需要访问控制？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;只要公司员工需接入互联网，公司就需要访问控制。换句话说，当今世界的每一家公司都需要一定程度的访问控制，尤其公司员工有在外办公且需要访问公司数据资源和服务的情况下。&lt;/p&gt; &lt;p&gt;或者，如果公司数据对非授权人士有一定价值，公司就需要实现访问控制。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;实施访问控制的5个关键挑战&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;1. 需要一致的策略&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;大多数安全人员都懂得访问控制对公司的重要性，但至于该怎么实施访问控制，大家意见不一。访问控制需要在动态的环境中实施一致的策略。当今世界，大多数人都在混合环境中工作，数据通过开放WiFi热点从内部服务器或云端流向办公室、家里、酒店、车上和咖啡馆。这种流动性让访问控制策略的事实变得很难。&lt;/p&gt; &lt;p&gt;而且，随着接入设备的增多，比如PC、笔记本电脑、智能手机、平板电脑、智能音箱和其他物联网设备，访问策略的创建和持续维护就更难了，风险也随之增大。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;2. 确定最适当的控制模型&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;企业必须基于所处理数据的类型和敏感度确定最适合自己的访问控制模型。老式访问模型包括自主访问控制(DAC)和强制访问控制(MAC)。DAC模型下，数据拥有者确定访问权限。DAC是根据用户指定的规则来分配访问权限的一种方式。&lt;/p&gt; &lt;p&gt;MAC采用非自主模式开发，根据信息许可授予用户访问权。MAC是基于中心权威机构的规则来分配访问权限的一种策略。&lt;/p&gt; &lt;p&gt;如今，&lt;strong&gt;基于角色的访问控制(RBAC)&lt;/strong&gt;是最常用的访问控制模型。RBAC根据用户的角色分配访问权限并实现关键安全原则，比如“最小权限原则”和“权限分离原则”。因此，试图访问信息的用户便只能访问执行自身角色职能所必须的那部分数据。&lt;/p&gt; &lt;p&gt;最新的模型名为&lt;strong&gt;基于属性的访问控制(ABAC)&lt;/strong&gt;，每个资源和用户都赋予一系列属性，几乎对用户属性的比较评估，比如时间、职务和位置，来确定该用户是否能访问某个资源。&lt;/p&gt; &lt;p&gt;公司企业必须根据数据敏感性和运营需求来确定哪种模型是最适合自身的。尤其是处理个人可识别信息(PII)或其他敏感信息类型的公司企业，比如涉及《健康保险流通与责任法案》(HIPPA)和受控非密信息(CUI)数据的公司企业，必须将访问控制设置为公司安全架构的核心功能。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;3. 可能需要多套访问控制解决方案&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;有多种技术可以支持各种访问控制模型。某些情形下，可能需要多种技术协同工作以达到所需的访问控制级别。如今数据广泛分布于云服务和SaaS应用且接入传统网络边界的事实，决定了必须编配一个协同的安全解决方案。有多家厂商提供可集成进传统活动目录(AD)的特权访问及身份管理解决方案。多因子身份验证也可以作为进一步强化安全的一个组件。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;4. 授权依然是某些企业的阿基里斯之踵&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;如今，大多数企业都已善于使用身份验证，且越来越多地采用多因子身份认证和基于生物特征识别的认证技术（比如人脸识别或虹膜识别）。最近几年，随着大型数据泄露导致被盗口令凭证在暗网售卖，安全人员已更加重视对多因子身份认证的需求。&lt;/p&gt; &lt;p&gt;授权则依然是安全人员经常出错的一个领域。比如说，&lt;strong&gt;确定并持续监视哪些数据资源被何人在何种条件下以何种方式访问，就是安全人员的一大挑战。&lt;/strong&gt;但不一致或强度较弱的授权协议，却可能产生必须尽快修复的安全漏洞。&lt;/p&gt; &lt;p&gt;说到监视，无论公司选择以何种方式实现访问控制，都必须持续监视以发现潜在安全漏洞，即是为了合规，也是为了运营。企业必须定期进行监管审查、风险评估和合规审查，并要对执行访问控制功能的应用程序反复进行漏洞扫描，还应该收集并监控每次访问的日志以验证策略有效性。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;5. 访问控制策略应可动态修改&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;过去，访问控制方法通常是静态的。而如今，网络访问必须是动态的，要支持基于身份和应用的用例。&lt;/p&gt; &lt;p&gt;高级访问控制策略可动态适应不断发展的风险因素，让被入侵的公司可以隔离相关雇员和数据资源以最小化对公司的伤害。&lt;/p&gt; &lt;p&gt;公司企业必须确保自己的访问控制技术受到云资产和应用的支持，可以平滑迁移到私有云之类虚拟环境。访问控制规则必须基于风险因素而变，也就是说，企业必须在现有网络和安全配置的基础上用AI和机器学习技术来部署安全分析层，还需要实时识别威胁并自动化访问控制规则。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;访问控制的底线&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;在今天的复杂IT环境中，应将访问控制看做是采用最先进的工具、反映工作环境中的改变、识别所用设备的改变及其带来的风险，并考虑到向云端的迁移的动态技术基础设施。&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;原文链接：https://www.aqniu.com/learn/31578.html...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>转载 | 访问控制是什么？数据安全的关键组成</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E6%98%AF%E4%BB%80%E4%B9%88-%E6%95%B0%E6%8D%AE%E5%AE%89%E5%85%A8%E7%9A%84%E5%85%B3%E9%94%AE%E7%BB%84%E6%88%90"/>
+   <id>https://authing.cn/blog/转载 | 访问控制是什么？数据安全的关键组成</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--访问控制是什么数据安全的关键组成&quot;&gt;转载 | 访问控制是什么？数据安全的关键组成&lt;/h1&gt; &lt;p&gt;访问控制验证用户身份，并授予用户访问许可范围内信息的权限。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://www.aqniu.com/wp-content/uploads/2019/08/bigstock-219048286_1200x-1.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt; &lt;p&gt;谁能访问公司的数据？怎样确保尝试访问的人切实得到授权？何种情况下拒绝有权限用户的访问请求？&lt;/p&gt; &lt;p&gt;为有效保护数据，公司访问控制策略必须解决这些（但不局限于这些）问题。以下内容便是访问控制基础知识导引：访问控制是什么？为什么访问控制很重要？哪些组织机构最需要访问控制？安全人员将面对何种挑战？&lt;/p&gt; &lt;h2 id=&quot;访问控制是什么&quot;&gt;访问控制是什么？&lt;/h2&gt; &lt;p&gt;访问控制是一套身份验证和权限管理机制，用于保证用户是其所声称的身份，以及授予用户访问公司数据的恰当权限。&lt;/p&gt; &lt;p&gt;从高级层面上看，访问控制是数据访问权限的选择性限制。访问控制由两个主要部分组成：&lt;strong&gt;身份验证与授权。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;身份验证是核实某人为其所宣称身份的一种技术，其本身并不足以保证数据安全。想要保证数据安全，还需要添加额外的安全层——授权。授权用以确定用户是否能够访问其所要求的数据，或者执行其所尝试的交易。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;没有身份验证与授权，就没有数据安全。&lt;/strong&gt;每一起数据泄露事件中，访问控制总是最先被调查的策略。无论是敏感数据意外暴露而被终端用户不当获取，还是敏感数据经由公开服务器上软件漏洞而暴露的 Equifax 数据泄露事件，访问控制都是其中的关键部分。只要没有恰当实现或维护好访问控制，其结果都有可能是灾难性的。&lt;/p&gt; &lt;p&gt;凡是员工需要连接互联网的公司企业——也就是当今所有公司企业，都需要某种程度的访问控制。有员工在外工作，且需要访问公司数据资源与服务的公司企业，更应重视访问控制策略实现。&lt;/p&gt; &lt;p&gt;换句话说，但凡你的数据对没有恰当授权的人有任何价值，那你的公司就需要强访问控制。&lt;/p&gt; &lt;h2 id=&quot;强访问控制的另一原因访问挖掘&quot;&gt;强访问控制的另一原因：访问挖掘&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;在暗网上收集与售卖访问描述文件的问题正变得越来越严重&lt;/strong&gt;。举个例子，Carbon Black 最近发布的报告描述了 Smominru 加密货币挖掘僵尸网络，但该僵尸网络不仅挖掘加密货币，还挖掘各类敏感信息，包括内部 IP 地址、域信息、用户名和密码。Carbon Black 的研究人员认为，该黑客组织 “极有可能” 将这些信息放到 “访问市场” 上售卖，以便买家此后运用远程访问发起自己的攻击。&lt;/p&gt; &lt;p&gt;这些访问市场为网络罪犯购买系统和公司的访问权限/凭证提供了一条便捷通道。该报告的作者称：“访问权失窃的系统可能会被当做僵尸主机用在大规模攻击中，或者被当成针对性攻击的入口点。”终极匿名服务 (UAS: Ultimate Anonymity Services) 就是这样一个访问市场，平均 6.75 美元就能买到一个访问凭证，而整个市场上提供有 3.5 万个凭证。&lt;/p&gt; &lt;p&gt;Carbon...</content>
+ </entry>
+
+ 
+
+ <entry>
+   <title>转载 | 访问控制之于物联网设备的重要性</title>
+   <link href="https://authing.cn/blog/%E8%BD%AC%E8%BD%BD-%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E4%B9%8B%E4%BA%8E%E7%89%A9%E8%81%94%E7%BD%91%E8%AE%BE%E5%A4%87%E7%9A%84%E9%87%8D%E8%A6%81%E6%80%A7"/>
+   <id>https://authing.cn/blog/转载 | 访问控制之于物联网设备的重要性</id>
+   <updated>2019-09-01T00:00:00+08:00</updated>
+   <content type="html">&lt;h1 id=&quot;转载--访问控制之于物联网设备的重要性&quot;&gt;转载 | 访问控制之于物联网设备的重要性&lt;/h1&gt; &lt;p&gt;网络罪犯的目光是越来越集中在物联网(IoT)设备上了。Hide ‘N Seek 恶意软件最新变种甚至首次将家居自动化设备纳入了感染范围。为什么这些设备在罪犯眼中受到如此关注？有两个原因：&lt;/p&gt; &lt;!-- more --&gt; &lt;ul&gt; &lt;li&gt;首先，这些设备出了名的易攻难守。&lt;/li&gt; &lt;li&gt;其次，大多数公司企业连网络上的传统设备都登记不全跟踪不了，更别说成百上千的新IoT设备了。&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2018/08/access_control.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt; &lt;p&gt;显然，&lt;strong&gt;IoT设备漏洞与机会并存&lt;/strong&gt;，让很多安全团队大为头疼。数字化转型时代，IoT设备的作用越来越关键，能令公司企业在今日泛在化市场中更具竞争优势。但同时，公司企业尚不具备在该新攻击界面上铺开全面可见性所需的资源，尤其是在IoT设备采纳速度过快的情况下。而且，公司企业现有的传统孤岛式安全设备也明显无法胜任IoT网络监视职能。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;那么需要做哪些安全措施来防止loT安全危机公司网络呢？&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;1. 需要访问控制&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;安全首要原则就是可见性。看不见就谈不上控制。从打补丁到监视到隔离，哪样都离不开在设备一接入网络时就建立起可见性。因为访问控制产品是新设备接入网络时首先碰到的网络元素，它们需能自动识别IoT设备，确定设备是否被黑，然后基于设备类型、预定目的地址、用户角色等因素提供受控访问。&lt;/p&gt; &lt;p&gt;进出网络的IoT设备数量持续增加，访问控制解决方案的处理速度需得跟上时代的发展。另外，访问控制解决方案还需与网络和安全控制措施无缝同步，确保IoT设备及其应用在分布式网络中的持续跟踪和策略统一实施。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;2. 网络分隔与访问控制&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;识别并验证IoT设备之后，还需为其分配一个特定的网络段。理想状态下，IoT设备与生产网络自动隔离，防止关键内部资源暴露在潜在威胁和攻击方法面前。比如说，直接与访问控制解决方案互动的内部分隔防火墙，就可将IoT设备置于专门的网段加以监视和审查其应用程序，识别并防止恶意软件的横向扩散。同时，边界防火墙可自动阻断受感染设备与外部C&amp;amp;C服务器通信。&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;3. 隔离与访问控制&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;访问控制还必须能够向其他安全、联网及管理设备发送IoT设备的信息，以便建立起IoT数据流基线并加以监视，方便采用行为分析之类的技术识别出流氓设备。&lt;/p&gt; &lt;p&gt;流氓设备一旦被揪出，整合的网络与安全解决方案便可在及时处理威胁上发挥关键作用。无论是哪种安全工具或解决方案检测出源自IoT设备的异常或恶意流量，都应能自动触发协同响应，包括重定向流量、封锁通信信道，以及使用网络访问控制(NAC)解决方案加以隔离——将被黑设备重分配到隔离网段留待评估、缓解或清除。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;loT安全新常态&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;因为在今日数字市场举足轻重，IoT设备代表着当今IT新常态的一部分。然而，想要在不干扰业务目标的情况下挡住被黑IoT设备带来的风险，却是难上加难。这是不仅仅是因为安全团队难以跟上设备及相关流量的爆发式增长与IoT设备本身的不安全性，也因为可防御的网络边界已经消散，可以从世界各个角落访问公司网络。更糟的是，安全人才的全球性短缺导致可用于检测和响应IoT相关事件的人手捉襟见肘。&lt;/p&gt; &lt;p&gt;只需一台被黑掉的IoT设备，就可对公司网络、基线和信誉造成严重打击。现代企业需要整合的自动化安全框架，该框架要能执行一系列关键功能，比如流量及行为监视、安全网络访问、协同威胁响应等等，无论这些威胁是在分布式网络的哪个角落被发现的。&lt;/p&gt; &lt;p&gt;黏合了访问控制和安全策略的集成安全方法，不仅可为企业带来建设强安全所需的可见性，还能带给企业检测、预防及响应威胁的自动化过程。该方法确保了设备情报共享、访问控制泛在实施，以及被黑设备快速清除，对关键业务交易和工作流的影响可降至最低。&lt;strong&gt;IoT设备已成现代业务流必备部分，只要安全措施做到位，倒也未必会成为公司网络的最弱一环。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;###&lt;strong&gt;相关阅读&lt;/strong&gt;&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;a href=&quot;https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html&quot;&gt;Authing 是什么以及为什么需要 Authing&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html&quot;&gt;我们为什么坚持做 ToB 的慢生意&lt;/a&gt;&lt;/li&gt; &lt;li&gt;&lt;a href=&quot;https://learn.authing.cn/authing/&quot;&gt;Authing 知识库&lt;/a&gt;&lt;/li&gt; &lt;li&gt;todo&lt;/li&gt;...</content>
  </entry>
 
  

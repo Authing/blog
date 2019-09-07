@@ -17,7 +17,7 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
 
   	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
@@ -38,6 +38,14 @@
 	  
 	    
 	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
 	    
 	  
 	    
@@ -93,7 +101,7 @@
     <span class="f-left">  
       <a href="/blog//">
         <h1>
-          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
           官方博客
         </h1>
       </a>
@@ -105,6 +113,14 @@
 	    
 	      
 	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
 	      
 	    
 	      
@@ -180,7 +196,7 @@
 
 <p>目前只支持 <strong>script</strong> 引入，暂不支持 <strong>NPM</strong> 安装，使用了本功能的开发者可以不必再安装 <strong>authing-js-sdk</strong>，因为通过 script 标签引入的代码中包含了 <strong>authing-js-sdk</strong>。</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="dl">"</span><span class="s2">https://cdn.authing.cn/sdk/javascript/authing-login-form-1.1.0.js</span><span class="dl">"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"https://cdn.authing.cn/sdk/javascript/authing-login-form-1.1.0.js"</span><span class="o">&gt;&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span></code></pre></div></div>
 
 <h3 id="2-显示表单">2. 显示表单</h3>
@@ -189,8 +205,8 @@
 
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
   <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
-    <span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">填入_Authing_的_client_ID</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">填入_Authing_client_ID_的_secret</span><span class="dl">'</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'填入_Authing_的_client_ID'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'填入_Authing_client_ID_的_secret'</span>
   <span class="p">});</span>
 
 </code></pre></div></div>
@@ -202,8 +218,8 @@
 <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.authing.cn/sdk/javascript/authing-login-form-1.1.0.js"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script&gt;</span>
   <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
-    <span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">填入_Authing_的_client_ID</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">填入_Authing_client_ID_的_secret</span><span class="dl">'</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'填入_Authing_的_client_ID'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'填入_Authing_client_ID_的_secret'</span>
   <span class="p">});</span>
 <span class="nt">&lt;/script&gt;</span>
 </code></pre></div></div>
@@ -466,12 +482,12 @@
 <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span>
 
   	<span class="c1">// 必选，client ID</span>
-    <span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">5b7f79f519915500015f18ac</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">clientId</span><span class="p">:</span> <span class="s1">'5b7f79f519915500015f18ac'</span><span class="p">,</span>
     <span class="c1">// 必选，secret</span>
-    <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">82f36cba243e13f81f06675193732af7</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">secret</span><span class="p">:</span> <span class="s1">'82f36cba243e13f81f06675193732af7'</span><span class="p">,</span>
 
-    <span class="na">title</span><span class="p">:</span> <span class="dl">'</span><span class="s1">Authing</span><span class="dl">'</span><span class="p">,</span>
-    <span class="na">logo</span><span class="p">:</span> <span class="dl">'</span><span class="s1">https://cdn.authing.cn/authing-logo.png</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">title</span><span class="p">:</span> <span class="s1">'Authing'</span><span class="p">,</span>
+    <span class="na">logo</span><span class="p">:</span> <span class="s1">'https://cdn.authing.cn/authing-logo.png'</span><span class="p">,</span>
 
     <span class="na">forceLogin</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="na">hideQRCode</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -480,16 +496,16 @@
     <span class="na">hideUsername</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
     <span class="na">hideClose</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 
-    <span class="na">mountId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">app</span><span class="dl">'</span><span class="p">,</span>
+    <span class="na">mountId</span><span class="p">:</span> <span class="s1">'app'</span><span class="p">,</span>
 
     <span class="c1">// 输入框的placeholder</span>
     <span class="na">placeholder</span><span class="p">:</span> <span class="p">{</span>
-      <span class="na">username</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-      <span class="na">email</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-      <span class="na">password</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-      <span class="na">confirmPassword</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-      <span class="na">verfiyCode</span><span class="p">:</span> <span class="dl">''</span><span class="p">,</span>
-      <span class="na">newPassword</span><span class="p">:</span> <span class="dl">''</span>
+      <span class="na">username</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">email</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">password</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">confirmPassword</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">verfiyCode</span><span class="p">:</span> <span class="s1">''</span><span class="p">,</span>
+      <span class="na">newPassword</span><span class="p">:</span> <span class="s1">''</span>
     <span class="p">},</span>
 
     <span class="na">qrcodeScanning</span><span class="p">:</span> <span class="p">{</span>
@@ -501,7 +517,7 @@
       <span class="na">onIntervalStarting</span><span class="p">:</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">intervalNum</span><span class="p">)</span> <span class="p">{</span>
       <span class="p">},</span> <span class="c1">// 可选，轮询时的回调函数，intervalNum 为 setInterval 返回的数值，可使用 clearInterval 停止轮询</span>
       <span class="na">interval</span><span class="p">:</span> <span class="mi">1500</span><span class="p">,</span> <span class="c1">// 可选，每隔多少秒检查一次是否扫码，默认1500</span>
-      <span class="na">tips</span><span class="p">:</span> <span class="dl">'</span><span class="s1">使用 微信 或小程序 身份管家 扫码登录</span><span class="dl">'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
+      <span class="na">tips</span><span class="p">:</span> <span class="s1">'使用 微信 或小程序 身份管家 扫码登录'</span><span class="p">,</span> <span class="c1">// 可选，提示信息，可写HTML</span>
     <span class="p">}</span>
   <span class="p">});</span>
 </code></pre></div></div>
@@ -511,8 +527,8 @@
 
 <p>在初始化 <code class="highlighter-rouge">AuthingForm</code> 后，可使用 <code class="highlighter-rouge">on</code>方法，如：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span> <span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">xxxx</span><span class="dl">'</span><span class="p">,</span> <span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">xxxxx</span><span class="dl">'</span><span class="p">});</span>
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">login</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">form</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingForm</span><span class="p">({</span> <span class="na">clientId</span><span class="p">:</span> <span class="s1">'xxxx'</span><span class="p">,</span> <span class="na">secret</span><span class="p">:</span> <span class="s1">'xxxxx'</span><span class="p">});</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
 	<span class="c1">// 成功登录后的回调事件，参数 user 为用户数据</span>
 <span class="p">});</span>
 </code></pre></div></div>
@@ -630,68 +646,68 @@
 
 <p>完整代码如下：</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">authingLoad</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">authing</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on authing load</span><span class="dl">'</span><span class="p">,</span> <span class="nx">authing</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'authingLoad'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">authing</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on authing load'</span><span class="p">,</span> <span class="nx">authing</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">authingUnload</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on authing load error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'authingUnload'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on authing load error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">oauthLoad</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">oauthList</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on oauth load</span><span class="dl">'</span><span class="p">,</span> <span class="nx">oauthList</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'oauthLoad'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">oauthList</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on oauth load'</span><span class="p">,</span> <span class="nx">oauthList</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">oauthUnload</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on oauth unload</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'oauthUnload'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on oauth unload'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">login</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on login</span><span class="dl">'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'login'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on login'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">loginError</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on login error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'loginError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on login error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">register</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on register</span><span class="dl">'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'register'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on register'</span><span class="p">,</span> <span class="nx">user</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">registerError</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on register error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'registerError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on register error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">emailSent</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on email sent</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'emailSent'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on email sent'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">emailSentError</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on email sent error</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'emailSentError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on email sent error'</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">resetPassword</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on reset password</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'resetPassword'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on reset password'</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">resetPasswordError</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on reset password error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'resetPasswordError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on reset password error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">scanning</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on scanning success</span><span class="dl">'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanning'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning success'</span><span class="p">,</span> <span class="nx">data</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">scanningError</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on scanning error</span><span class="dl">'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanningError'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning error'</span><span class="p">,</span> <span class="nx">error</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">scanningIntervalStarting</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on scanning interval starting</span><span class="dl">'</span><span class="p">,</span> <span class="nx">interval</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'scanningIntervalStarting'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">interval</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on scanning interval starting'</span><span class="p">,</span> <span class="nx">interval</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">formClosed</span><span class="dl">'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">on form closed</span><span class="dl">'</span><span class="p">);</span>
+<span class="nx">form</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">'formClosed'</span><span class="p">,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'on form closed'</span><span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div></div>
 
@@ -709,7 +725,7 @@
 	  </div>
 	    
 	    <!-- Footer -->
-	    <footer><span>@2018 - Authing</span></footer>
+	    <footer><span>@2019 - Authing</span></footer>
 
 
 	    <!-- Script -->

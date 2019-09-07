@@ -17,7 +17,7 @@
 	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
 
   <!-- Favicon -->
-  <link rel="shortcut icon" type="image/png" href="img/favicon.ico">
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
 
   	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 
@@ -38,6 +38,14 @@
 	  
 	    
 	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
 	    
 	  
 	    
@@ -93,7 +101,7 @@
     <span class="f-left">  
       <a href="/blog//">
         <h1>
-          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo-dark-colorful.jpg">
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
           官方博客
         </h1>
       </a>
@@ -105,6 +113,14 @@
 	    
 	      
 	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
 	      
 	    
 	      
@@ -179,17 +195,17 @@
 
 <p>然后将repo内的authing文件夹移动到你的项目目录下，之后使用require引入</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">path/to/authing/authing.js</span><span class="dl">'</span><span class="p">)</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'path/to/authing/authing.js'</span><span class="p">)</span>
 </code></pre></div></div>
 
 <p>3、调用</p>
 
-<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">authing-js-sdk</span><span class="dl">'</span><span class="p">);</span>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">Authing</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">'authing-js-sdk'</span><span class="p">);</span>
 
 <span class="c1">// 对Client ID和Client Secret进行验证，获取Access Token</span>
 <span class="kd">var</span> <span class="nx">auth</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Authing</span><span class="p">({</span>
-	<span class="na">clientId</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_client_id</span><span class="dl">'</span><span class="p">,</span>
-	<span class="na">secret</span><span class="p">:</span> <span class="dl">'</span><span class="s1">your_app_secret</span><span class="dl">'</span>
+	<span class="na">clientId</span><span class="p">:</span> <span class="s1">'your_client_id'</span><span class="p">,</span>
+	<span class="na">secret</span><span class="p">:</span> <span class="s1">'your_app_secret'</span>
 <span class="p">});</span>
 
 <span class="nx">auth</span><span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">validAuth</span><span class="p">)</span> <span class="p">{</span>
@@ -197,8 +213,8 @@
 	<span class="c1">//验证成功后返回新的authing-js-sdk实例(validAuth)，可以将此实例挂在全局</span>
 
 	<span class="nx">validAuth</span><span class="p">.</span><span class="nx">login</span><span class="p">({</span>
-		<span class="na">email</span><span class="p">:</span> <span class="dl">'</span><span class="s1">test@testmail.com</span><span class="dl">'</span><span class="p">,</span>
-		<span class="na">password</span><span class="p">:</span> <span class="dl">'</span><span class="s1">testpassword</span><span class="dl">'</span>
+		<span class="na">email</span><span class="p">:</span> <span class="s1">'test@testmail.com'</span><span class="p">,</span>
+		<span class="na">password</span><span class="p">:</span> <span class="s1">'testpassword'</span>
 	<span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">user</span><span class="p">)</span> <span class="p">{</span>
 		<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">user</span><span class="p">);</span>	
 	<span class="p">}).</span><span class="k">catch</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
@@ -232,7 +248,7 @@
 	  </div>
 	    
 	    <!-- Footer -->
-	    <footer><span>@2018 - Authing</span></footer>
+	    <footer><span>@2019 - Authing</span></footer>
 
 
 	    <!-- Script -->

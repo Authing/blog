@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>一键认证让移动应用都不需要发短信了，Web怎么办？</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>一键认证让移动应用都不需要发短信了，Web怎么办？</h2>		
+	<time datetime="2019-07-26T00:00:00+08:00" class="by-line">26 Jul 2019</time>
+	<div class="content">
+
+		<p>Authing 小登录，为你节省数以万计的短信费用。
+<!-- more -->
+<img src="http://img.staryu.cn/20190726-01.jpg" alt="" /></p>
+
+<p>最近各大短信服务商纷纷推出了一项新服务 —— 一键认证。这个功能可以让用户不需要收发短信点一下按钮直接进入应用。对用户来说，不仅减少了记忆密码的负担，还可以快速进入应用享受服务；对企业来说，最大的好处是提高了注册转化率 —— 毕竟点一下按钮比敲键盘，等短信要快太多了。在价格上，一键认证相比传统短信并无优势，价格一致。</p>
+
+<p><img src="http://img.staryu.cn/20190726-02.jpg" alt="左边是传统手机验证码登录，右边是一键登录" /></p>
+
+<p>最先推出这项服务的公司是闪验，百度搜一下闪验，可以搜到五家在做同样事情的公司，此类公司主要在做的事情就是用一套 SDK（软件开发包） 兼容了三大运营商的认证流程，方便企业和开发者快速接入，降低成本。</p>
+
+<p><img src="http://img.staryu.cn/20190726-03.jpg" alt="看到这里，我们可以发现，这些公司都在针对移动端做简化登录的事情" /></p>
+
+<p>那么现在问题来了，Web 应用怎么办？</p>
+
+<p>一键登录虽然让移动应用不需要再填手机号收发短信了，但是 Web 的用户依然需要，比如下面这样：</p>
+
+<p><img src="http://img.staryu.cn/20190726-04.jpg" alt="看到这里，我们可以发现，这些公司都在针对移动端做简化登录的事情" /></p>
+
+<p>难道我们真的要抛弃 Web 用户吗？答案是 No！</p>
+
+<p>Authing 推出的「小登录」小程序，可以让用户在网页端使用微信扫码快速登录，免收发短信，免等待短信收取时间。在企业端，可以节省几万到几十万不等的短信费用，同时可以防羊毛党薅羊毛。</p>
+
+<p>小登录在网页端展现的是一个小程序二维码：</p>
+
+<p><img src="http://img.staryu.cn/20190726-05.jpg" alt="" /></p>
+
+<p>用户扫码后会打开如下的界面，确认授权后即可完成登录：</p>
+
+<p><img src="http://img.staryu.cn/20190726-06.jpg" alt="" /></p>
+
+<p>对于开发者来说，小登录提供了完善的 SDK，开发者只需要使用非常简单的代码就可以完成接入：</p>
+
+<p><img src="http://img.staryu.cn/20190726-07.jpg" alt="" /></p>
+
+<p>如果你是企业管理者，还可以在控制台中管理并查看用户的登录数据：</p>
+
+<p><img src="http://img.staryu.cn/20190726-08.jpg" alt="" /></p>
+
+<h2 id="价格">价格</h2>
+
+<p>小登录的价格比传统短信和一键认证低四倍还多，短信和一键认证的价格平均在 0.035 一次，而小登录最低仅需要 0.006 元一次，如下所示：</p>
+
+<p><img src="http://img.staryu.cn/20190726-09.jpg" alt="" /></p>
+
+<h2 id="客户">客户</h2>
+
+<p>小登录已获得数十家客户认可，客户体量从五百强到初创公司，客户行业从出版社到人工智能，总托管用户达百万。</p>
+
+<blockquote>
+  <p>如果你对「小登录」感兴趣，请访问 <a href="https://wxapp.authing.cn/">https://wxapp.authing.cn/</a>（微信网页端也可以体验），若寻求商务合作请联系商务：186-1669-9123。</p>
+</blockquote>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>访问控制是什么？数据安全的关键组成</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>访问控制是什么？数据安全的关键组成</h2>		
+	<time datetime="2019-09-01T00:00:00+08:00" class="by-line">01 Sep 2019</time>
+	<div class="content">
+
+		<p>访问控制验证用户身份，并授予用户访问许可范围内信息的权限。</p>
+
+<!-- more -->
+
+<p><img src="https://www.aqniu.com/wp-content/uploads/2019/08/bigstock-219048286_1200x-1.jpg" alt="img" /></p>
+
+<p>谁能访问公司的数据？怎样确保尝试访问的人切实得到授权？何种情况下拒绝有权限用户的访问请求？</p>
+
+<p>为有效保护数据，公司访问控制策略必须解决这些（但不局限于这些）问题。以下内容便是访问控制基础知识导引：访问控制是什么？为什么访问控制很重要？哪些组织机构最需要访问控制？安全人员将面对何种挑战？</p>
+
+<h2 id="访问控制是什么">访问控制是什么？</h2>
+
+<p>访问控制是一套身份验证和权限管理机制，用于保证用户是其所声称的身份，以及授予用户访问公司数据的恰当权限。</p>
+
+<p>从高级层面上看，访问控制是数据访问权限的选择性限制。访问控制由两个主要部分组成：<strong>身份验证与授权。</strong></p>
+
+<p>身份验证是核实某人为其所宣称身份的一种技术，其本身并不足以保证数据安全。想要保证数据安全，还需要添加额外的安全层——授权。授权用以确定用户是否能够访问其所要求的数据，或者执行其所尝试的交易。</p>
+
+<p><strong>没有身份验证与授权，就没有数据安全。</strong>每一起数据泄露事件中，访问控制总是最先被调查的策略。无论是敏感数据意外暴露而被终端用户不当获取，还是敏感数据经由公开服务器上软件漏洞而暴露的 Equifax 数据泄露事件，访问控制都是其中的关键部分。只要没有恰当实现或维护好访问控制，其结果都有可能是灾难性的。</p>
+
+<p>凡是员工需要连接互联网的公司企业——也就是当今所有公司企业，都需要某种程度的访问控制。有员工在外工作，且需要访问公司数据资源与服务的公司企业，更应重视访问控制策略实现。</p>
+
+<p>换句话说，但凡你的数据对没有恰当授权的人有任何价值，那你的公司就需要强访问控制。</p>
+
+<h2 id="强访问控制的另一原因访问挖掘">强访问控制的另一原因：访问挖掘</h2>
+
+<p><strong>在暗网上收集与售卖访问描述文件的问题正变得越来越严重</strong>。举个例子，Carbon Black 最近发布的报告描述了 Smominru 加密货币挖掘僵尸网络，但该僵尸网络不仅挖掘加密货币，还挖掘各类敏感信息，包括内部 IP 地址、域信息、用户名和密码。Carbon Black 的研究人员认为，该黑客组织 “极有可能” 将这些信息放到 “访问市场” 上售卖，以便买家此后运用远程访问发起自己的攻击。</p>
+
+<p>这些访问市场为网络罪犯购买系统和公司的访问权限/凭证提供了一条便捷通道。该报告的作者称：“访问权失窃的系统可能会被当做僵尸主机用在大规模攻击中，或者被当成针对性攻击的入口点。”终极匿名服务 (UAS: Ultimate Anonymity Services) 就是这样一个访问市场，平均 6.75 美元就能买到一个访问凭证，而整个市场上提供有 3.5 万个凭证。</p>
+
+<p>Carbon Black 研究人员表示，网络罪犯将会更善加利用访问市场和访问挖掘技术，因为这实在是“太有利可图”了。如果被盗用户凭证拥有高于所需的权限，那公司面临的风险也会随之上升。</p>
+
+<h2 id="访问控制策略重点考虑">访问控制策略：重点考虑</h2>
+
+<p>绝大多数安全人员都清楚访问控制对自家公司的重要性。但访问控制该如何实施，就没那么容易取得共识了。访问控制要求在没有传统边界的动态世界中实现一致的策略。我们绝大多数人都在<strong>混合环境</strong>中工作，数据从公司服务器或云端流向办公室、家里、酒店、车中，以及提供开放 WiFi 热点的咖啡馆。这就令访问控制的实施很是棘手了。</p>
+
+<p>除此之外，设备种类和数量的暴增也增加了风险暴露面，比如 PC、笔记本电脑、智能手机、平板电脑、智能音箱和其他物联网 (IoT) 设备。设备多样性让创建和保持访问策略一致性成为了非常现实的难题。</p>
+
+<p>过去，访问控制方法常常是静态的。如今，网络访问必须是动态和流动的，要支持身份和基于应用的用例。</p>
+
+<p>高级访问控制策略应可动态调整，以响应不断进化的风险因素，使已被入侵的公司能够隔离相关员工和数据资源以控制伤害。</p>
+
+<p>企业必须确保其访问控制技术受到云资产和应用的一致支持，并能够无缝迁移到私有云等虚拟环境。访问控制规则必须依据风险因素而改变，也就是说，公司企业应在现有网络及安全配置基础之上，部署运用人工智能 (AI) 和机器学习的安全分析层。实时识别威胁并相应自动化调整访问控制规则也是公司企业应努力实现的。</p>
+
+<h2 id="四种访问控制">四种访问控制</h2>
+
+<p><strong>公司企业应根据所处理数据的类型及敏感程度，确定应采用哪种访问控制模型</strong>。旧有访问控制模型包括自主访问控制 (DAC) 和强制访问控制 (MAC)，基于角色的访问控制 (RBAC) 模型是现金最常用的，而最新的模型是基于属性的访问控制 (ABAC)。</p>
+
+<h3 id="1-自主访问控制-dac"><strong>1. 自主访问控制 (DAC)</strong></h3>
+
+<p>DAC 模型中，数据拥有者决定访问权。DAC 是基于用户指定的规则分配访问权限的一种方式。</p>
+
+<h3 id="2-强制访问控制-mac"><strong>2. 强制访问控制 (MAC)</strong></h3>
+
+<p>MAC 采用非自主模型发展而来，基于信息许可授予用户访问权限。MAC 是基于中央权威的规则分配访问权限的一种策略。</p>
+
+<h3 id="3-基于角色的访问控制-rbac"><strong>3. 基于角色的访问控制 (RBAC)</strong></h3>
+
+<p>RBAC 基于用户的角色授予访问权限，并实现关键安全原则，比如“最小权限原则”和“权限分离原则”。因此，尝试访问信息的用户只能访问其角色所需的必要数据。</p>
+
+<h3 id="4-基于属性的访问控制-abac"><strong>4. 基于属性的访问控制 (ABAC)</strong></h3>
+
+<p>ABAC 模型中，每个资源和用户都被赋予一系列属性。该动态方法中，资源访问权限决策是根据对用户属性的比较评估做出的，比如时间、位置和职位等。</p>
+
+<p>公司企业应根据数据敏感性和数据访问运营需求，来确定哪一种模型是最适合自己的。尤其是处理个人可识别信息 (PII) 或其他敏感信息（如健康保险流通与责任法案 (HIPAA) 或《受控非密信息》 (CUI) 数据）的公司企业，必须将访问控制当做自身安全架构的关键部分加以构建。</p>
+
+<h2 id="访问控制解决方案">访问控制解决方案</h2>
+
+<p>有很多技术可以支持多种访问控制模型。某些情况下，只有协同使用多种技术才可以达成所需访问控制等级。</p>
+
+<p>数据广布于云服务提供商和软件即服务 (SaaS) 应用上，且接入传统网络边界的现实，意味着需编排一个安全的解决方案。当前多家供应商提供的特权访问和身份管理解决方案，均可以集成进传统微软活动目录 (AD) 架构。多因子身份验证也可用作进一步增强安全的措施。</p>
+
+<h2 id="为什么授权依旧棘手">为什么授权依旧棘手？</h2>
+
+<p>如今，大部分公司企业已擅长身份验证，尤其是在多因子身份验证和生物特征识别身份验证（比如人脸识别或虹膜识别）的帮助下。最近几年，由于重大数据泄露造成被盗密码凭证在暗网上售卖，安全人员更加重视多因子身份验证了。</p>
+
+<p>但授权却仍是安全人员常常搞砸的一个领域。新手很难确定并持续监测谁具有哪些数据资源的访问权，应怎样访问数据资源，以及何种情况下可以授予访问权。不一致的授权协议或弱授权协议却能制造安全漏洞，不尽快发现和修复就会造成重大损失的那种。</p>
+
+<p>说到监视，无论公司选择哪种访问控制实现方法，其实施都必须受到持续监视，要符合公司安全策略和运营方针，能识别潜在安全漏洞。公司企业应定期执行治理、风险及合规审核。执行访问控制功能的每个应用都需要反复接受漏洞扫描，应收集和监视每次访问的日志以发现策略违反事件。</p>
+
+<p>今天的复杂 IT 环境中，访问控制应被视为运用高级工具的动态技术基础设施，反映移动性增长等网络环境变化，识别我们所用设备的改变及其固有风险，并考虑云迁移风潮的影响。</p>
+
+<p><strong>Carbon Black 的访问挖掘报告下载：https://www.carbonblack.com/resources/threat-research/access-mining/</strong></p>
+
+<h3 id="相关阅读"><strong>相关阅读</strong></h3>
+<ul>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<blockquote>
+  <p>原文链接：https://www.aqniu.com/learn/54554.html 作者：nana 星期六, 八月 31, 2019</p>
+</blockquote>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

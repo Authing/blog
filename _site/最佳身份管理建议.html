@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>最佳身份管理建议</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>最佳身份管理建议</h2>		
+	<time datetime="2019-09-01T00:00:00+08:00" class="by-line">01 Sep 2019</time>
+	<div class="content">
+
+		
+<blockquote>
+  <p>我们从未像现在这样接近无处不在的全局身份(ID)。在双因子身份验证(2FA)/多因子身份验证(MFA)的加持下，好处尽在掌握而风险得到控制。</p>
+</blockquote>
+
+<!-- more -->
+
+<p>ID，曾是计算机安全防御方面唯一重要的安全边界。只要可访问多个域的1个登录凭证被盗，物理边界、防火墙边界、安全域、虚拟网络等等，全都不再重要了。</p>
+
+<p>今天的ID解决方案，可以1个凭证就访问成百上千个不同的安全域，但同时又保持处于整体风险很低的状态。这是怎么做到的呢？</p>
+
+<h2 id="id技术早期"><strong>ID技术早期</strong></h2>
+
+<p>在计算机和网络技术早期，大多数人都只用1个<strong>登录名&amp;口令</strong>对来访问全部资源。由于1台计算机被感染，就会导致共享该相同登录凭证的其他所有计算机也遭殃，这种1个凭证走天下的做法被证明是非常糟糕的策略。每个人都被建议为自己访问的各个系统创建不同的口令。</p>
+
+<h2 id="id技术中期"><strong>ID技术中期</strong></h2>
+
+<p>随着大多数人如今都需要用口令访问几十上百个不同资源，若要每个资源用单独的口令，就会要求要么把口令全都写下来，要么用口令管理器把所有口令存储下来，在访问时自动登入，要么采用某种形式的<strong>单点登录(SSO)解决方案</strong>。</p>
+
+<p>SSO解决方案在企业里非常盛行，口令管理器则在家庭用户中间非常普遍。但这两种类型的解决方案无法在全部的安全域和平台中适用。一些广泛应用的SSO解决方案被创建出来，比如微软的Passport服务和去中心化的OpenID标准。尽管全球采用的承诺很诱人，所有中期SSO解决方案没有一个真正成功了。</p>
+
+<h2 id="当今的id技术"><strong>当今的ID技术</strong></h2>
+
+<p><strong>社交媒体杀手级App，比如Facebook和推特，无情碾压过其他ID竞争者，方产生了ID大战中的新胜者。</strong>庞大的用户数量，确保了他们无论使用哪种解决方案和协议，最终都会成为全球通行方案。新的全局ID标准和解决方案几乎一夜之间冒头。至少，在ID观察者眼中是这样的。</p>
+
+<p>新解决方案并非总能获得全球认可。这个世界上，还有很多聪明专注的人，长期以来都在磨砺其他可能更棒的解决方案，这部分人感受到了深深的伤害。但都不重要了。要么吸收，要么落后。</p>
+
+<p>最初的阵痛过去后，纷争平息，强势的新标准最终被认为是不错的东西。结果就是，<strong>我们可供选择的SSO身份验证标准更少，但更广为接受。而且这些标准在企业和消费者两种平台中都能应用。</strong></p>
+
+<p>说到今天的ID解决方案，下列协议和解决方案简直信手拈来，没用过也听过：<strong>Facebook的 Graph API、OAuth、OpenIDConnect、xAuth、SAML、RESTful和FIDO联盟。</strong>数十年的尝试过后，通用ID的世界终于达成。很多网站上，你可以用Facebook、推特或喜欢的 OAuth/xAuth SSO 来验证身份。互操作问题依然存在，但这些障碍正飞速瓦解。</p>
+
+<p>今天，你可以使用<strong>口令、手机、数字证书、生物识别特征、2FA或MFA SSO</strong>解决方案，来登录各种网站。每个ID都有不同的“属性”或相关“声明”，关联至1个或多个受信设备，有不同的保证级别，可用于不同的网站。</p>
+
+<p>当然，目前并非全部网站都接受了SSO，但我们距离这一将来并不太远。不过，我们真的想要吗？</p>
+
+<p>我们大多数人都会有用不同身份应对不同事务的需求。比如说，大部分人都有工作和私人账号。我的工作要求能随时保有所有工作相关内容，甚至要能够在雇佣终止时立即清除所有工作内容。同时，我并不希望工作上的管理员可以访问我在家庭电脑上的个人内容浏览历史。我不想让自己的个人文档出现在工作计算机上，反之亦然。这种情况在当前全局ID无孔不入的大环境下，还是经常发生的。比如说，家里小孩把iPod插入大人工作电脑充电，iTunes就自动同步大人的工作文档到小孩iPod上——很惊悚，很危险，但经常发生。</p>
+
+<h2 id="完美单一id"><strong>完美单一ID</strong></h2>
+
+<p>如果能用1个全局ID畅行不同“身份”，比如“工作的你”、“家庭的你”……；能1个ID应用到不同用例场景；能确保不同内容和资源各自隔离；那世界就完美了。或许未来能实现，但目前恐怕还没走到这一步。</p>
+
+<p>单点登录引入更多风险？</p>
+
+<p>或许你会担忧，1个统一的ID(或者更少但更通行的ID)，会不会意味着一旦该ID被盗，所有内容都曝光在黑客眼中，后果严重到不堪设想。毕竟，用单点登录，跟用同一个口令登录所有注册网站，从哪方面看都太像了。难道我们绕这一大圈，只是为了走回原点？</p>
+
+<p>只要做对了，多半是不会绕一圈又绕回老问题的。</p>
+
+<p><strong>如果你用的全局ID从源头就被黑了（比如ID提供商），被黑ID有可能被用在更多地方，风险自然更大。</strong>举个例子，坏人拿到了你的Facebook登录名和口令，你所有用Facebook账户凭证登录的地方他就都能访问了。</p>
+
+<p>但这也正是Facebook，以及大多数其他流行社交站点和身份验证提供商，主推更强壮的2FA和MFA解决方案，而你也应该使用2FA/MFA的原因所在。这样一来，即便黑客获取了你的口令，他也得不到(至少不会立即获得)，你身份验证所需的第二个因子或物理设备。</p>
+
+<p>另外，大多数全局ID解决方案，并不会在所有参与站点上使用单一身份验证令牌。<strong>相反，你的“全局令牌”被用来创建特定于各站点/会话的身份验证令牌，令牌间不存在交叉使用的情况。</strong>这意味着，即使你用全局身份验证令牌登录的某个站点被黑客攻破，该令牌也无法应用到其他站点上。这是双赢解决方案，比共享口令好多了。</p>
+
+<h2 id="生物特征识别的隐忧"><strong>生物特征识别的隐忧</strong></h2>
+
+<p>其实不担心生物特征识别的随意使用，或者无需担心生物特征不定哪天就被存储到每个人的全局ID账户中。生物特征识别技术从来都不像表现出来的那么神奇。它们根本没有号称的那么精确，很容易被伪造，还经常罢工（手上有汗或者稍微脏点儿的时候去按按指纹打卡机试试，你老板会很乐意扣你全勤奖的）。</p>
+
+<p>但假设你是个指纹识别忠实粉丝，你想用指纹访问任意网站，然后你挑了个能接受指纹的全局身份验证提供商。听起来很棒的主意。但是，<strong>一旦我们开始在全局ID中存储指纹，攻破了该ID提供商的攻击者就将获得你的指纹——永久性的。</strong>他们有可能以你的名义，横行在所有接受你指纹的其他网站上。毕竟，你又不可能把自己的指纹改掉。</p>
+
+<p>目前为止，有两样东西在阻止生物特征ID盗窃问题蔓延(除了生物特征识别技术并未在手机和笔记本之外的很多用例中被接受的事实)。</p>
+
+<ul>
+  <li>
+    <p><strong>其一，大多数生物特征都是本地存储并使用的。</strong>这意味着黑客必须实地接触到你的设备，才能破解并拿到你的生物特征ID。而且，即便他拿到了，该生物特征也用不到其他设备上。</p>
+  </li>
+  <li>
+    <p>其二，一旦你使用生物特征ID登录，此后的身份验证就是：验证系统使用上述讨论过的其他身份验证方式之一。除了你的指纹，还用一些其他身份验证令牌。<strong>你的生物特征ID一般是不离开你的本地设备。而如果人们开始过度依赖全局生物特征识别身份验证，这种情况就会发生变化了。</strong></p>
+  </li>
+</ul>
+
+<p>##<strong>总结</strong></p>
+
+<p>我们从未像现在这样接近无处不在的全局ID。目前的最佳实践是：对全局ID启用2FA/MFA。这样才能利益最大化而风险最小化。</p>
+
+<p>###<strong>相关阅读</strong></p>
+<ul>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<blockquote>
+  <p>原文链接：https://www.aqniu.com/learn/25990.html  作者：nana 星期五, 六月 16, 2017</p>
+</blockquote>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

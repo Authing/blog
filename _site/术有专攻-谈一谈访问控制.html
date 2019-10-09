@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>术有专攻，谈一谈访问控制</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>术有专攻，谈一谈访问控制</h2>		
+	<time datetime="2019-09-01T00:00:00+08:00" class="by-line">01 Sep 2019</time>
+	<div class="content">
+
+		
+<p>说起访问控制，不同的人会有不同的理解。不过其最基本的解释，简单地讲，就是<strong>“限制对资源的访问”</strong>。然而，具体到我们各自的组织，要弄明白访问控制的实际意义，却远非说起来那么简单。</p>
+
+<!-- more -->
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2016/03/640.webp-138.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2016/03/640.webp-138.jpg" alt="640.webp (1)" /></a></p>
+
+<p>对于有些人来讲，只需基于用户身份验证机制有选择性地授予用户对账户的访问即可；对于有些人来讲，只需厘清用户角色即可；对于有些人来讲，只需控制好访问的许可即可。但对于另外一些人来讲，可能就需要对虚拟局域网进行锁定，这已经超出了用户的范畴，而是机器与机器之间的交互问题。</p>
+
+<p>当然，还有很多的访问控制技术，并不是基于允许访问列表（即白名单）的访问控制，而是基于不允许访问列表（即黑名单）的访问控制，比如进行潜在流量过滤的WEB应用程序安全工具。</p>
+
+<p>综上所述，访问控制在IT组织可以说是无处不在，并且在很多情况下又各有不同。</p>
+
+<p><strong>具体到“访问策略”，大多数的访问控制方法都依赖于完全专业人士所制定的安全策略。</strong>特别是白名单方法，该策略通常是由组织指定的。</p>
+
+<p>黑名单则通常容易一些，因为对付不必要的访问（如恶意软件）通常不需要为每个用户设定个性化的访问控制技术。因此，尽管通过阻止一些不必要的访问的黑名单形式是一项非常棒的安全基准，但真正的访问控制通常只有通过基于组织特定的安全需求的附加的白名单才能够达成。</p>
+
+<p>这正是访问控制麻烦的地方。在极端情况下，访问控制方法可以很简单、很流行并且可控，比如：</p>
+
+<ul>
+  <li><strong>基于身份识别的访问控制（IBAC）：</strong>请求者进行身份验证，通过验证获得所有访问权限，否则被拒绝访问</li>
+  <li><strong>基于角色的访问控制（RBAC）：</strong>请求者进行身份验证，并获得基于角色的访问权限；</li>
+  <li><strong>多层安全（MLS）：</strong>请求者拥有一定级别的身份标识，可以访问不高于其身份级别的分类资源。</li>
+</ul>
+
+<p>这些方法的问题在于，其大部分对于组织至关重要的策略的实际执行都过于简单。例如，HIPAA法案要求，法案覆盖范围内的实体要努力限制自己“完成使用、披露、或请求目的的最低必要”。</p>
+
+<p>这种通用的（我们称之为“高级”的）策略都是基于人类直觉的，使用的都是像IBAC、RBAC、MLS或列入黑名单之类的传统而又简单的访问控制方法，但却并不容易实现,。</p>
+
+<p>相反地，这些通用的高级策略需要重新解读为可以在实际技术中实现的“低级的”、复杂的策略，比如“护士只允许查看其当前所服务的治疗医师所负责的患者的病历，并且该护士和患者应当属于同一病区”。这样的访问策略往往非常复杂、详细、包含动态信息和应用场景。</p>
+
+<p>在过去的10到15年间，设计出了许多这样先进的访问控制方法来支持这样的复杂性。这些方法如属性访问控制（ABAC）——简单地讲，就是<strong>基于访问者、资源和场景的规则与属性来决定访问控制</strong>；风险自适应访问控制——基于风险计算实行访问权限变化的访问控制；还有基于邻近度的访问控制、基于业务流程的访问控制、基于历史记录的访问控制等等。</p>
+
+<p>要弥补通用性高级访问策略和技术性可实现性低级策略之间的“语义鸿沟”通常是具有挑战性的。正确地实现这样的以及其他的先进访问控制策略需要很好地理解以下要点：</p>
+
+<ul>
+  <li>当前日益复杂的安全策略需求及其对技术性访问控制实现的影响；</li>
+  <li>越来越复杂的IT环境的影响，如云计算、物联网等访问策略；</li>
+  <li>可用的高级访问控制方法所带来的好处与所面临的复杂性挑战；</li>
+  <li>克服复杂性和动态性，管理高级访问策略的方法和流程；</li>
+  <li>了解高级访问控制最适合的用例（如企业、大数据、云计算、物联网等）。</li>
+</ul>
+
+<h3 id="相关阅读"><strong>相关阅读</strong></h3>
+<ul>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<blockquote>
+  <p>原文链接：https://www.aqniu.com/learn/14547.html 作者：nana 星期五, 三月 25, 2016</p>
+</blockquote>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

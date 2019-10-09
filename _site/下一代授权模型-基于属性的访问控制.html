@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>下一代授权模型：基于属性的访问控制</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>下一代授权模型：基于属性的访问控制</h2>		
+	<time datetime="2019-09-08T00:00:00+08:00" class="by-line">08 Sep 2019</time>
+	<div class="content">
+
+		<p>尽管<strong>基于属性的访问控制(ABAC)</strong>前景光明，但决策者仍因某些误解而对其<strong>投资回报率(ROI)</strong>心存疑虑。</p>
+
+<!-- more -->
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2017/08/encryption_security_lock-100052900-large-100310475-large.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2017/08/encryption_security_lock-100052900-large-100310475-large.jpg" alt="img" /></a></p>
+
+<p>技术发展日新月异，公司决策者和安全团队常迷惑于自己到底需要什么产品。进一步讲，他们想知道公司能从他们的投资中获得什么收益。</p>
+
+<p>与其他投资相同，公司企业在安全投资上也会寻求ROI。<strong>安全操作者需要理解每个新产品的优势，知道该产品帮助降低风险的机制。</strong></p>
+
+<p>虽然Gartner预测，“到2020年，70%的企业将采用ABAC保护关键资产”，人们对企业到底能从ABAC中得到什么好处仍存有很多疑虑。</p>
+
+<p>虽然ABAC可能作为安全工具得到更广泛的应用，但只要对ROI的疑问存在，这一天就不会真的到来。</p>
+
+<p><strong>ABAC是“下一代”授权模型，在结构化语言中使用属性作为构建基石来定义并实施访问控制，提供上下文相关的细粒度动态访问控制服务。</strong></p>
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2017/08/企业ABAC场景示例.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2017/08/%E4%BC%81%E4%B8%9AABAC%E5%9C%BA%E6%99%AF%E7%A4%BA%E4%BE%8B-690x448.jpg" alt="img" /></a></p>
+
+<p>企业ABAC技术使用场景示例</p>
+
+<p>如果加入到新数字化转型计划中，ABAC可帮助企业向客户、员工和合作伙伴，交付更为个性化、更便利、更可靠的移动体验，提供对云端应用和数据的安全访问。企业也需要更快适应不断改变的监管和安全要求。</p>
+
+<p>ABAC不管理硬连接业务应用的控制，而是采用透明的策略方法。</p>
+
+<p>当然，这些是该模型的既定特性。潜在客户还是会质疑（也应该质疑）该模型对自家企业的好处。</p>
+
+<p><strong>ABAC四大误解与真相</strong></p>
+
+<p>围绕ABAC有4个广泛存在的误解，理清真相有助理解不同意见，做出更好决策。</p>
+
+<p>误解1——<strong>采用ABAC会影响系统性能</strong></p>
+
+<p><strong>真相：</strong>错。ABAC最多会<strong>增加一点点极小的延迟</strong>，几毫秒而已。</p>
+
+<p>误解2——<strong>ABAC需要客户强化其身份验证</strong></p>
+
+<p><strong>真相：</strong>错。ABAC是<strong>身份验证的补充</strong>，即便你已经用了多重登录凭证也可以加上ABAC。</p>
+
+<p>误解3——<strong>公司开发人员可以在做API时编写他们自己的访问控制</strong></p>
+
+<p><strong>真相：</strong>并非如此。<strong>维护写入应用中的逻辑既没效率，代价还特别高昂。</strong>除了创建应用时的前期开发成本，未来修改过程中持续的开销才是大头。</p>
+
+<p>误解4——<strong>角色和分组列表就是定制应用所需的全部访问控制</strong></p>
+
+<p><strong>真相：</strong>未必。<strong>ABAC可解放你的开发团队，让他们可以专注在关键项目上，摒弃编写太多额外代码来处理复杂访问需求的麻烦。</strong>另外，你的应用未必具备做出恰当授权决策所需的全部上下文。</p>
+
+<p>原文链接： https://www.aqniu.com/tools-tech/27392.html  作者：nana 星期一, 八月 14, 2017</p>
+
+<h3 id="相关阅读"><strong>相关阅读</strong></h3>
+<ul>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

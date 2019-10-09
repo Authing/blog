@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2019-10-09T23:31:45+08:00</updated>
+ <updated>2019-10-09T23:39:53+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -14,9 +14,9 @@
  
 
  <entry>
-   <title>Authing新功能速览（9月第三周）</title>
-   <link href="http://localhost:4000/Authing%E6%96%B0%E5%8A%9F%E8%83%BD%E9%80%9F%E8%A7%88-9%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8"/>
-   <id>http://localhost:4000/Authing新功能速览（9月第三周）</id>
+   <title>Authing新功能速览9月第三周</title>
+   <link href="http://localhost:4000/Authing%E6%96%B0%E5%8A%9F%E8%83%BD%E9%80%9F%E8%A7%889%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8"/>
+   <id>http://localhost:4000/Authing新功能速览9月第三周</id>
    <updated>2019-09-13T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;秋天到了。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190913090847.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;控制台支持管理用户授权列表&quot;&gt;控制台支持管理用户授权列表&lt;/h2&gt; &lt;p&gt;目前可以在 &lt;strong&gt;控制台 -&amp;gt; 用户中心 -&amp;gt; 选择用户 -&amp;gt; 授权应用列表&lt;/strong&gt; 查看某用户的授权记录，并支持撤回授权。 &lt;img src=&quot;https://cdn.authing.cn/blog/20190913090856.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;开源一款-graphql-调试器&quot;&gt;开源一款 GraphQL 调试器&lt;/h2&gt; &lt;p&gt;我们开源了一款基于 Vue.js 的 GraphQL 调试器，暂命名为 Super Graphiql 。它可以帮助体验与调试线上的 API，支持自动生成查询语句，并集成了文档功能。欢迎关注与提交 issue 哦。 Github 地址: https://github.com/Authing/super-graphiql&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190913094356.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;密码函数计算支持校验密码&quot;&gt;密码函数计算支持校验密码&lt;/h2&gt; &lt;p&gt;在上&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzU1OTk1NjU4MA==&amp;amp;mid=2247483791&amp;amp;idx=1&amp;amp;sn=cd195aa89be1760eefad6824858a262f&amp;amp;chksm=fc0e1684cb799f926c9fe1789850b2bba1469e3c1dc37be470133e4800765241e6482b123455&amp;amp;scene=21#wechat_redirect&quot;&gt;一个版本&lt;/a&gt;，我们增加了对自定义密码加密方法的支持，现在新增了函数计算校验模块，可以通过输入和对比测试明文和密文的方式，在线校验上传的代码片段是否有效。&lt;/p&gt; &lt;p&gt;&lt;img...</content>
  </entry>
@@ -24,9 +24,9 @@
  
 
  <entry>
-   <title>身份访问与管理(iam)的定义、应用与提供商</title>
+   <title>身份访问与管理(iam)的定义:应用与提供商</title>
    <link href="http://localhost:4000/%E8%BA%AB%E4%BB%BD%E8%AE%BF%E9%97%AE%E4%B8%8E%E7%AE%A1%E7%90%86(IAM)%E7%9A%84%E5%AE%9A%E4%B9%89-%E5%BA%94%E7%94%A8%E4%B8%8E%E6%8F%90%E4%BE%9B%E5%95%86"/>
-   <id>http://localhost:4000/身份访问与管理(IAM)的定义、应用与提供商</id>
+   <id>http://localhost:4000/身份访问与管理(IAM)的定义:应用与提供商</id>
    <updated>2019-09-08T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;企业IT中的IAM基本上就是定义和管理个人网络用户的角色和访问权限，以及规定用户获得授权（或被拒绝授权）的条件。IAM系统的核心目标是为每个用户赋予一个身份。该数字身份一经建立，在用户的整个“访问生命周期”存续期间都应受到良好的维护、调整与监视。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2018/01/integrated-identity-management-e1415816987409.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2018/01/integrated-identity-management-e1415816987409-690x388.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;因此，身份管理的首要目标就是：&lt;strong&gt;从用户登录系统到权限授予到登出系统的整个过程中，根据需要在恰当的条件下及时赋予正确的用户对企业内适当资产的访问权。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;IAM系统为管理员提供了修改用户角色、跟踪用户活动、创建用户活动报告和贯彻管理策略的工具及技术。这些系统的出现就是为了能够管理整个企业内的用户访问，并确保用户活动符合企业规章制度与政府监管规定。&lt;/p&gt; &lt;h2 id=&quot;iam产品和服务能做什么&quot;&gt;&lt;strong&gt;IAM产品和服务能做什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;身份与管理技术包括（但不局限于）口令管理工具、配置软件、安全策略实施应用程序、报告及监视App和身份存储。身份管理系统既可以在企业内部署，比如微软SharePoint，也有云端系统，比如微软的 Office 365。&lt;/p&gt; &lt;p&gt;佛瑞斯特研究所的&lt;strong&gt;《科技浪潮：身份与访问管理，2017第四季度》&lt;/strong&gt;报告中，&lt;strong&gt;有6种IAM技术被认为具备发展潜力，目前虽然成熟度低，但具备很高的商业价值。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;1. API安全&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;驱动IAM应用于B2B商业模式，促成IAM与云的融合，并催生出基于微服务的IAM架构。佛瑞斯特研究所看到API安全解决方案用于移动应用或用户托管访问之间的单点登录(SSO)。这将使安全团队得以管理IoT设备授权和个人可识别数据。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;2. 客户身份与访问管理(CIAM)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;可对用户进行全面的管理与身份验证，可施行自服务与资料管理，还能与CRM、ERP和其他客户管理系统及数据库集成。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;3. 身份分析(IA)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;能够让安全团队运用规则、机器学习和其他统计算法来检测并阻止危险身份行为。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;4. 身份即服务(IDaaS)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;包含提供SSO的软件即服务(SaaS)解决方案，可从一个门户即登录Web应用和原生移动应用，还能提供一定程度的用户账户资料和访问请求管理。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;5. 身份管理与治理&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;提供可重复的自动化方式来监管身份生命周期。在身份及隐私合规方面非常重要。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;6. 基于风险的身份验证(RBA)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;解决方案在给出风险评级时会将用户会话和身份验证上下文考虑在内。于是公司就可要求高风险用户进行双因子身份验证(2FA)而允许低风险用户仅以单因子凭证验证身份（比如用户名+口令）。&lt;/p&gt; &lt;p&gt;今天这种复杂的计算环境下，IAM系统必须足够灵活和健壮。原因之一：企业计算环境曾经很大程度上都只在企业内部部署，身份管理系统仅在用户来公司上班时对其进行身份验证和跟踪。曾经，有一道安全围墙阻隔着企业外面的各种风险，而现在，随着移动办公和云的兴起，围墙消失了。&lt;/p&gt; &lt;p&gt;因此，今天的身份管理系统应能让管理员方便地管理各类用户的访问权限，包括在公司上班的员工和世界各地的承包商；融合了内部计算、SaaS应用和影子IT及BYOD用户的混合计算环境；混合了UNIX、Windows、Macintosh、iOS、安卓甚至IoT设备的计算架构。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;最终，身份与访问管理系统应能以持续和可扩展的方式对整个企业的用户进行集中式管理。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;最近几年，IDaaS作为第三方托管服务通过云以订阅的方式提供逐渐发展起来，同时满足了客户的现场与云端两类系统的身份管理需求。&lt;/p&gt; &lt;h2 id=&quot;为什么需要-iam&quot;&gt;&lt;strong&gt;为什么需要 IAM？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;身份与访问管理是任何企业安全计划的重要一环，因为在今天的数字化经济中，它与企业的安全和生产力密不可分。&lt;/p&gt; &lt;p&gt;被盗用户凭证往往是进入企业网络及其信息资产的入口点。企业运用身份管理来守护信息资产，使其不受日渐增多的勒索软件、犯罪黑客活动、网络钓鱼和其他恶意软件攻击的影响。Cybersecurity Ventures 曾预测，今年全球勒索软件所致损失将超50亿美元，比2016年上升15%。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;很多企业里，用户有时候会拥有超出工作所需的访问权限。而健壮的IAM系统可以贯彻用户访问规则和策略，为整个企业加上一层重要的防护。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;身份与访问管理系统可以增强业务生产力。此类系统的中央管理能力能够减少守护用户凭证与访问权限的复杂性和成本。同时，身份管理系统也能提升员工在各种环境的生产力（保证安全的情况下），无论他们是在家办公还是在公司里上班，或者是在外地出差。&lt;/p&gt; &lt;h2 id=&quot;iam对合规管理的意义何在&quot;&gt;&lt;strong&gt;IAM对合规管理的意义何在？&lt;/strong&gt;&lt;/h2&gt;...</content>
  </entry>
@@ -34,9 +34,9 @@
  
 
  <entry>
-   <title>身份体系中一个极端的存在：ssi（自主身份）</title>
-   <link href="http://localhost:4000/%E8%BA%AB%E4%BB%BD%E4%BD%93%E7%B3%BB%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9E%81%E7%AB%AF%E7%9A%84%E5%AD%98%E5%9C%A8-SSI-%E8%87%AA%E4%B8%BB%E8%BA%AB%E4%BB%BD"/>
-   <id>http://localhost:4000/身份体系中一个极端的存在：SSI（自主身份）</id>
+   <title>身份体系中一个极端的存在:ssi自主身份</title>
+   <link href="http://localhost:4000/%E8%BA%AB%E4%BB%BD%E4%BD%93%E7%B3%BB%E4%B8%AD%E4%B8%80%E4%B8%AA%E6%9E%81%E7%AB%AF%E7%9A%84%E5%AD%98%E5%9C%A8-SSI%E8%87%AA%E4%B8%BB%E8%BA%AB%E4%BB%BD"/>
+   <id>http://localhost:4000/身份体系中一个极端的存在:SSI自主身份</id>
    <updated>2019-09-08T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;自主身份(SSI：self-sovereign identity)是数字身份体系中一个极端的存在。其焦点放在将控制交回用户手中。但SSI不是解决问题的唯一方式。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190908073400.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;身份领域流传有很多关于自主身份(SSI)的话题。SSI的宗旨就是将用户置于数字身份管理和控制的中心。以用户为中心的数字身份不是新鲜概念，2005年 Kim Cameron 的《身份法则》一书中就提出了这一概念。法则1：身份元系统的成功取决于其使用者。&lt;/p&gt; &lt;p&gt;SSI以用户为中心，但以用户为中心的不止SSI系统一家。&lt;/p&gt; &lt;p&gt;理论上讲，SSI很不错。毕竟，数字身份就是用来解决你如何处理自身标识信息的——这当然应该在你自己的掌控之下。然而，有几个问题令人怀疑SSI真的能够满足我们对身份的需求吗？&lt;/p&gt; &lt;h2 id=&quot;1-自主身份是什么&quot;&gt;1. 自主身份是什么？&lt;/h2&gt; &lt;p&gt;自主身份采用区块链注册个人身份属性。这是什么意思呢？你的身份数据(属性或声明)——决定 “数字化的你” 或 “此物是此物” 的东西，被注册到区块链中的某个区块上。该区块链是个分布式账本(没有中央权威控制)，后续的去中心化声明是个人识别数据的一部分，可在用户控制下与请求方(如银行或政府机构等)共享。&lt;/p&gt; &lt;p&gt;SSI的实质基于可验证声明。数字身份领域里，验证是件颇为棘手的事；没那么直观，也不是弄点“用户友好”就能应付过去的。但Sovrin这样的组织就是建立在通过适用于数字身份的分布式账本技术主干网管理可验证声明的概念上。(Sovrin提供SSI骨干网。)&lt;/p&gt; &lt;h2 id=&quot;2-什么是可验证声明&quot;&gt;2. 什么是可验证声明？&lt;/h2&gt; &lt;p&gt;关于个人的数据点必须是真实的，或者至少要具备能满足服务提供商要求的一定真实性，才是有效的。由可信第三方核实(验证)过的声明即被视为可验证的。Web标准监管者W3C就曾研究过可验证声明标准的问题。其研究极不看好用户为中心的和隐私增强的模式。他们的声明极为强硬：没有以用户为中心的、隐私增强的可验证声明生态系统。&lt;/p&gt; &lt;p&gt;该研究的结论包括：&lt;/p&gt; &lt;ul&gt; &lt;li&gt;信任是去中心化的。可验证声明的消费者决定哪些发布者可信任。&lt;/li&gt; &lt;li&gt;用户可共享可验证的声明而无需向用于存储声明的软件代理透露既定接收方。&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;但是，这种情况下，你需要一套去中心化的身份系统来实现去中心化的可验证声明吗？二者是否是互斥的呢？&lt;/p&gt; &lt;h2 id=&quot;3-关于ssi的3个关键问题&quot;&gt;3. 关于SSI的3个关键问题&lt;/h2&gt; &lt;h3 id=&quot;1-谁来支付&quot;&gt;&lt;strong&gt;1). 谁来支付？&lt;/strong&gt;&lt;/h3&gt; &lt;p&gt;我们生活的世界建立在一定商业架构基础之上。这种架构很大程度上受金钱驱动。基于出示可验证声明的身份框架要如何应用到服务上呢？谁来支付验证费用？如果某家公司付费，这些数据被竞争公司共享来与之建立可信关系了怎么办？&lt;/p&gt; &lt;p&gt;我们是不是又回到了当初联合身份的那些老问题上？就像2006年时 Phillip Windley 所说的：&lt;/p&gt; &lt;blockquote&gt; &lt;p&gt;毫不意外，困难的部分通常都不是技术，而是管理那些过程和商业关系以确保联盟可靠、安全，并提供适当的隐私保护。&lt;/p&gt; &lt;/blockquote&gt; &lt;p&gt;自主系统是否会遇到联合身份遭遇的类似商业问题？只不过，这次问题大概会出在使用付费上？&lt;/p&gt; &lt;p&gt;信任网络工作组研究了上述问题的解决办法，他们正在著述的论文《SSI如何挺过资本主义》对此提出了一些有趣的观点。他们的分析中有个值得关注的论述：由于缺乏平台而导致的前期融资缺乏(鸡生蛋蛋生鸡问题)。&lt;/p&gt;...</content>
  </entry>
@@ -104,9 +104,9 @@
  
 
  <entry>
-   <title>实录 | 云上的身份认证应对趋势 奶罩</title>
-   <link href="http://localhost:4000/%E5%AE%9E%E5%BD%95-%E4%BA%91%E4%B8%8A%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%BA%94%E5%AF%B9%E8%B6%8B%E5%8A%BF-%E5%A5%B6%E7%BD%A9"/>
-   <id>http://localhost:4000/实录 | 云上的身份认证应对趋势-奶罩</id>
+   <title>实录 | 云上的身份认证应对趋势</title>
+   <link href="http://localhost:4000/%E5%AE%9E%E5%BD%95-%E4%BA%91%E4%B8%8A%E7%9A%84%E8%BA%AB%E4%BB%BD%E8%AE%A4%E8%AF%81%E5%BA%94%E5%AF%B9%E8%B6%8B%E5%8A%BF"/>
+   <id>http://localhost:4000/实录 | 云上的身份认证应对趋势</id>
    <updated>2019-09-05T00:00:00+08:00</updated>
    <content type="html">&lt;blockquote&gt; &lt;p&gt;本文为 2016年 洋葱创始人兼CEO，前DNSPod创始人吴洪声应邀参加第二届乌云白帽大会时，在企业安全专场进行的专题演讲内容实录。&lt;/p&gt; &lt;/blockquote&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190905122451.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;众所周知，近年来云服务市场异常火热，越来越多的企业开始尝试云服务，并且体会到云计算带来的便捷和成本优势。然而使用云服务的同时也可能会带来各种各样的问题，尤其是在初期。比如，当企业使用云服务时，员工会有各种各样的外部网站账号。一个云服务账号登录了，企业却不知道到底是员工本人在登录，还是黑客冒充登录，甚至可能只是一个恶意木马，密码体系从来只匹配账号密码是否匹配，从来不关心背后的人。&lt;/p&gt; &lt;p&gt;云服务意味着企业的防御边界也将不断向外扩张，在这种情况下企业如何做好身份认证，以应对越来越复杂的身份环境？今天我就来和大家一起讨论这个问题。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190905122509.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;##身份认证，举足轻重却漏洞百出 首先我们来看一组数据，Gartner在前不久发布的《2016年企业安全趋势报告》中提到了今年企业面临安全问题的5个核心领域，其中身份认证就在其中占一个很重要的位置。但是现实中的身份认证形势却不容乐观，根据《Verizon 2016数据泄露报告》中的数据统计，有超过一半的企业网络安全事故和身份认证凭据盗用有关。我们平时上乌云网也会看到，10个漏洞里面，起码有一半和和员工弱口令、账户体系控制不严等相关。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190905122537.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;问题太普遍以至于大家都习以为常了，很多人归结为员工自身安全意识不足，常常草草了事，出了问题就让员工改复杂密码，改完就当问题解决了，下一次继续出现同样的问题，再继续整改，如此往复。员工和账户管理员也在一次次的整改中不厌其烦的改密码，改密码。&lt;/p&gt; &lt;p&gt;有的企业会用账号密码的限制策略，一些注重账号安全的企业常常会采用OTP（一次性密码）、手机短信等认证方式来替代账号密码或作为二次认证措施。我认识的一个朋友所在的企业，就曾为大部分员工配备了一次性动态令牌硬件，以保证安全性。这些方法有一定成效，但也存在种种弊端，比如成本昂贵、使用不便等。&lt;/p&gt; &lt;p&gt;目前成体系的解决方案主要有4A和IAM，在国内传统企业来说，大家都认4A，但是在国外使用更多的是IAM方案，IAM算是比4A更先进的企业身份认证解决方案，所有也被称为“大4A”，但其实从本质上看来，两者相差无几，都是把内部的多个系统进行集中授权和管理，配备一个强身份认证手段，根据不同用户的不同身份来分配对应的权限。近年大数据分析兴起，因此在IAM 的方案中，越来越多地开始采用大数据分析进行用户行为审计，判断用户身份的真实性。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;http://www.2cto.com/uploadfile/Collfiles/20160728/20160728091454132.jpg&quot; alt=&quot;æ­¤å¤è¾å¥å¾ççæè¿°&quot; /&gt;&lt;/p&gt; &lt;p&gt;防御边界正消失，身份无处不在 本地部署的4A方案和 IAM方案 固然能解决内部权限的认证和管理问题，但越来越多的企业都在往云上迁移，比如在国外经常用的Saleforce、国内用的比较多的钉钉、纷享销客等等，企业边界正在不断弱化，身份关系变得更加复杂，原本围墙式的防御措施正在逐渐失效，本地部署的IAM也显得捉襟见肘，很多地方顾及不到。&lt;/p&gt; &lt;p&gt;一旦上了云，员工在使用外部服务时，企业再也无法像管理内部应用一样管理员工的账号，无法再要求使用复杂密码或定期修改，无法得知登录者是员工本人，还是他人，甚至是恶意木马在登录，这些都无从得知，因为传统的认证方式只认凭据而不认人。&lt;/p&gt; &lt;p&gt;所以越来越多的企业干脆弱化内外网的概念，比如 Google 公司就已经不再区分内网外网。传统的防御方式被形容为「硬壳软糖」，外表看起来很坚固，咬破之后里面很美味，这种观点如今已经得到大部分人的认可，区分内外网的做法下，一旦攻击者突破边界就几乎可以为所欲为，非常危险。身份认证也是如此，以往员工只需要登录内部应用，将核心的内容和日常内容进行隔离就可以大致保证安全，如今身份认证无处不在，在内部，在云服务，在移动应用等等。&lt;/p&gt; &lt;p&gt;在去掉边界的情况下，新的问题就会不断产生，企业也会不断产生更多的身份认证需求。既然内外网不再区分，内部身份和外部身份错综复杂，这时把内部外部的身份打通，实现统一管理就成了新的强需求。&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;http://www.2cto.com/uploadfile/Collfiles/20160728/20160728091454133.jpg&quot; alt=&quot;æ­¤å¤è¾å¥å¾ççæè¿°&quot; /&gt;&lt;/p&gt; &lt;p&gt;于是，在身份无处不在的情况下，产生了一种新的身份认证模式——IDaaS 身份即服务，目前这种模式在国外也已经十分火热，被看做是未来身份认证的发展方向之一。&lt;/p&gt; &lt;p&gt;所谓 IDaaS，把验证作为一个云服务提出来，整个架设在云上，把企业内外部的身份认证打通。会有专门的身份认证服务商来提供相应的服务，企业只需要把身份认证委派给云身份提供商即可。&lt;/p&gt;...</content>
  </entry>

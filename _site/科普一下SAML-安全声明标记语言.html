@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>科普一下saml：安全声明标记语言</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>科普一下saml：安全声明标记语言</h2>		
+	<time datetime="2019-09-08T00:00:00+08:00" class="by-line">08 Sep 2019</time>
+	<div class="content">
+
+		<p>随着互联网的普及，物联网的逼近，数字化时代的真正到来，身份认证与访问授权的重要性越来越凸显。<strong>SAML</strong>（安全声明标记语言）标准定义了供应商提供身份验证与授权服务的方式。那么关于SAML，我们需要知道些什么呢？</p>
+
+<!-- more -->
+
+<p><img src="https://cdn.authing.cn/blog/20190908073950.png" alt="" /></p>
+
+<p>首先，SAML是可在网络中多台计算机上共享安全凭证的一个开放标准。该标准描述了一个框架，可使1台计算机代表其他多台计算机执行某些安全功能。</p>
+
+<ul>
+  <li><strong>身份验证：</strong>确定用户身份与其所声称的相符</li>
+  <li><strong>授权：</strong>确定用户是否有权访问特定系统或内容</li>
+</ul>
+
+<p><strong>严格来讲，SAML是指用于编码所有这些信息的XML变体语言，但该术语也涵盖了组成该标准的各种协议消息和资料。</strong></p>
+
+<p><strong>SAML 2.0</strong>在2005年引入，仍是该标准的当前版本。之前的1.1版如今已基本弃用。</p>
+
+<p><strong>SAML是实现单点登录(SSO)的一种方法，且SSO也确实是SAML最常见的用例。</strong>我们可以从SSO开始讨论SAML的用途，然后深入SAML的组件和操作。</p>
+
+<h2 id="sso是什么它能干什么"><strong>SSO是什么？它能干什么？</strong></h2>
+
+<p>单点登录(SSO)，可使用户提供一次安全凭证(比如用户名/口令对)，就能以之访问多个系统、平台、App或其他资源。该方法能将用户从记忆多组登录名及口令的负担中解脱出来，也可令IT团队不用再将多个服务整合到一台服务器上，真是让事情简单不少。</p>
+
+<p>比如说，公司可用SSO让用户既能登录内部服务器上运行的专用Web应用，也能登录托管在SaaS上的ERP（企业资源计划）系统。</p>
+
+<p><strong>想要发挥SSO的功用，用户必须要能经过身份验证就收到授权。基于其被证实的身份，访问其他多台计算机。</strong>或者以另一种方式：1台计算机向在其他多台计算机上被授权的用户提供服务。SAML标准定义了所有这些计算机之间相互安全通信的方式。</p>
+
+<h2 id="saml提供者是什么"><strong>SAML提供者是什么？</strong></h2>
+
+<p>SAML术语中，<strong>提供者</strong>是系统中的一个实体，通常来讲就是一台服务器或其他计算机，帮助用户访问所需的服务。提供或消费SAML服务的系统，一般被称为服务提供者；最重要的一种服务提供者，就是身份提供者。</p>
+
+<h2 id="身份提供者是什么"><strong>身份提供者是什么？</strong></h2>
+
+<p><strong>身份提供者</strong>是系统中的一个实体，用于确保用户真的是其所声称的身份——提供身份验证。身份提供者还负责确认系统中各实体上哪些服务可以被该用户访问。可按SAML标准提供身份验证服务的实现有很多种，比如Salesforce就能充当身份提供者和这一角色，LDAP、RADIUS或活动目录(AD)也可以。</p>
+
+<h2 id="saml声明是什么"><strong>SAML声明是什么？</strong></h2>
+
+<p><strong>SAML声明就是一份XML文档，所有我们讨论的信息都通过它在计算机间传递。</strong>一旦身份提供者确认你确实是所声称的用户，且有权访问你感兴趣的内容或服务，它就会向实际提供这些服务的服务器发出SAML声明。出于安全考虑，SAML声明可被加密。</p>
+
+<p>##<strong>SAML身份验证如何进行</strong>？</p>
+
+<p>这看起来可能有点抽象，不妨看看下面这张SAML身份验证事务处理的高级视图。大多数情况下用户代理都是Web浏览器。</p>
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2017/11/security-assertion-markup-language-saml-explainer-100738529-orig.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2017/11/security-assertion-markup-language-saml-explainer-100738529-orig-690x466.jpg" alt="img" /></a></p>
+
+<p>假设你是SSO环境中的用户，你正试图访问服务器上的某资源。所涉及的一系列事件如下：</p>
+
+<ol>
+  <li>你试图访问服务器上的资源，也就是SAML术语中的服务提供者。该服务提供者查验你是否是系统中经验证过的用户。如果你是，直接跳转到步骤7；如果你不是，服务提供者开始身份验证过程。</li>
+  <li>服务提供者为你确定恰当的身份提供者，并将你重定向到该提供者——也就是SSO服务。</li>
+  <li>你的浏览器向SSO服务发送身份验证请求；该服务对你进行识别。</li>
+  <li>SSO服务返回一个XHTML文档，在SAMLResponse参数中包含有服务提供者所需的身份验证信息。</li>
+  <li>SAMLResponse参数被传递给服务提供者。</li>
+  <li>服务提供者处理该响应，并为你创建安全上下文——基本上，就是让你登录进去，然后告诉你你请求的资源在哪里。</li>
+  <li>有了该信息，你就可以再次请求你感兴趣的资源了。</li>
+  <li>该资源最终被返回给你！</li>
+</ol>
+
+<p>你会注意到，该过程中很多步骤很抽象。比如说，SAML是怎么知道恰当的身份提供者的，或者身份提供者是如何确定你就是你所声称的用户的，这些都没有任何解释。这不是什么疏漏：<strong>SAML标准并没有定义确切的实现方法，给IT留有很多余地。</strong></p>
+
+<p>正如前文所述，有很多技术可供实际身份验证过程所用；无论你选择的是Salesforce、LDAP还是别的什么，SAML声明都会将你经过验证的信息在提供者间流转。</p>
+
+<p>如果你想了解更多有关SAML事务中消息传递的细节，你可以深入研究完整XML代码，了解上述场景中从身份提供者传递给服务提供者的各种声明。</p>
+
+<h2 id="saml-vs-oauth其间区别是什么"><strong>SAML vs. OAuth：其间区别是什么？</strong></h2>
+
+<h3 id="oauth"><strong>OAuth</strong></h3>
+<p><strong>OAuth</strong>(https://oauth.net/)是比SAML略新的标准，由谷歌和推特在2006年联合开发。该标准被开发的部分原因，是为了补充SAML在移动平台上的不足，且不是基于XML，而是基于JSON。</p>
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2017/11/OAuth.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2017/11/OAuth-690x443.jpg" alt="img" /></a></p>
+
+<p>除了SAML不那么吸引人的移动支持，这二者之间的区别在哪里呢？如我们所见，<strong>SAML标准定义了提供者提供身份验证和授权服务的方式。OAuth则不然，仅处理授权。</strong></p>
+
+<h3 id="openid-connect"><strong>OpenID Connect</strong></h3>
+<p><strong>OpenID Connect</strong>(http://openid.net/connect/)是更新的标准，于2014年开发，提供身份验证服务，处于OAuth上层。</p>
+
+<p><a href="http://www.aqniu.com/wp-content/uploads/2017/11/OpenID.jpg"><img src="http://www.aqniu.com/wp-content/uploads/2017/11/OpenID-690x389.jpg" alt="img" /></a></p>
+
+<p>另一个主要的不同，就是其用例。<strong>SAML理论上用于开放互联网，实际上最常部署在企业内网，出于单点登录目的。相比之下，OAuth则是谷歌和推特为了整个互联网而设计的。</strong></p>
+
+<p><strong>原文链接：https://www.aqniu.com/tools-tech/29359.html  作者：nana 星期六, 十一月 11, 2017</strong></p>
+
+<h3 id="相关阅读"><strong>相关阅读</strong></h3>
+<ul>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

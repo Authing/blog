@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2019-10-09T23:28:06+08:00</updated>
+ <updated>2019-10-09T23:31:45+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -14,9 +14,9 @@
  
 
  <entry>
-   <title>Authing 新功能速览（9月第三周）</title>
-   <link href="http://localhost:4000/Authing-%E6%96%B0%E5%8A%9F%E8%83%BD%E9%80%9F%E8%A7%88-9%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8"/>
-   <id>http://localhost:4000/Authing 新功能速览（9月第三周）</id>
+   <title>Authing新功能速览（9月第三周）</title>
+   <link href="http://localhost:4000/Authing%E6%96%B0%E5%8A%9F%E8%83%BD%E9%80%9F%E8%A7%88-9%E6%9C%88%E7%AC%AC%E4%B8%89%E5%91%A8"/>
+   <id>http://localhost:4000/Authing新功能速览（9月第三周）</id>
    <updated>2019-09-13T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;秋天到了。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190913090847.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;控制台支持管理用户授权列表&quot;&gt;控制台支持管理用户授权列表&lt;/h2&gt; &lt;p&gt;目前可以在 &lt;strong&gt;控制台 -&amp;gt; 用户中心 -&amp;gt; 选择用户 -&amp;gt; 授权应用列表&lt;/strong&gt; 查看某用户的授权记录，并支持撤回授权。 &lt;img src=&quot;https://cdn.authing.cn/blog/20190913090856.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;开源一款-graphql-调试器&quot;&gt;开源一款 GraphQL 调试器&lt;/h2&gt; &lt;p&gt;我们开源了一款基于 Vue.js 的 GraphQL 调试器，暂命名为 Super Graphiql 。它可以帮助体验与调试线上的 API，支持自动生成查询语句，并集成了文档功能。欢迎关注与提交 issue 哦。 Github 地址: https://github.com/Authing/super-graphiql&lt;/p&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190913094356.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;h2 id=&quot;密码函数计算支持校验密码&quot;&gt;密码函数计算支持校验密码&lt;/h2&gt; &lt;p&gt;在上&lt;a href=&quot;https://mp.weixin.qq.com/s?__biz=MzU1OTk1NjU4MA==&amp;amp;mid=2247483791&amp;amp;idx=1&amp;amp;sn=cd195aa89be1760eefad6824858a262f&amp;amp;chksm=fc0e1684cb799f926c9fe1789850b2bba1469e3c1dc37be470133e4800765241e6482b123455&amp;amp;scene=21#wechat_redirect&quot;&gt;一个版本&lt;/a&gt;，我们增加了对自定义密码加密方法的支持，现在新增了函数计算校验模块，可以通过输入和对比测试明文和密文的方式，在线校验上传的代码片段是否有效。&lt;/p&gt; &lt;p&gt;&lt;img...</content>
  </entry>
@@ -54,9 +54,9 @@
  
 
  <entry>
-   <title>科普一下 saml：安全声明标记语言</title>
-   <link href="http://localhost:4000/%E7%A7%91%E6%99%AE%E4%B8%80%E4%B8%8B-SAML-%E5%AE%89%E5%85%A8%E5%A3%B0%E6%98%8E%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80"/>
-   <id>http://localhost:4000/科普一下 SAML：安全声明标记语言</id>
+   <title>科普一下saml：安全声明标记语言</title>
+   <link href="http://localhost:4000/%E7%A7%91%E6%99%AE%E4%B8%80%E4%B8%8BSAML-%E5%AE%89%E5%85%A8%E5%A3%B0%E6%98%8E%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80"/>
+   <id>http://localhost:4000/科普一下SAML：安全声明标记语言</id>
    <updated>2019-09-08T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;随着互联网的普及，物联网的逼近，数字化时代的真正到来，身份认证与访问授权的重要性越来越凸显。&lt;strong&gt;SAML&lt;/strong&gt;（安全声明标记语言）标准定义了供应商提供身份验证与授权服务的方式。那么关于SAML，我们需要知道些什么呢？&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;img src=&quot;https://cdn.authing.cn/blog/20190908073950.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt; &lt;p&gt;首先，SAML是可在网络中多台计算机上共享安全凭证的一个开放标准。该标准描述了一个框架，可使1台计算机代表其他多台计算机执行某些安全功能。&lt;/p&gt; &lt;ul&gt; &lt;li&gt;&lt;strong&gt;身份验证：&lt;/strong&gt;确定用户身份与其所声称的相符&lt;/li&gt; &lt;li&gt;&lt;strong&gt;授权：&lt;/strong&gt;确定用户是否有权访问特定系统或内容&lt;/li&gt; &lt;/ul&gt; &lt;p&gt;&lt;strong&gt;严格来讲，SAML是指用于编码所有这些信息的XML变体语言，但该术语也涵盖了组成该标准的各种协议消息和资料。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;SAML 2.0&lt;/strong&gt;在2005年引入，仍是该标准的当前版本。之前的1.1版如今已基本弃用。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;SAML是实现单点登录(SSO)的一种方法，且SSO也确实是SAML最常见的用例。&lt;/strong&gt;我们可以从SSO开始讨论SAML的用途，然后深入SAML的组件和操作。&lt;/p&gt; &lt;h2 id=&quot;sso是什么它能干什么&quot;&gt;&lt;strong&gt;SSO是什么？它能干什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;单点登录(SSO)，可使用户提供一次安全凭证(比如用户名/口令对)，就能以之访问多个系统、平台、App或其他资源。该方法能将用户从记忆多组登录名及口令的负担中解脱出来，也可令IT团队不用再将多个服务整合到一台服务器上，真是让事情简单不少。&lt;/p&gt; &lt;p&gt;比如说，公司可用SSO让用户既能登录内部服务器上运行的专用Web应用，也能登录托管在SaaS上的ERP（企业资源计划）系统。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;想要发挥SSO的功用，用户必须要能经过身份验证就收到授权。基于其被证实的身份，访问其他多台计算机。&lt;/strong&gt;或者以另一种方式：1台计算机向在其他多台计算机上被授权的用户提供服务。SAML标准定义了所有这些计算机之间相互安全通信的方式。&lt;/p&gt; &lt;h2 id=&quot;saml提供者是什么&quot;&gt;&lt;strong&gt;SAML提供者是什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;SAML术语中，&lt;strong&gt;提供者&lt;/strong&gt;是系统中的一个实体，通常来讲就是一台服务器或其他计算机，帮助用户访问所需的服务。提供或消费SAML服务的系统，一般被称为服务提供者；最重要的一种服务提供者，就是身份提供者。&lt;/p&gt; &lt;h2 id=&quot;身份提供者是什么&quot;&gt;&lt;strong&gt;身份提供者是什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;身份提供者&lt;/strong&gt;是系统中的一个实体，用于确保用户真的是其所声称的身份——提供身份验证。身份提供者还负责确认系统中各实体上哪些服务可以被该用户访问。可按SAML标准提供身份验证服务的实现有很多种，比如Salesforce就能充当身份提供者和这一角色，LDAP、RADIUS或活动目录(AD)也可以。&lt;/p&gt; &lt;h2 id=&quot;saml声明是什么&quot;&gt;&lt;strong&gt;SAML声明是什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;&lt;strong&gt;SAML声明就是一份XML文档，所有我们讨论的信息都通过它在计算机间传递。&lt;/strong&gt;一旦身份提供者确认你确实是所声称的用户，且有权访问你感兴趣的内容或服务，它就会向实际提供这些服务的服务器发出SAML声明。出于安全考虑，SAML声明可被加密。&lt;/p&gt; &lt;p&gt;##&lt;strong&gt;SAML身份验证如何进行&lt;/strong&gt;？&lt;/p&gt; &lt;p&gt;这看起来可能有点抽象，不妨看看下面这张SAML身份验证事务处理的高级视图。大多数情况下用户代理都是Web浏览器。&lt;/p&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/security-assertion-markup-language-saml-explainer-100738529-orig.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2017/11/security-assertion-markup-language-saml-explainer-100738529-orig-690x466.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;假设你是SSO环境中的用户，你正试图访问服务器上的某资源。所涉及的一系列事件如下：&lt;/p&gt; &lt;ol&gt; &lt;li&gt;你试图访问服务器上的资源，也就是SAML术语中的服务提供者。该服务提供者查验你是否是系统中经验证过的用户。如果你是，直接跳转到步骤7；如果你不是，服务提供者开始身份验证过程。&lt;/li&gt; &lt;li&gt;服务提供者为你确定恰当的身份提供者，并将你重定向到该提供者——也就是SSO服务。&lt;/li&gt; &lt;li&gt;你的浏览器向SSO服务发送身份验证请求；该服务对你进行识别。&lt;/li&gt; &lt;li&gt;SSO服务返回一个XHTML文档，在SAMLResponse参数中包含有服务提供者所需的身份验证信息。&lt;/li&gt; &lt;li&gt;SAMLResponse参数被传递给服务提供者。&lt;/li&gt; &lt;li&gt;服务提供者处理该响应，并为你创建安全上下文——基本上，就是让你登录进去，然后告诉你你请求的资源在哪里。&lt;/li&gt; &lt;li&gt;有了该信息，你就可以再次请求你感兴趣的资源了。&lt;/li&gt; &lt;li&gt;该资源最终被返回给你！&lt;/li&gt; &lt;/ol&gt; &lt;p&gt;你会注意到，该过程中很多步骤很抽象。比如说，SAML是怎么知道恰当的身份提供者的，或者身份提供者是如何确定你就是你所声称的用户的，这些都没有任何解释。这不是什么疏漏：&lt;strong&gt;SAML标准并没有定义确切的实现方法，给IT留有很多余地。&lt;/strong&gt;&lt;/p&gt;...</content>
  </entry>

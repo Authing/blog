@@ -4,7 +4,7 @@
  <title>Authing 官方博客 | 云端身份认证系统</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <id>http://localhost:4000</id>
- <updated>2019-10-09T23:42:33+08:00</updated>
+ <updated>2019-10-09T23:43:55+08:00</updated>
  <author>
    <name>Authing 官方博客 | 云端身份认证系统</name>
    <uri>https://authing.cn</uri>
@@ -24,9 +24,9 @@
  
 
  <entry>
-   <title>身份访问与管理(iam)的定义，应用与提供商</title>
-   <link href="http://localhost:4000/%E8%BA%AB%E4%BB%BD%E8%AE%BF%E9%97%AE%E4%B8%8E%E7%AE%A1%E7%90%86(IAM)%E7%9A%84%E5%AE%9A%E4%B9%89-%E5%BA%94%E7%94%A8%E4%B8%8E%E6%8F%90%E4%BE%9B%E5%95%86"/>
-   <id>http://localhost:4000/身份访问与管理(IAM)的定义，应用与提供商</id>
+   <title>身份访问与管理(iam)的定义与应用和提供商</title>
+   <link href="http://localhost:4000/%E8%BA%AB%E4%BB%BD%E8%AE%BF%E9%97%AE%E4%B8%8E%E7%AE%A1%E7%90%86(IAM)%E7%9A%84%E5%AE%9A%E4%B9%89%E4%B8%8E%E5%BA%94%E7%94%A8%E5%92%8C%E6%8F%90%E4%BE%9B%E5%95%86"/>
+   <id>http://localhost:4000/身份访问与管理(IAM)的定义与应用和提供商</id>
    <updated>2019-09-08T00:00:00+08:00</updated>
    <content type="html">&lt;p&gt;企业IT中的IAM基本上就是定义和管理个人网络用户的角色和访问权限，以及规定用户获得授权（或被拒绝授权）的条件。IAM系统的核心目标是为每个用户赋予一个身份。该数字身份一经建立，在用户的整个“访问生命周期”存续期间都应受到良好的维护、调整与监视。&lt;/p&gt; &lt;!-- more --&gt; &lt;p&gt;&lt;a href=&quot;http://www.aqniu.com/wp-content/uploads/2018/01/integrated-identity-management-e1415816987409.jpg&quot;&gt;&lt;img src=&quot;http://www.aqniu.com/wp-content/uploads/2018/01/integrated-identity-management-e1415816987409-690x388.jpg&quot; alt=&quot;img&quot; /&gt;&lt;/a&gt;&lt;/p&gt; &lt;p&gt;因此，身份管理的首要目标就是：&lt;strong&gt;从用户登录系统到权限授予到登出系统的整个过程中，根据需要在恰当的条件下及时赋予正确的用户对企业内适当资产的访问权。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;IAM系统为管理员提供了修改用户角色、跟踪用户活动、创建用户活动报告和贯彻管理策略的工具及技术。这些系统的出现就是为了能够管理整个企业内的用户访问，并确保用户活动符合企业规章制度与政府监管规定。&lt;/p&gt; &lt;h2 id=&quot;iam产品和服务能做什么&quot;&gt;&lt;strong&gt;IAM产品和服务能做什么？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;身份与管理技术包括（但不局限于）口令管理工具、配置软件、安全策略实施应用程序、报告及监视App和身份存储。身份管理系统既可以在企业内部署，比如微软SharePoint，也有云端系统，比如微软的 Office 365。&lt;/p&gt; &lt;p&gt;佛瑞斯特研究所的&lt;strong&gt;《科技浪潮：身份与访问管理，2017第四季度》&lt;/strong&gt;报告中，&lt;strong&gt;有6种IAM技术被认为具备发展潜力，目前虽然成熟度低，但具备很高的商业价值。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;&lt;strong&gt;1. API安全&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;驱动IAM应用于B2B商业模式，促成IAM与云的融合，并催生出基于微服务的IAM架构。佛瑞斯特研究所看到API安全解决方案用于移动应用或用户托管访问之间的单点登录(SSO)。这将使安全团队得以管理IoT设备授权和个人可识别数据。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;2. 客户身份与访问管理(CIAM)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;可对用户进行全面的管理与身份验证，可施行自服务与资料管理，还能与CRM、ERP和其他客户管理系统及数据库集成。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;3. 身份分析(IA)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;能够让安全团队运用规则、机器学习和其他统计算法来检测并阻止危险身份行为。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;4. 身份即服务(IDaaS)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;包含提供SSO的软件即服务(SaaS)解决方案，可从一个门户即登录Web应用和原生移动应用，还能提供一定程度的用户账户资料和访问请求管理。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;5. 身份管理与治理&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;提供可重复的自动化方式来监管身份生命周期。在身份及隐私合规方面非常重要。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;6. 基于风险的身份验证(RBA)&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;解决方案在给出风险评级时会将用户会话和身份验证上下文考虑在内。于是公司就可要求高风险用户进行双因子身份验证(2FA)而允许低风险用户仅以单因子凭证验证身份（比如用户名+口令）。&lt;/p&gt; &lt;p&gt;今天这种复杂的计算环境下，IAM系统必须足够灵活和健壮。原因之一：企业计算环境曾经很大程度上都只在企业内部部署，身份管理系统仅在用户来公司上班时对其进行身份验证和跟踪。曾经，有一道安全围墙阻隔着企业外面的各种风险，而现在，随着移动办公和云的兴起，围墙消失了。&lt;/p&gt; &lt;p&gt;因此，今天的身份管理系统应能让管理员方便地管理各类用户的访问权限，包括在公司上班的员工和世界各地的承包商；融合了内部计算、SaaS应用和影子IT及BYOD用户的混合计算环境；混合了UNIX、Windows、Macintosh、iOS、安卓甚至IoT设备的计算架构。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;最终，身份与访问管理系统应能以持续和可扩展的方式对整个企业的用户进行集中式管理。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;最近几年，IDaaS作为第三方托管服务通过云以订阅的方式提供逐渐发展起来，同时满足了客户的现场与云端两类系统的身份管理需求。&lt;/p&gt; &lt;h2 id=&quot;为什么需要-iam&quot;&gt;&lt;strong&gt;为什么需要 IAM？&lt;/strong&gt;&lt;/h2&gt; &lt;p&gt;身份与访问管理是任何企业安全计划的重要一环，因为在今天的数字化经济中，它与企业的安全和生产力密不可分。&lt;/p&gt; &lt;p&gt;被盗用户凭证往往是进入企业网络及其信息资产的入口点。企业运用身份管理来守护信息资产，使其不受日渐增多的勒索软件、犯罪黑客活动、网络钓鱼和其他恶意软件攻击的影响。Cybersecurity Ventures 曾预测，今年全球勒索软件所致损失将超50亿美元，比2016年上升15%。&lt;/p&gt; &lt;p&gt;&lt;strong&gt;很多企业里，用户有时候会拥有超出工作所需的访问权限。而健壮的IAM系统可以贯彻用户访问规则和策略，为整个企业加上一层重要的防护。&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;身份与访问管理系统可以增强业务生产力。此类系统的中央管理能力能够减少守护用户凭证与访问权限的复杂性和成本。同时，身份管理系统也能提升员工在各种环境的生产力（保证安全的情况下），无论他们是在家办公还是在公司里上班，或者是在外地出差。&lt;/p&gt; &lt;h2 id=&quot;iam对合规管理的意义何在&quot;&gt;&lt;strong&gt;IAM对合规管理的意义何在？&lt;/strong&gt;&lt;/h2&gt;...</content>
  </entry>

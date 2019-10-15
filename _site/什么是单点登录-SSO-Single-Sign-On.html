@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>什么是单点登录（sso single Sign On）？</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>什么是单点登录（sso single Sign On）？</h2>		
+	<time datetime="2019-09-08T00:00:00+08:00" class="by-line">08 Sep 2019</time>
+	<div class="content">
+
+		<p><img src="https://cdn.authing.cn/blog/20190908080023.png" alt="" /></p>
+
+<p>在日常工作中，用户需要访问大量的信息资源，例如，用户首先要登录到操作系统中，然后进入各个应用系统。进入每一个系统都需要对用户的身份进行识别与验证，这样，用户需要提供多个用户帐号与口令，为了便于记忆，用户很可能把各种帐号与口令信息记录在笔记本上，甚至写在便条上并贴在办公桌或屏幕边，这就使口令信息很容易泄露出去，增加了组织信息系统被入侵的安全风险。为了解决这个问题，单点登录的概念被提了出来。</p>
+
+<!-- more -->
+
+<p>所谓单点登录就是组织把多个操作系统平台和应用系统中的安全管理、身份识别与验证等功能集成到一个单一的安全管理过程中，以对组织中的安全操作进行集中化管理，并方便用户的使用。单点登录功能将与组织中的所有信息资源进行交互操作，</p>
+<h2 id="可能的信息系统包括">可能的信息系统包括：</h2>
+
+<ul>
+  <li>客户机/服务器及其他分布式系统</li>
+  <li>大型主机系统</li>
+  <li>网络安全，包括远程访问机制</li>
+</ul>
+
+<p>单点登录过程从用户证书被引入组织IT计算环境中的第一个实例就开始了，SSO服务器作为主域，首先处理用户请求并根据事先建立的规则给用户颁发授权证书，然后用户携带授权证书去直接访问操作系统、应用系统、或其他信息资源，此时不再需要用户进行登录操作了。这些被访问的资源系统被称为备份域(或第二域)。</p>
+
+<h2 id="使用sso管理多个平台的挑战来源于以下几个方面">使用SSO管理多个平台的挑战来源于以下几个方面：</h2>
+
+<ul>
+  <li>在建立所有信息系统可接受的安全证书时，需要克服组织中不同网络、操作系统、数据库和应用系统的异构特性。为了有效地集成SSO过程，SSO管理员应当了解每一个需要集成的系统是如何管理SSO安全证书信息、ACL授权规则、审核日志和报告的。</li>
+  <li>传统方式中的主机系统能够对用户进行维护与控制，但在SSO环境下，所有对用户的维护都必须由SSO管理员在SSO服务器中进行操作。这在一定程度上失去了单个主机管理的灵活性。</li>
+</ul>
+
+<h2 id="sso的优点">SSO的优点：</h2>
+
+<ul>
+  <li>用户不再需要多个口令，所以用户可以选择记忆一个更强的口令。</li>
+  <li>简化了管理员要在多个平台上管理用户帐户与授权的问题。</li>
+  <li>多个平台和应用系统中用户经常忘记了口令，管理员需要为其重新设置，SSO的实施可以降低这类管理成本。</li>
+  <li>减少了用户登录进入多个应用系统与平台的时间。</li>
+</ul>
+
+<h2 id="sso的缺点">SSO的缺点：</h2>
+
+<ul>
+  <li>要SSO支持所有的不同类型的操作系统环境是很困难的，在一个企业的IT架构中，SSO的实施需要把大量的不同解决方案集中到一个总的方案中。</li>
+  <li>因为需要为不同类型的系统开发SSO接口界面，因此与SSO开发相关的成本是较高的。</li>
+  <li>在中心化、集中化管理环境下，如果SSO服务器出现单点故障，会造成整个信息系统的瘫痪。</li>
+</ul>
+
+<p>原文链接：https://www.aqniu.com/learn/851.html  作者：Secguru  星期三, 十二月 18, 2013</p>
+
+<h3 id="相关阅读"><strong>相关阅读</strong></h3>
+<ul>
+  <li><a href="https://docs.authing.cn/authing/quickstart/implement-sso-with-authing">用 Authing 10 分钟实现 SSO</a></li>
+  <li><a href="https://authing.cn/blog//Authing%E6%98%AF%E4%BB%80%E4%B9%88%E4%BB%A5%E5%8F%8A%E4%B8%BA%E4%BB%80%E4%B9%88%E9%9C%80%E8%A6%81Authing.html">Authing 是什么以及为什么需要 Authing</a></li>
+  <li><a href="https://authing.cn/blog//我们为什么坚持做ToB的慢生意.html">我们为什么坚持做 ToB 的慢生意</a></li>
+  <li><a href="https://learn.authing.cn/authing/">Authing 知识库</a></li>
+</ul>
+
+<h3 id="欢迎关注-authing-技术专栏">欢迎关注 Authing 技术专栏</h3>
+<p><img src="https://cdn.authing.cn/blog/Authing_mini.jpg" alt="Authing 社区" /></p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

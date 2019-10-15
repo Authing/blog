@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Authing 支持 Webhook</title>
+  <meta name="description" content="Authing云端身份认证系统官方博客">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 支持 Webhook</h2>		
+	<time datetime="2019-06-04T00:00:00+08:00" class="by-line">04 Jun 2019</time>
+	<div class="content">
+
+		<p>Webhooks 允许你对用户注册、登录等行为进行监听，从而对其做一些自定义处理。</p>
+
+<!-- more -->
+<p>使用 Webhook 的方法是在 Authing 平台中配置 HTTP URL，当你的用户登录、注册、修改密码后，都会给远程 HTTP URL 发送一个 POST 请求。</p>
+
+<h2 id="配置-webhook">配置 Webhook</h2>
+
+<p><img src="http://img.staryu.cn/20190604-01.jpg" alt="" /></p>
+
+<p>点击页面的「添加」按钮即可开始配置，如下图所示：</p>
+
+<p><img src="http://img.staryu.cn/20190604-02.jpg" alt="" /></p>
+
+<h2 id="参数解释">参数解释</h2>
+<p><img src="http://img.staryu.cn/20190604-03.jpg" alt="" /></p>
+
+<h2 id="管理-webhook">管理 Webhook</h2>
+
+<p>在创建完 Webhook 之后可以看到详细的事件记录：
+<img src="http://img.staryu.cn/20190604-04.jpg" alt="" /></p>
+
+<p>刚创建好的 Hook 请求事件都为空，这时你可以点击「测试」触发一个「测试事件」
+<img src="http://img.staryu.cn/20190604-05.jpg" alt="" /></p>
+
+<p>测试成功后你将看到详细的请求信息和返回信息。</p>
+
+<h2 id="调试-webhook">调试 Webhook</h2>
+
+<p>调试 Webhook 的方法如下图所示：</p>
+
+<p><img src="http://img.staryu.cn/20190604-06.jpg" alt="" /></p>
+
+<p>点击后将发送一个 Post 请求到配置好的 HTTP URL 中。</p>
+
+<p>请求数据为：</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+ "description": "A test from Authing Webhook"
+}
+</code></pre></div></div>
+
+<h2 id="支持的事件">支持的事件</h2>
+
+<h3 id="事件列表">事件列表</h3>
+<p><img src="http://img.staryu.cn/20190604-07.jpg" alt="" /></p>
+
+<h3 id="请求类型">请求类型</h3>
+
+<p>指定发起 Webhook 请求时 Request body 的数据格式，可选值有 application/json 和 application/x-www-form-urlencoded</p>
+
+<h3 id="附带的数据">附带的数据</h3>
+
+<p>每一个事件都会携带一些特定的请求参数。</p>
+
+<h3 id="request-headers">Request headers</h3>
+
+<p>我们会在 HTTP POST 头中携带一些自定义头信息，如下表所示：
+<img src="http://img.staryu.cn/20190604-08.jpg" alt="" /></p>
+
+<h3 id="request-body">Request body</h3>
+
+<p>请求体中也会携带一些特定参数
+<img src="http://img.staryu.cn/20190604-09.jpg" alt="" /></p>
+
+<h3 id="request-示例">Request 示例</h3>
+
+<p><strong>headers</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "Accept": "application/json, text/plain, */*",
+  "Content-Type": "application/json; charset=UTF-8",
+  "User-Agent": "authing-hook",
+  "X-Authing-Token": "",
+  "X-Authing-Event": "login",
+  "Content-Length": 337
+}
+</code></pre></div></div>
+
+<p><strong>Login Event Body</strong></p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "success": 1,
+  "message": "密码修改成功",
+  "executed_at": 1559453952531,
+  "params": {
+      "_id": "5cf3608753c403913e81f74b",
+      "password": "+5NllFUKNK/AgyJPd7QNfO7kH1x8J9L7S65NQh/n5TzgcwaveLg=",
+      "registerInClient": "59f86b4832eb28071bdd9214"
+  },
+  "emit_by": {
+      "_id": "5c00a5fbec1083000f5b27d4",
+      "username": "",
+      "email": "xieyang@dodora.cn",
+      "phone": ""
+  }
+}
+</code></pre></div></div>
+
+<p><strong>Register Event Body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "success": 1,
+  "message": "注册成功",
+  "executedAt": 1559453155297,
+  "params": {
+      "_id": "590cd6b4832eb28071bdd9251"
+      "email": "example@example.com",
+      "password": "30f049f7ae9386d2ac2c203f5c4319a5",
+      "registerInClient": "59f86b4832eb28071bdd9214",
+      "username": "username",
+      "registerMethod": "default:username-password",
+      "nickname": "",
+      "emailVerified": true
+  }
+}
+</code></pre></div></div>
+
+<p><strong>Change-password Event body</strong></p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
+  "success": 1,
+  "message": "注册成功",
+  "executedAt": 1559453831284,
+  "params": {
+      "__v": 0,
+      "email": "example@example2.com",
+      "registerInClient": "59f86b4832eb28071bdd9214",
+      "salt": "fhnli5d0ahoi",
+      "_id": "5cf3608753c403913e81f74b",
+      "updatedAt": "",
+      "country": "",
+      "postalCode": "",
+      "region": "",
+      "locality": "",
+      "streetAddress": "",
+      "formatted": "",
+      "address": "",
+      "locale": "",
+      "zoneinfo": "",
+      "birthdate": "",
+      "gender": "",
+      "website": "",
+      "preferredUsername": "",
+      "profile": "",
+      "middleName": "",
+      "familyName": "",
+      "givenName": "",
+      "name": "",
+      "phoneCode": "",
+      "oauth": "",
+      "isDeleted": false,
+      "blocked": false,
+      "signedUp": "2019-06-02T05:37:11.257Z",
+      "lastLogin": "2019-06-02T05:37:11.257Z",
+      "registerMethod": "default:username-password",
+      "loginsCount": 0,
+      "password": "bdcff42caccb7e2a889bfb490d91e67c",
+      "browser": "",
+      "photo": "https://usercontents.authing.cn/authing-avatar.png",
+      "company": "",
+      "nickname": "",
+      "username": "example2",
+      "phoneVerfified": false,
+      "emailVerified": true,
+      "phone": ""
+  },
+  "emit_by": {
+      "_id": "5c00a5fbec1083000f5b27d4",
+      "username": "root",
+      "email": "xieyang@dodora.cn",
+      "phone": ""
+  }
+}
+</code></pre></div></div>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Authing 和 Solid 账号完成打通</title>
+  <meta name="description" content="Authing 和 Solid 账号完成打通">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>Authing 和 Solid 账号完成打通</h2>		
+	<time datetime="2018-12-16T00:00:00+08:00" class="by-line">16 Dec 2018</time>
+	<div class="content">
+
+		<p>Authing 和 Solid 账号完成打通 
+<!-- more -->
+Solid 是万维网之父的去中心化社交网络项目，正式的名称是“社交互联数据”，旨在将数据还给用户。</p>
+
+<p>Authing 是一个服务开发者的身份认证云（为什么身份认证值得上云），可以帮助开发者快速集成登录认证、OAuth、邮件等服务。</p>
+
+<p>Solid 项目仍处于早期，无法有效管理用户，与 Authing 账号打通后可实现注册／登录 Solid 等同于注册／登录 Authing 。管理员使用 Authing 的控制台即可看到 Solid 的活跃状况。</p>
+
+<p>集成的代码已在 Github 开源（搜索：solid-authing）。</p>
+
+<p>solid-authing 使用 Authing 官方架设的 Solid Pod: solid.authing.cn。</p>
+
+<h2 id="安装">安装</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ npm install solid-authing --save
+</code></pre></div></div>
+
+<h2 id="引入">引入</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>import SolidAuthing from 'solid-authing';
+</code></pre></div></div>
+
+<h2 id="注册">注册</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const main = async () =&gt; {    const solidAuthing = new SolidAuthing({
+        clientId: 'client_id',
+        secret: 'client_secret',
+    });    const sa = await solidAuthing.getAuthingInsatance(); //必须调用
+
+    const userInfo = await sa.register();
+}main();
+</code></pre></div></div>
+
+<h2 id="登录">登录</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const main = async () =&gt; {    const solidAuthing = new SolidAuthing({
+        clientId: 'client_id',
+        secret: 'client_secret',
+    });    const sa = await solidAuthing.getAuthingInsatance(); //必须调用
+
+    const userInfo = await sa.login();
+}main();
+</code></pre></div></div>
+
+<h2 id="退出">退出</h2>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>const main = async () =&gt; {    const solidAuthing = new SolidAuthing({
+        clientId: 'client_id',
+        secret: 'client_secret',
+    });    const sa = await solidAuthing.getAuthingInsatance(); //必须调用
+
+    const userInfo = await sa.logout();
+}main();
+~~~
+
+## 获取 Solid 实例
+
+调用完 getAuthingInsatance 后可以使用 solid。
+
+</code></pre></div></div>
+<p>const main = async () =&gt; {    const solidAuthing = new SolidAuthing({
+        clientId: ‘client_id’,
+        secret: ‘client_secret’,
+    });    const sa = await solidAuthing.getAuthingInsatance(); //必须调用</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>// sa.solid...
+
+sa.solid.fetch('https://leinue.solid.authing.cn/public/test.html')
+.then((response) =&gt; {        return response.text();
+})
+.then((data) =&gt; {        // 打出 test.html 的网页内容
+    console.log(data);
+}); }main(); ```
+</code></pre></div></div>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

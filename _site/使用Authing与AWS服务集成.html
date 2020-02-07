@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>使用 Authing 与 AWS 服务集成</title>
+  <meta name="description" content="使用 Authing 与 AWS 服务集成">
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/blog/css/main.css">
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="https://usercontents.authing.cn/client/logo@2.png">
+
+  	<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/blog//">Home</a>
+
+		<!-- Nav pages -->
+	  
+	    
+	  
+	    
+	      <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+    
+    <!-- Nav links -->
+	  <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+	</div>
+  
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.0.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header" class="parent justify-spaceBetween">
+  <div class="inner w100 relative">
+    <span class="f-left">  
+      <a href="/blog//">
+        <h1>
+          <img style="width: auto; height: 50px;margin-bottom:-14px;display: inline-block;" src="https://usercontents.authing.cn/client/logo@2.png">
+          官方博客
+        </h1>
+      </a>
+    </span>
+    <span id="nav-links" class="absolute right bottom">
+      <!-- Nav pages -->
+<!-- 	    
+	      
+	    
+	      
+	        <a href="/blog//about.html" title="关于 Authing">关于 Authing</a>
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+	      
+	    
+      
+ -->      <!-- Nav links -->
+	    <a href="https://authing.cn">主页</a>
+<a href="https://authing.cn/solutions">解决方案</a>
+<a href="https://authing.cn/productivity">生产力计划</a>
+<a href="https://docs.authing.cn/">开发文档</a>
+<a href="https://authing.cn/pricing">价格</a>
+<a href="https://authing.cn/login">注册／登录</a>
+<!-- <a href="https://github.com/thereviewindex/monochrome">Project on Github</a> -->
+
+
+    </span>
+  </div>
+</header>
+
+
+
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="post-page">
+	<h2>使用 Authing 与 AWS 服务集成</h2>		
+	<time datetime="2019-12-20T00:00:00+08:00" class="by-line">20 Dec 2019</time>
+	<div class="content">
+
+		<h1 id="使用-authing-与-aws-服务集成">使用 Authing 与 AWS 服务集成</h1>
+
+<p>Authing 是一个开发者友好、拓展性极高的身份认证云服务，每月有超过 100 万次用户被 Authing 认证和授权。本次分享将介绍如何企业常见的认证授权场景，可以满足中国本地用户对于 Cognito User Pool 的需求，并且提供本地化的服务。同时本文将讲解 Authing 如何与 AWS 各类服务集成，如 Cognito Identity Pool, IAM, S3, Lambda, AD 等等。</p>
+
+<!-- more -->
+
+<h2 id="cognito-identity-pool">Cognito Identity Pool</h2>
+
+<p>Cognito User Pool 负责认证。终端用户可以通过 user pool 完成注册登录流程。</p>
+
+<p>Cognito Identity Pool 负责授权（访问控制），将使用 AWS 资源的权利授权给终端用户。</p>
+
+<p>Amazon Web Services(AWS) 虽然作为市场份额全球第一的云计算厂商，其产品也不是完美无缺的，Cognito （AWS 的身份认证解决方案）及其附带的中文文档就是一个反面教材，其难用程度令人发指。当然，除了不易用之外，还有访问速度缓慢，不适用于中国市场等问题存在。</p>
+
+<p>而国产的 Authing 可以解决使用 Cognito 的诸多问题，使用 Authing User Pool， 可以替代 Cognito User Pool，构建起国内用户与 AWS 资源之间的桥梁。</p>
+
+<p>在创建 AWS Identity Pool 时，可以配置自定义 Authentication providers，这里我们将 Developer provider name 设置为 <authing-userpool-id>.authing.cn  格式：</authing-userpool-id></p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-042750.jpg" alt="" /></p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-042809.jpg" alt="" /></p>
+
+<p>整个流程中一共有三方参与：终端用户、Authing 、AWS，具体过程如下：</p>
+<ul>
+  <li>终端用户使用 Authing 用户池完成认证</li>
+  <li>Authing 开发者在服务端调用 AWS 的 GetOpenIdTokenForDeveloperIdentity 接口，获得 IdentityId 和 Token。</li>
+  <li>终端用户调用 GetCredentialsForIdentity 使用 token 换取访问 AWS 资源所需的 credentials。</li>
+</ul>
+
+<p>GetOpenIdTokenForDeveloperIdentity 需要以下参数：</p>
+<ul>
+  <li>IdentityPoolId：你的 AWS Identity Pool ID。</li>
+  <li>Logins：一组 provider name 到 provider tokens 的映射，provider token 可以任意可以区分用户的字符串，比如 Authing 用户在用户池内的唯一 ID。</li>
+</ul>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s2">"Logins"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="s2">"&lt;authing-userpool-id&gt;.authing.cn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5ccb24701bbaf00d50xxxxxxx"</span><span class="w"> </span><span class="err">//</span><span class="w"> </span><span class="err">Authing</span><span class="w"> </span><span class="err">用户池</span><span class="w"> </span><span class="err">ID</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>我们能从请求返回数据中 获得 IdentityId 和 Token。这样，我们就在 Authing 用户池用户 和 Cognito Identity ID 之间构建起了联系。接着可以使用 GetCredentialsForIdentity 获取 credentials，从而访问相关资源。</p>
+
+<h2 id="iam">IAM</h2>
+
+<p>IAM(Identity and Access Management) 管理 Users、Groups、 Roles 对 AWS 资源的访问权限，通过给 Role 添加相关权限，达到使用相关 AWS 资源的目的。</p>
+
+<p>例如，新建 Cognito Identity Pool 的时候，会默认创建两个 role：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-042856.jpg" alt="" /></p>
+
+<p>可以给此 role 添加相关权限，比如</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-042906.jpg" alt="" /></p>
+
+<p>通过集成 Authing 与 Cognito Identity Pool，我们在 Authing User ID 与 Cognito Identity ID 之间构建起了映射关系。而每个 Identity ID，可以拥有不同的 Role。不同的 Role，具备不同的 AWS 资源访问权限。这也就将 Authing 和 AWS 的各种服务结合了起来。</p>
+
+<h2 id="s3simple-storage-service">S3（Simple Storage Service）</h2>
+
+<blockquote>
+  <p>在线 Demo：https://sample.authing.cn/aws-demo/</p>
+
+  <p>Github Repo：https://github.com/Authing/aws-s3</p>
+</blockquote>
+
+<p>下面举一个具体的例子：用户使用 Authing 登录之后，会得到一个唯一的 Authing User ID，通过 GetOpenIdTokenForDeveloperIdentity，将 Authing User ID 与 Cognito Identity ID 对应起来。</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-042938.jpg" alt="" /></p>
+
+<p>在 aws console 配置 role permissions 和 bucket policy，实现每个 Authing 用户能且仅能对 users/<cognito-identity-id> 目录的文件进行增删改查操作：</cognito-identity-id></p>
+
+<p>Bucket Policy 如下：</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"Version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2012-10-17"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Policy1576670578319"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"Statement"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ListYourObjects"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Principal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Action"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3:ListBucket"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="s2">"arn:aws-cn:s3:::authing-aws-demo"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Condition"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"StringLike"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="s2">"s3:prefix"</span><span class="p">:</span><span class="w"> </span><span class="s2">"users/${cognito-identity.amazonaws.com:sub}"</span><span class="w">
+                </span><span class="p">}</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"Sid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ReadWriteDeleteYourObjects"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Effect"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Allow"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Principal"</span><span class="p">:</span><span class="w"> </span><span class="s2">"*"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"Action"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"s3:GetObject"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"s3:PutObject"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"s3:DeleteObject"</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="s2">"Resource"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="s2">"arn:aws-cn:s3:::authing-aws-demo/users/${cognito-identity.amazonaws.com:sub}"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"arn:aws-cn:s3:::authing-aws-demo/users/${cognito-identity.amazonaws.com:sub}/*"</span><span class="w">
+            </span><span class="p">]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><code class="highlighter-rouge">${cognito-identity.amazonaws.com:sub}</code> 会被替换成当前请求用户的 Cognito Identity Id。Statement ListYourObjects 让用户具备遍历 <code class="highlighter-rouge">users/${cognito-identity.amazonaws.com:sub}</code> 的权利，Statement ReadWriteDeleteYourObjects 让用户可以操作 <code class="highlighter-rouge">users/${cognito-identity.amazonaws.com:sub}</code> 下面的文件。</p>
+
+<p>Role Permission 同理：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043010.jpg" alt="" /></p>
+
+<p>实现效果如下：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043027.jpg" alt="" /></p>
+
+<h2 id="lambda">Lambda</h2>
+
+<blockquote>
+  <p>在线 Demo：https://sample.authing.cn/aws/
+Github Repo：https://github.com/Authing/authing-lambda</p>
+</blockquote>
+
+<p>Authing 非常适合用作 serverless 函数计算的身份认证层，开发者可以在  Authing 控制台（第三方登录 -&gt; OIDC 应用）创建 OIDC 应用：</p>
+
+<p>然后在前端用几行代码即可实现一个具备标准 OIDC 认证流程的表单：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">authing</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">AuthingSSO</span><span class="p">({</span>
+    <span class="na">appId</span><span class="p">:</span> <span class="s2">"5dfa6fd7673d4xxxxxxxxxxxx"</span><span class="p">,</span> <span class="c1">// OIDC 应用的 ID</span>
+    <span class="na">appDomain</span><span class="p">:</span> <span class="s2">"aws-demo.authing.cn"</span>
+<span class="p">});</span>
+<span class="kd">const</span> <span class="nx">res</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">authing</span><span class="p">.</span><span class="nx">trackSession</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">res</span><span class="p">.</span><span class="nx">session</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// 未登录</span>
+   <span class="nx">authing</span><span class="p">.</span><span class="nx">login</span><span class="p">()</span> <span class="c1">// 唤起下面显示的登录表单</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">userInfo</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">userInfo</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>生成的表单如下：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043059.jpg" alt="" /></p>
+
+<p>可以通过以下网址体验：https://aws-demo.authing.cn/</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043110.jpg" alt="" /></p>
+
+<p>用户使用 Authing 成功登录之后，会在 authorization 请求头中带上 token，开发者只需要在 lambda 函数中对这个 token 进行验证即可。</p>
+
+<p>Authing 提供丰富的检验 token 的手段供开发者选择：
+文档地址：https://learn.authing.cn/authing/advanced/authentication/verify-jwt-token</p>
+
+<ul>
+  <li>使用 Authing 提供的 SDK</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">Authing</span> <span class="k">from</span> <span class="s1">'authing-js-sdk'</span>
+
+<span class="p">(</span><span class="k">async</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="kd">const</span> <span class="nx">authing</span> <span class="o">=</span> <span class="kr">await</span> <span class="k">new</span> <span class="nx">Authing</span><span class="p">({</span>
+        <span class="na">clientId</span><span class="p">:</span> <span class="s1">'your_client_id'</span><span class="p">,</span>
+        <span class="na">secret</span><span class="p">:</span> <span class="s1">'your_client_secret'</span>
+    <span class="p">});</span>
+    <span class="kd">const</span> <span class="nx">result</span> <span class="o">=</span> <span class="kr">await</span> <span class="nx">authing</span><span class="p">.</span><span class="nx">checkLoginStatus</span><span class="p">(</span><span class="s1">'USER_JWT_TOKEN'</span><span class="p">);</span>
+<span class="p">})()</span>
+
+<span class="err">若</span> <span class="nx">Token</span> <span class="err">合法，则返回数据为：</span>
+<span class="p">{</span>
+  <span class="na">status</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">code</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span>
+  <span class="na">message</span><span class="p">:</span> <span class="s1">'已登录'</span><span class="p">,</span>
+  <span class="na">token</span><span class="p">:</span> <span class="p">{</span>
+    <span class="p">...</span> <span class="c1">// Token 数据</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>若 Token 不合法，message 会提示相关错误信息。我们还提供了所有的错误代码列表：https://learn.authing.cn/authing/advanced/error-code 。</p>
+
+<p>如果你想 reduce package size，也可以直接构造 GraphQL 请求：</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">axios</span> <span class="k">from</span> <span class="s1">'axios'</span>
+
+<span class="nx">axios</span><span class="p">({</span>
+  <span class="na">url</span><span class="p">:</span> <span class="s2">"https://users.authing.cn/graphql"</span><span class="p">,</span>
+  <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+  <span class="na">data</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">operationName</span><span class="p">:</span> <span class="s1">'checkLoginStatus'</span><span class="p">,</span>
+    <span class="na">query</span><span class="p">:</span> <span class="s2">`query checkLoginStatus($token: String) {
+          checkLoginStatus(token: $token) {
+            status
+            code
+            message
+            token {
+              data {
+                email
+                id
+                clientId
+                unionid
+              }
+              iat
+              exp
+            }
+          }
+        }`</span><span class="p">,</span>
+    <span class="na">variables</span><span class="p">:</span> <span class="p">{</span>
+      <span class="na">token</span><span class="p">:</span> <span class="s1">'USER_JWT_TOKEN'</span><span class="p">,</span> <span class="c1">// 这里传入 request 携带的 token</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+<span class="p">}).</span><span class="nx">then</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="nx">res</span><span class="p">.</span><span class="nx">data</span><span class="p">;</span>
+  <span class="k">if</span> <span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">errors</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">throw</span> <span class="nx">d</span><span class="p">.</span><span class="nx">errors</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+  <span class="p">}</span>
+  <span class="k">return</span> <span class="nx">d</span><span class="p">.</span><span class="nx">data</span><span class="p">.</span><span class="nx">checkLoginStatus</span><span class="p">;</span>
+<span class="p">});</span>
+<span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">loginStatus</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// handle login status</span>
+<span class="p">})</span>
+<span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">error</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="c1">// handle error</span>
+<span class="p">});</span>
+</code></pre></div></div>
+
+<ul>
+  <li>使用 OIDC 密钥自己检验：传入 jwt.verify 函数的第二个参数就是 OIDC 应用的密钥。</li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">authorizationToken</span><span class="p">)</span> <span class="p">{</span>
+    <span class="c1">// remove "bearer " from token</span>
+    <span class="kd">const</span> <span class="nx">token</span> <span class="o">=</span> <span class="nx">event</span><span class="p">.</span><span class="nx">authorizationToken</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mi">7</span><span class="p">);</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="kd">let</span> <span class="nx">decoded</span> <span class="o">=</span> <span class="nx">jwt</span><span class="p">.</span><span class="nx">verify</span><span class="p">(</span><span class="nx">token</span><span class="p">,</span> <span class="s1">'02128f34e11b11xxxxxxxxxxxxxx'</span><span class="p">),</span>
+          <span class="nx">expired</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="k">new</span> <span class="nb">Date</span><span class="p">())</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span> <span class="o">&gt;</span> <span class="nx">decoded</span><span class="p">.</span><span class="nx">exp</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">expired</span><span class="p">)</span> <span class="p">{</span>
+          <span class="nx">cb</span><span class="p">(</span><span class="s1">'Unauthorized, Login information has expired.'</span><span class="p">);</span>
+        <span class="p">}</span><span class="k">else</span> <span class="p">{</span>
+          <span class="nx">cb</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span> <span class="nx">generatePolicy</span><span class="p">(</span><span class="s1">'user'</span><span class="p">,</span> <span class="s1">'Allow'</span><span class="p">,</span> <span class="nx">event</span><span class="p">.</span><span class="nx">methodArn</span><span class="p">));</span>
+        <span class="p">}</span>
+      <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">cb</span><span class="p">(</span><span class="s1">'Unauthorized'</span><span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="nx">cb</span><span class="p">(</span><span class="s1">'Unauthorized'</span><span class="p">);</span>
+  <span class="p">}</span>
+</code></pre></div></div>
+
+<ul>
+  <li>使用 OIDC 应用的 rest 接口
+https://oauth.authing.cn/oauth/oidc/validate_access_token</li>
+</ul>
+
+<p>GET 请求参数：access_token，必填。
+返回的 Response 示例：</p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isRevoked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"isDeleted"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yokj1gN8kCBixIhc6KEj7SNsMcJ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"yokj1gN8kCBixIhc6KEj7SNsMcJ"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accessToken"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJkVlJmenZEbHZQRG50dG9LWnJ1WkciLCJzdWIiOiI1Y2U1M2FlYTlmODUyNTdkZDEzMmQ3NDkiLCJpc3MiOiJodHRwczovL29hdXRoLmF1dGhpbmcuY24vb2F1dGgvb2lkYyIsImlhdCI6MTU2OTU4MDMwOCwiZXhwIjoxNTY5NTgzOTA1LCJzY29wZSI6Im9wZW5pZCBwcm9maWxlIiwiYXVkIjxxxxxxxxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"accessTokenExpiresAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-27T11:31:45.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"openid profile"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"appId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d01e389985f81c6xxxxxxxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"userOrClientId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5ce53aea9f8525xxxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"when"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-09-27T10:31:48.000Z"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"iss"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://oauth.authing.cn/oauth/oidc"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"sub"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5ce53aea9f85257dd13xxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"aud"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d01e389985f81c6c1xxxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"exp"</span><span class="p">:</span><span class="w"> </span><span class="mi">1569583905000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"iat"</span><span class="p">:</span><span class="w"> </span><span class="mi">1569580308000</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"user_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5ce53aea9f85257xxxxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"issued_to"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://sso.authing.cn"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"audience"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d01e389985f81c6xxxxxxx"</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">3360</span><span class="p">,</span><span class="w">
+    </span><span class="s2">"access_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"offline"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>开发者可以通过验证结果的不同，进行相应的业务逻辑处理。
+如在这个示例中，未登录下 private 接口的 http status code 为 401：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043227.jpg" alt="" /></p>
+
+<p>登录之后成功返回数据：</p>
+
+<p><img src="http://lcjim-img.oss-cn-beijing.aliyuncs.com/2019-12-20-043236.jpg" alt="" /></p>
+
+<h2 id="ad">AD</h2>
+
+<p>Authing 为每个用户池自动创建了一个 LDAP 服务，访问 Authing LDAP 服务器需要使用 Authing 的应用密钥 (Secret)，认证命令如下所示：</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ldapsearch -H ldap://ldap.authing.cn:1389 -x -D "ou=users,o=AUTHING_CLIENT_ID,dc=authing,dc=cn" -w "AUTHING_CLIEENT_SECRET"  -LLL -b "ou=users,o=AUTHING_CLIENT_ID,dc=authing,dc=cn"
+</code></pre></div></div>
+
+<p>具体文档可见：https://learn.authing.cn/authing/advanced/ldap-idp。</p>
+
+<p>通过 Active Directory Connector，AWS 开发者可以直接复用 Authing 的 LDAP-IdP。</p>
+
+<h2 id="其他-aws-资源">其他 AWS 资源</h2>
+
+<p>在上面的 Cognito Identity Pool 一节中，我们实现了 Authing User ID 与 Cognito Identity ID 的一一对应的关系，这样 Authing 就具备了使用所有 aws 相关资源的能力，开发者可以参考我们前面给的示例。</p>
+
+		
+	</div>
+</article>
+
+
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2019 - Authing</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/blog/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>
